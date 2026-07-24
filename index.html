@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SecureDesktop Shield - Academic Defense Presentation">
+  <title>SecureDesktop Shield - Academic Defense Presentation</title>
+
+  <!-- Google Fonts: Outfit, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ============================================================
+       REDESIGNED MAIN COVER TITLE SLIDE COMPONENT STYLES
+       ============================================================ -->
+  <style id="cover-slide-styles">
+    /* 1. Layout & Full Slide Container with Cybersecurity Cover Background */
+    .slide.main-cover-slide {
+      padding: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      overflow: hidden !important;
+      background-color: #070c18 !important;
+      background-image:
+        linear-gradient(135deg, rgba(7, 12, 24, 0.65) 0%, rgba(15, 23, 42, 0.82) 100%),
+        url('file:///C:/Users/EikoMotsu/.gemini/antigravity-ide/brain/3a5124cc-add4-43df-8320-2f45ab89b34b/cover_bg_v2_1784699885589.png'),
+        url('cover_bg.png') !important;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .cover-grid-container {
+      display: grid !important;
+      grid-template-columns: 1.15fr 0.85fr !important;
+      gap: 5rem !important;
+      width: 95% !important;
+      max-width: 1780px !important;
+      padding: 0 4rem !important;
+      align-items: center !important;
+      z-index: 2 !important;
+      box-sizing: border-box !important;
+    }
+
+    /* 2. Typography & Hierarchy (Modern Crisp Sans-Serif) */
+    .cover-left-col {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+    }
+
+    .cover-pill-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      background: rgba(37, 99, 235, 0.25) !important;
+      color: #93c5fd !important;
+      border: 1px solid rgba(59, 130, 246, 0.5) !important;
+      font-family: 'Outfit', 'Inter', system-ui, sans-serif !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 2px !important;
+      text-transform: uppercase !important;
+      padding: 10px 28px !important;
+      border-radius: 40px !important;
+      margin-bottom: 2.2rem !important;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15) !important;
+    }
+
+    .cover-main-title {
+      font-family: 'Outfit', 'Inter', system-ui, sans-serif !important;
+      font-size: clamp(3.2rem, 4.5vw, 4.8rem) !important;
+      font-weight: 800 !important;
+      line-height: 1.15 !important;
+      color: #ffffff !important;
+      letter-spacing: -0.8px !important;
+      margin: 0 0 1.8rem 0 !important;
+      text-align: left !important;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .cover-accent-line {
+      width: 160px !important;
+      height: 5px !important;
+      background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%) !important;
+      border-radius: 4px !important;
+      margin-bottom: 1.8rem !important;
+    }
+
+    .cover-tagline {
+      font-family: 'Inter', system-ui, sans-serif !important;
+      font-size: 1.25rem !important;
+      color: #cbd5e1 !important;
+      line-height: 1.6 !important;
+      font-weight: 400 !important;
+      max-width: 680px !important;
+      text-align: left !important;
+    }
+
+    /* 3. Visual Polish & Dark Glassmorphism Card */
+    .cover-right-col {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .cover-glass-card {
+      background: rgba(15, 23, 42, 0.82) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      border-radius: 24px !important;
+      padding: 3rem 3.5rem !important;
+      width: 100% !important;
+      max-width: 650px !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .card-header-tag {
+      color: #60a5fa !important;
+      font-family: 'Outfit', 'Inter', system-ui, sans-serif !important;
+      font-size: 0.9rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 2px !important;
+      text-transform: uppercase !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+      padding-bottom: 16px !important;
+      margin-bottom: 16px !important;
+      text-align: left !important;
+    }
+
+    .team-members-list {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0 !important;
+      margin-bottom: 1.8rem !important;
+    }
+
+    .team-member-row {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 14px 0 !important;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important;
+      font-family: 'Inter', system-ui, sans-serif !important;
+    }
+
+    .team-member-row:last-child {
+      border-bottom: none !important;
+    }
+
+    .member-name {
+      color: #f1f5f9 !important;
+      font-size: 1.12rem !important;
+      font-weight: 500 !important;
+      text-align: left !important;
+    }
+
+    .member-id {
+      color: #93c5fd !important;
+      font-size: 1.12rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.5px !important;
+      font-family: 'JetBrains Mono', monospace !important;
+      text-align: right !important;
+    }
+
+    /* Mentor Section Inside Card */
+    .mentor-badge-card {
+      background: rgba(37, 99, 235, 0.18) !important;
+      border-left: 4px solid #2563eb !important;
+      padding: 18px 24px !important;
+      border-radius: 10px !important;
+      font-family: 'Inter', system-ui, sans-serif !important;
+      text-align: left !important;
+    }
+
+    .mentor-label {
+      color: #60a5fa !important;
+      font-weight: 700 !important;
+      font-size: 0.78rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1.5px !important;
+      margin-bottom: 6px !important;
+    }
+
+    .mentor-name {
+      color: #ffffff !important;
+      font-size: 1.18rem !important;
+      font-weight: 700 !important;
+      line-height: 1.35 !important;
+    }
+
+    /* 4. Slide Navigation Dots (Fixed & Vertically Centered) */
+    .side-dots {
+      position: fixed !important;
+      right: 28px !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 10px !important;
+      z-index: 100 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================
+       MINIMAL SLIDE NUMBER WATERMARK DISPLAY
+       ========================================== -->
+  <div class="slide-number-display">
+    SLIDE <span id="current-slide-num">1</span> / <span id="total-slides-num">21</span>
+  </div>
+
+  <!-- Navigation Side Dots (21 Slides) -->
+  <div class="side-dots">
+    <div class="dot active" data-slide-target="0"></div>
+    <div class="dot" data-slide-target="1"></div>
+    <div class="dot" data-slide-target="2"></div>
+    <div class="dot" data-slide-target="3"></div>
+    <div class="dot" data-slide-target="4"></div>
+    <div class="dot" data-slide-target="5"></div>
+    <div class="dot" data-slide-target="6"></div>
+    <div class="dot" data-slide-target="7"></div>
+    <div class="dot" data-slide-target="8"></div>
+    <div class="dot" data-slide-target="9"></div>
+    <div class="dot" data-slide-target="10"></div>
+    <div class="dot" data-slide-target="11"></div>
+    <div class="dot" data-slide-target="12"></div>
+    <div class="dot" data-slide-target="13"></div>
+    <div class="dot" data-slide-target="14"></div>
+    <div class="dot" data-slide-target="15"></div>
+    <div class="dot" data-slide-target="16"></div>
+    <div class="dot" data-slide-target="17"></div>
+    <div class="dot" data-slide-target="18"></div>
+    <div class="dot" data-slide-target="19"></div>
+    <div class="dot" data-slide-target="20"></div>
+  </div>
+
+  <!-- Main Presentation Widescreen Canvas -->
+  <main id="presentation-viewport">
+    <div class="light-grid-bg"></div>
+
+    <!-- ==========================================
+         SLIDE 1: MAIN COVER TITLE SLIDE
+         ========================================== -->
+    <section class="slide active main-cover-slide" data-slide-index="0">
+      <div class="cover-grid-container">
+        <!-- LEFT COLUMN: Presentation Title & Accent Elements -->
+        <div class="cover-left-col">
+          <!-- Top Tag Badge -->
+          <div class="cover-pill-badge">
+            ACADEMIC REVIEW 1 PRESENTATION
+          </div>
+
+          <!-- Main Title (Georgia Serif) -->
+          <h1 class="cover-main-title">
+            Secure Desktop<br>
+            Authentication and System<br>
+            Protection Application
+          </h1>
+
+          <!-- Bottom Blue Accent Line -->
+          <div class="cover-accent-line"></div>
+        </div>
+
+        <!-- RIGHT COLUMN: Team Members & Mentor Glassmorphism Card -->
+        <div class="cover-right-col">
+          <div class="cover-glass-card">
+            <!-- Card Header Tag -->
+            <div class="card-header-tag">
+              PROJECT DEVELOPMENT TEAM
+            </div>
+
+            <!-- Team Members List with Right-Aligned Register IDs -->
+            <div class="team-members-list">
+              <div class="team-member-row">
+                <span class="member-name">Erolla Rishvin Reddy</span>
+                <span class="member-id">24WU0103006</span>
+              </div>
+              <div class="team-member-row">
+                <span class="member-name">Yogamruth Reddy Guggilla</span>
+                <span class="member-id">24WU0103019</span>
+              </div>
+              <div class="team-member-row">
+                <span class="member-name">Navari Yashwanth Reddy</span>
+                <span class="member-id">24WU0104009</span>
+              </div>
+              <div class="team-member-row">
+                <span class="member-name">Gayathri Pocharam</span>
+                <span class="member-id">24WU0104034</span>
+              </div>
+              <div class="team-member-row">
+                <span class="member-name">Chakradhar Muppuri</span>
+                <span class="member-id">24WU0103020</span>
+              </div>
+            </div>
+
+            <!-- Project Mentor Section -->
+            <div class="mentor-badge-card">
+              <div class="mentor-label">PROJECT MENTOR</div>
+              <div class="mentor-name">Professor Meher Gayatri Devi Tiwari</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 2: SECTION 01 DIVIDER
+         ========================================== -->
+    <section class="slide section-divider-slide" data-slide-index="1">
+      <div class="slide-content slide-layout-hero" style="position: relative;">
+        <!-- Large section number watermark -->
+        <div class="section-num-watermark">01</div>
+        <div class="slide-text" style="z-index: 2; position: relative; align-items: flex-start;">
+          <h2 class="slide-title"
+            style="font-size: 3.5rem; font-weight: 800; color: #000000; font-family: Georgia, serif; margin-top: 1.2rem; line-height: 1.1;">
+            Story Setup &amp;<br>Problem Framing</h2>
+          <div class="cover-divider" style="margin-top: 20px;"></div>
+        </div>
+        <div class="slide-visual" style="display: flex; align-items: center; justify-content: center; z-index: 2;">
+          <div class="animate-float"
+            style="width: 75%; max-width: 340px; aspect-ratio: 1; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 50px rgba(37,99,235,0.15); padding: 20px;">
+            <!-- Premium Glowing Shield Graphic -->
+            <svg viewBox="0 0 200 200" width="100%" height="100%"
+              style="filter: drop-shadow(0 10px 20px rgba(37, 99, 235, 0.25));">
+              <defs>
+                <radialGradient id="shieldGlowPart1" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="rgba(37, 99, 235, 0.15)" />
+                  <stop offset="100%" stop-color="rgba(37, 99, 235, 0)" />
+                </radialGradient>
+                <linearGradient id="shieldGradPart1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3b82f6" />
+                  <stop offset="100%" stop-color="#1d4ed8" />
+                </linearGradient>
+              </defs>
+              <!-- Background Glow -->
+              <circle cx="100" cy="100" r="90" fill="url(#shieldGlowPart1)" />
+              <!-- Hexagon grid lines -->
+              <path d="M100 25 L160 55 L160 125 L100 175 L40 125 L40 55 Z" fill="none" stroke="rgba(37, 99, 235, 0.12)"
+                stroke-width="2" />
+              <path d="M100 35 L150 62 L150 120 L100 162 L50 120 L50 62 Z" fill="none" stroke="rgba(37, 99, 235, 0.2)"
+                stroke-width="1.5" />
+              <!-- Main Shield Shape -->
+              <path
+                d="M100 45 C130 45 145 55 145 85 C145 125 100 155 100 155 C100 155 55 125 55 85 C55 55 70 45 100 45 Z"
+                fill="url(#shieldGradPart1)" stroke="#60a5fa" stroke-width="2.5" />
+              <!-- Inner accent -->
+              <path
+                d="M100 55 C120 55 130 63 130 85 C130 115 100 138 100 138 C100 138 70 115 70 85 C70 63 80 55 100 55 Z"
+                fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="3,3" />
+              <!-- Padlock inside shield -->
+              <rect x="90" y="88" width="20" height="16" rx="3" fill="#ffffff" />
+              <path d="M94 88 V82 C94 78 97 75 100 75 C103 75 106 78 106 82 V88" fill="none" stroke="#ffffff"
+                stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 3: PROJECT JOURNEY ROADMAP (MCKINSEY / APPLE EDITORIAL)
+         ========================================== -->
+    <!-- ==========================================
+         SLIDE 3: PROJECT JOURNEY ROADMAP (EDITORIAL STORYTELLING)
+         ========================================== -->
+    <section class="slide" data-slide-index="2">
+      <div class="slide-content flex-column" style="justify-content: space-between; height: 100%;">
+        <!-- Slide Header -->
+        <div class="slide-header" style="margin-bottom: 0.3rem;">
+          <h2 class="slide-title"
+            style="font-size: 2.1rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; margin-top: 0.3rem; letter-spacing: -0.5px;">
+            Project Journey: From Problem to Solution</h2>
+        </div>
+
+        <div class="editorial-roadmap-container">
+          <div class="editorial-timeline-wrapper">
+
+            <!-- Phase 1: Research & Problem Identification -->
+            <div class="editorial-grid-flow">
+              <!-- Card 01: Project Introduction (Short) -->
+              <div class="ed-card ed-card-short">
+                <div class="ed-card-head">
+                  <span class="ed-card-num">01</span>
+                </div>
+                <div class="ed-card-title">Project Introduction</div>
+                <ul class="ed-bullet-list">
+                  <li>Desktop Authentication</li>
+                  <li>System Protection</li>
+                  <li>Local-First Security</li>
+                </ul>
+                <div class="ed-goal-box">
+                  <strong>Goal:</strong> Protect desktop sessions from unauthorized access.
+                </div>
+              </div>
+
+              <div class="ed-flow-arrow">➔</div>
+
+              <!-- Card 02: Problem Statement (Medium) -->
+              <div class="ed-card ed-card-medium">
+                <div class="ed-card-head">
+                  <span class="ed-card-num">02</span>
+                </div>
+                <div class="ed-card-title">Problem Statement</div>
+                <div class="ed-sub-label">Problems</div>
+                <ul class="ed-check-list">
+                  <li><span class="chk-icon">✔</span> Session Hijacking</li>
+                  <li><span class="chk-icon">✔</span> Weak Authentication</li>
+                  <li><span class="chk-icon">✔</span> No Monitoring</li>
+                  <li><span class="chk-icon">✔</span> Insider Threat</li>
+                </ul>
+              </div>
+
+              <div class="ed-flow-arrow">➔</div>
+
+              <!-- Card 03: Existing Solutions (Medium) -->
+              <div class="ed-card ed-card-medium">
+                <div class="ed-card-head">
+                  <span class="ed-card-num">03</span>
+                </div>
+                <div class="ed-card-title">Existing Solutions</div>
+                <div class="ed-compare-box">
+                  <div class="compare-group">
+                    <div class="compare-name">Windows Hello</div>
+                    <div class="cmp-row pos">✔ Login</div>
+                    <div class="cmp-row neg">✖ Continuous Protection</div>
+                  </div>
+                  <div class="compare-group" style="margin-top: 6px;">
+                    <div class="compare-name">Linux PAM</div>
+                    <div class="cmp-row pos">✔ Authentication</div>
+                    <div class="cmp-row neg">✖ Monitoring</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ed-flow-arrow">➔</div>
+
+              <!-- Card 04: Research Gap (Short) -->
+              <div class="ed-card ed-card-short">
+                <div class="ed-card-head">
+                  <span class="ed-card-num">04</span>
+                </div>
+                <div class="ed-card-title">Research Gap</div>
+                <div class="ed-sub-label">Missing Features</div>
+                <ul class="ed-missing-list">
+                  <li><span class="box-icon">□</span> Local Monitoring</li>
+                  <li><span class="box-icon">□</span> Runtime Protection</li>
+                  <li><span class="box-icon">□</span> Tamper Detection</li>
+                  <li><span class="box-icon">□</span> Audit Logging</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Editorial Section Divider -->
+            <div class="editorial-divider">
+              <span class="divider-double-line"></span>
+              <span class="divider-title">Proposed Solution</span>
+              <span class="divider-double-line"></span>
+            </div>
+
+            <!-- Phase 2: Technical Design & Execution -->
+            <div class="editorial-grid-flow">
+              <!-- Card 05: Proposed Solution (Large) -->
+              <div class="ed-card ed-card-large">
+                <div class="ed-card-head">
+                  <span class="ed-card-num">05</span>
+                </div>
+                <div class="ed-card-title">Proposed Solution</div>
+                <div class="ed-flow-chain">
+                  <div class="chain-node">Desktop Lock</div>
+                  <div class="chain-arr">↓</div>
+                  <div class="chain-node">Authentication</div>
+                  <div class="chain-arr">↓</div>
+                  <div class="chain-node">Monitoring</div>
+                  <div class="chain-arr">↓</div>
+                  <div class="chain-node">Logging</div>
+                  <div class="chain-arr">↓</div>
+                  <div class="chain-node active">Protection</div>
+                </div>
+              </div>
+
+              <div class="ed-flow-arrow">➔</div>
+
+              <!-- Card 06: Architecture (Large) -->
+              <div class="ed-card ed-card-large">
+                <div class="ed-card-head">
+                  <span class="ed-card-num">06</span>
+                </div>
+                <div class="ed-card-title">System Architecture</div>
+                <div class="ed-arch-chain">
+                  <div class="arch-box">GUI Layer</div>
+                  <div class="arch-arr">↓</div>
+                  <div class="arch-box">Authentication Engine</div>
+                  <div class="arch-arr">↓</div>
+                  <div class="arch-box">Watchdog Service</div>
+                  <div class="arch-arr">↓</div>
+                  <div class="arch-box active">Encrypted DB</div>
+                </div>
+              </div>
+
+              <div class="ed-flow-arrow">➔</div>
+
+              <!-- Card 07: Implementation (Medium) -->
+              <div class="ed-card ed-card-medium">
+                <div class="ed-card-head">
+                  <span class="ed-card-num">07</span>
+                </div>
+                <div class="ed-card-title">Implementation</div>
+                <div class="ed-tech-pills">
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">Watchdog</span>
+                  <span class="tech-pill">SQLite</span>
+                  <span class="tech-pill">Argon2</span>
+                  <span class="tech-pill">SQLCipher</span>
+                </div>
+                <div class="ed-impl-flow">
+                  <span>Auth</span> ➔ <span>Monitor</span> ➔ <span>Log</span>
+                </div>
+              </div>
+
+              <div class="ed-flow-arrow">➔</div>
+
+              <!-- Card 08: Future Scope (Short) -->
+              <div class="ed-card ed-card-short">
+                <div class="ed-card-head">
+                  <span class="ed-card-num">08</span>
+                </div>
+                <div class="ed-card-title">Future Scope</div>
+                <div class="ed-milestones-chain">
+                  <div class="ms-node current">✔ Current Base</div>
+                  <div class="ms-arr">↓</div>
+                  <div class="ms-node">MFA Integration</div>
+                  <div class="ms-arr">↓</div>
+                  <div class="ms-node">Behavior Analytics</div>
+                  <div class="ms-arr">↓</div>
+                  <div class="ms-node">AI Detection</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 4: THREAT LANDSCAPE & DIFFERENTIATION
+         ========================================== -->
+    <section class="slide" data-slide-index="3">
+      <div class="slide-content flex-column" style="justify-content: space-between; height: 100%;">
+        <!-- Header with Powerful Sub-Statement -->
+        <div class="slide-header" style="margin-bottom: 0.8rem;">
+          <h2 class="slide-title">Understanding Today's Desktop Security Threats</h2>
+          <p style="font-size: 0.96rem; color: var(--color-text-sec); font-weight: 500; margin-top: 4px;">
+            Traditional desktop authentication protects the login, but not the system after access is granted.
+          </p>
+        </div>
+
+        <div class="threat-container-full"
+          style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <div class="threat-timeline-wrapper"
+            style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; gap: 1.2rem;">
+            <!-- 2x2 Grid of Threat Presentation Cards -->
+            <div class="threat-grid-2x2">
+              <div class="threat-metric-card">
+                <div class="threat-card-title">Credential Theft (81%)</div>
+                <div class="threat-desc">Most security breaches stem from stolen passwords or compromised user
+                  credentials.</div>
+              </div>
+
+              <div class="threat-metric-card">
+                <div class="threat-card-title">Automated Brute Force</div>
+                <div class="threat-desc">High-frequency password cracking scripts hammering offline hashes and weak
+                  login PINs.</div>
+              </div>
+
+              <div class="threat-metric-card">
+                <div class="threat-card-title">Physical Desktop Hijacking</div>
+                <div class="threat-desc">Unauthorized local execution and data tampering following unattended terminal
+                  sessions.</div>
+              </div>
+
+              <div class="threat-metric-card">
+                <div class="threat-card-title">Network Credential Sniffing</div>
+                <div class="threat-desc">Remote cloud endpoint syncs exposing unencrypted authentication traffic to
+                  local listeners.</div>
+              </div>
+            </div>
+
+            <!-- System Comparison Matrix Box (PPT Style) -->
+            <div class="threat-matrix-box">
+              <div class="matrix-column">
+                <div class="matrix-column-title">Existing Systems Limitations</div>
+                <ul class="matrix-ppt-list bad">
+                  <li>Cloud Dependent &amp; Network Exposed</li>
+                  <li>Single Password Authentication Factor</li>
+                  <li>Minimal Post-Login Security Monitoring</li>
+                </ul>
+              </div>
+
+              <div class="matrix-column">
+                <div class="matrix-column-title">Proposed System Protection</div>
+                <ul class="matrix-ppt-list good">
+                  <li>100% Local-First Privacy Architecture</li>
+                  <li>Continuous Real-Time Watchdog Observer</li>
+                  <li>Encrypted Local Audit Event Logging</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 5: SECURITY SYSTEM COMPARISON (EDITORIAL ACADEMIC)
+         ========================================== -->
+    <section class="slide" data-slide-index="4">
+      <div class="slide-content flex-column" style="justify-content: flex-start; gap: 1rem; height: 100%;">
+        <!-- Header -->
+        <div class="slide-header" style="margin-bottom: 0.3rem;">
+          <h2 class="slide-title"
+            style="font-size: 2.1rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; margin-top: 0.3rem; letter-spacing: -0.5px;">
+            Existing System vs Proposed Secure Desktop Solution</h2>
+          <p style="font-size: 0.95rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 4px;">
+            A comparative evaluation highlighting conventional authentication limitations and the advantages of
+            local-first security.
+          </p>
+        </div>
+
+        <div class="academic-comp-container">
+          <!-- Column 1: Existing Desktop Authentication -->
+          <div class="acad-col acad-col-existing">
+            <div class="acad-header-existing">
+              <h3 class="acad-title-existing">Existing Desktop Authentication</h3>
+              <div class="acad-divider-thin"></div>
+            </div>
+
+            <div class="acad-list">
+              <div class="acad-item">
+                <div class="acad-item-title">Password Only</div>
+                <div class="acad-item-desc">Single-factor authentication.</div>
+              </div>
+              <div class="acad-item">
+                <div class="acad-item-title">No Continuous Monitoring</div>
+                <div class="acad-item-desc">Protection stops after login.</div>
+              </div>
+              <div class="acad-item">
+                <div class="acad-item-title">Limited Security Logging</div>
+                <div class="acad-item-desc">Minimal event tracking.</div>
+              </div>
+              <div class="acad-item">
+                <div class="acad-item-title">Vulnerable to Credential Theft</div>
+                <div class="acad-item-desc">Stolen passwords grant full access.</div>
+              </div>
+              <div class="acad-item">
+                <div class="acad-item-title">Cloud Network Dependency</div>
+                <div class="acad-item-desc">Requires active internet connection.</div>
+              </div>
+              <div class="acad-item">
+                <div class="acad-item-title">Fragmented Security</div>
+                <div class="acad-item-desc">Logs &amp; monitoring handled separately.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 (MIDDLE): Center Stacked Illustration Column (Top & Bottom Images) -->
+          <div class="acad-illustration-center-col">
+            <div class="acad-img-box top-box">
+              <img
+                src="file:///C:/Users/EikoMotsu/.gemini/antigravity-ide/brain/d4f61e49-c7b2-4236-bbe7-c9c16dd2f87b/insecure_legacy_desktop_graphic_1784896597265.png"
+                alt="Legacy Insecure Desktop Workstation Graphic" class="acad-stack-img" />
+            </div>
+
+            <div class="acad-center-flow-arrow">↓</div>
+
+            <div class="acad-img-box bottom-box">
+              <img
+                src="file:///C:/Users/EikoMotsu/.gemini/antigravity-ide/brain/d4f61e49-c7b2-4236-bbe7-c9c16dd2f87b/secure_protected_desktop_graphic_1784896610667.png"
+                alt="Secure Protected Desktop Workstation Graphic" class="acad-stack-img" />
+            </div>
+          </div>
+
+          <!-- Column 3: Proposed Secure Desktop System -->
+          <div class="acad-col acad-col-proposed">
+            <div class="acad-header-proposed">
+              <h3 class="acad-title-proposed">Proposed Secure Desktop System</h3>
+              <div class="acad-divider-strong"></div>
+            </div>
+
+            <div class="acad-list">
+              <div class="acad-item proposed-item">
+                <div class="acad-item-title"><span class="chk-icon">✔</span> Multi-Layer Auth</div>
+                <div class="acad-item-desc">Multi-factor security layers.</div>
+              </div>
+              <div class="acad-item proposed-item">
+                <div class="acad-item-title"><span class="chk-icon">✔</span> Continuous Monitoring</div>
+                <div class="acad-item-desc">Real-time post-login watchdog.</div>
+              </div>
+              <div class="acad-item proposed-item">
+                <div class="acad-item-title"><span class="chk-icon">✔</span> Centralized Dashboard</div>
+                <div class="acad-item-desc">Unified real-time event view.</div>
+              </div>
+              <div class="acad-item proposed-item">
+                <div class="acad-item-title"><span class="chk-icon">✔</span> Secure Event Logging</div>
+                <div class="acad-item-desc">Encrypted local audit logs.</div>
+              </div>
+              <div class="acad-item proposed-item">
+                <div class="acad-item-title"><span class="chk-icon">✔</span> 100% Local-First Privacy</div>
+                <div class="acad-item-desc">Zero cloud dependency.</div>
+              </div>
+              <div class="acad-item proposed-item">
+                <div class="acad-item-title"><span class="chk-icon">✔</span> Modular Architecture</div>
+                <div class="acad-item-desc">Built for MFA &amp; AI modules.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 6: PROJECT GOALS & OBJECTIVES
+         ========================================== -->
+    <section class="slide" data-slide-index="5">
+      <div class="slide-content flex-column"
+        style="justify-content: space-between; height: 100%; padding-bottom: 28px;">
+        <!-- Header -->
+        <div class="slide-header" style="margin-bottom: 0.6rem;">
+          <h2 class="slide-title">Project Goals &amp; Objectives</h2>
+          <p class="slide-subtitle" style="margin-top: 4px;">
+            The proposed system focuses on strengthening desktop authentication, improving security monitoring,
+            protecting user privacy, and providing a scalable security framework.
+          </p>
+        </div>
+
+        <!-- Top Section: Project Design Goals Table -->
+        <div style="width: 100%; margin-bottom: 0.6rem;">
+          <div class="design-goals-table-box">
+            <table class="design-goals-table">
+              <thead>
+                <tr>
+                  <th>Objective Area</th>
+                  <th>Project Design Goal</th>
+                  <th>Objective Area</th>
+                  <th>Project Design Goal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: 700; color: #000000;">Authentication</td>
+                  <td>Secure user authentication &amp; access verification</td>
+                  <td style="font-weight: 700; color: #000000;">Privacy</td>
+                  <td>Store sensitive data locally using local-first approach</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700; color: #000000;">Security Monitoring</td>
+                  <td>Monitor selected security-related system activities</td>
+                  <td style="font-weight: 700; color: #000000;">User Experience</td>
+                  <td>Simple and intuitive desktop dashboard</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700; color: #000000;">Event Logging</td>
+                  <td>Maintain secure local authentication &amp; audit logs</td>
+                  <td style="font-weight: 700; color: #000000;">Scalability</td>
+                  <td>Modular architecture supporting future enhancements</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Middle Section: 3 Objective Group Cards -->
+        <div class="objectives-container-3col" style="flex-grow: 1;">
+          <div class="objectives-cards-column">
+            <!-- Group 1: Authentication & Security -->
+            <div class="obj-group-card blue">
+              <div class="obj-group-title">Authentication &amp; Security</div>
+              <ul class="obj-bullet-list">
+                <li>Prevent unauthorized desktop access and credential attacks.</li>
+                <li>Provide an additional security layer beyond basic passwords.</li>
+                <li>Detect and record suspicious local authentication attempts.</li>
+              </ul>
+            </div>
+
+            <!-- Group 2: Monitoring & Privacy -->
+            <div class="obj-group-card purple">
+              <div class="obj-group-title">Monitoring &amp; Privacy</div>
+              <ul class="obj-bullet-list">
+                <li>Monitor important security-related system activities post-login.</li>
+                <li>Maintain secure, tamper-resistant local security event logs.</li>
+                <li>Follow a 100% local-first architecture to protect user privacy.</li>
+              </ul>
+            </div>
+
+            <!-- Group 3: System Design & Scalability -->
+            <div class="obj-group-card green">
+              <div class="obj-group-title">System Design &amp; Scalability</div>
+              <ul class="obj-bullet-list">
+                <li>Provide a simple, intuitive security dashboard for desktop users.</li>
+                <li>Design a modular, extensible, and scalable architecture.</li>
+                <li>Support future authentication mechanisms and security modules.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Very Bottom Section: Core Purpose Footer -->
+        <div class="obj-defense-footer" style="width: 100%; margin-top: 0.6rem;">
+          <span style="font-weight: 800; white-space: nowrap;">🛡️ Core Purpose:</span>
+          <span>Our project aims to build a secure, privacy-focused desktop authentication system combining
+            authentication, monitoring, event logging, and modular security features.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 7: SECTION 02 DIVIDER
+         ========================================== -->
+    <section class="slide section-divider-slide" data-slide-index="6">
+      <div class="slide-content slide-layout-hero" style="position: relative;">
+        <!-- Large section number watermark -->
+        <div class="section-num-watermark">02</div>
+        <div class="slide-text" style="z-index: 2; position: relative; align-items: flex-start;">
+          <h2 class="slide-title"
+            style="font-size: 3.5rem; font-weight: 800; color: #000000; font-family: Georgia, serif; margin-top: 1.2rem; line-height: 1.1;">
+            Proposed Solution &amp;<br>System Architecture</h2>
+          <div class="cover-divider" style="margin-top: 20px;"></div>
+        </div>
+        <div class="slide-visual" style="display: flex; align-items: center; justify-content: center; z-index: 2;">
+          <div class="animate-float"
+            style="width: 75%; max-width: 340px; aspect-ratio: 1; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 50px rgba(37,99,235,0.15); padding: 20px;">
+            <!-- Premium Glowing Shield Graphic -->
+            <svg viewBox="0 0 200 200" width="100%" height="100%"
+              style="filter: drop-shadow(0 10px 20px rgba(37, 99, 235, 0.25));">
+              <defs>
+                <radialGradient id="shieldGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="rgba(37, 99, 235, 0.15)" />
+                  <stop offset="100%" stop-color="rgba(37, 99, 235, 0)" />
+                </radialGradient>
+                <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3b82f6" />
+                  <stop offset="100%" stop-color="#1d4ed8" />
+                </linearGradient>
+              </defs>
+              <!-- Background Glow -->
+              <circle cx="100" cy="100" r="90" fill="url(#shieldGlow)" />
+              <!-- Hexagon grid lines -->
+              <path d="M100 25 L160 55 L160 125 L100 175 L40 125 L40 55 Z" fill="none" stroke="rgba(37, 99, 235, 0.12)"
+                stroke-width="2" />
+              <path d="M100 35 L150 62 L150 120 L100 162 L50 120 L50 62 Z" fill="none" stroke="rgba(37, 99, 235, 0.2)"
+                stroke-width="1.5" />
+              <!-- Main Shield Shape -->
+              <path
+                d="M100 45 C130 45 145 55 145 85 C145 125 100 155 100 155 C100 155 55 125 55 85 C55 55 70 45 100 45 Z"
+                fill="url(#shieldGrad)" stroke="#60a5fa" stroke-width="2.5" />
+              <!-- Inner accent -->
+              <path
+                d="M100 55 C120 55 130 63 130 85 C130 115 100 138 100 138 C100 138 70 115 70 85 C70 63 80 55 100 55 Z"
+                fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="3,3" />
+              <!-- Padlock inside shield -->
+              <rect x="90" y="88" width="20" height="16" rx="3" fill="#ffffff" />
+              <path d="M94 88 V82 C94 78 97 75 100 75 C103 75 106 78 106 82 V88" fill="none" stroke="#ffffff"
+                stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 8: LITERATURE REVIEW & COMPARISON
+         ========================================== -->
+    <section class="slide" data-slide-index="7">
+      <div class="slide-content flex-column"
+        style="justify-content: space-between; height: 100%; padding-bottom: 28px;">
+        <!-- Header with Subtitle -->
+        <div class="slide-header" style="margin-bottom: 0.5rem;">
+          <h2 class="slide-title">Comparative Analysis of Existing Authentication Solutions</h2>
+          <p style="font-size: 0.94rem; color: var(--color-text-sec); font-weight: 500; margin-top: 4px;">
+            Comparison of commonly used authentication approaches with the proposed desktop authentication and system
+            protection application.
+          </p>
+        </div>
+
+        <div class="lit-review-container">
+          <!-- Left Column: Literature Review Table -->
+          <div class="lit-table-box">
+            <table class="lit-compare-table">
+              <thead>
+                <tr>
+                  <th style="text-align: left;">Security Feature</th>
+                  <th>Password</th>
+                  <th>MFA</th>
+                  <th>Biometric</th>
+                  <th>OS Security</th>
+                  <th>Endpoint Sec</th>
+                  <th class="proposed-col-header">Proposed System</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature-label">User Authentication</td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td class="proposed-cell"><span class="status-tag yes">Yes</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-label">Additional Security Layer</td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td><span class="status-tag partial">Partial</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td class="proposed-cell"><span class="status-tag yes">Yes</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-label">Security Monitoring</td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag partial">Partial</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td class="proposed-cell"><span class="status-tag yes">Yes</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-label">Suspicious Activity Detection</td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag partial">Partial</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td class="proposed-cell"><span class="status-tag yes">Yes</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-label">Event Logging</td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag partial">Partial</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td class="proposed-cell"><span class="status-tag yes">Yes</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-label">Local-First Architecture</td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td><span class="status-tag partial">Partial</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td><span class="status-tag partial">Partial</span></td>
+                  <td class="proposed-cell"><span class="status-tag yes">Yes</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-label">Unified Dashboard</td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag partial">Partial</span></td>
+                  <td class="proposed-cell"><span class="status-tag yes">Yes</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-label">Future Scalability</td>
+                  <td><span class="status-tag no">No</span></td>
+                  <td><span class="status-tag partial">Partial</span></td>
+                  <td><span class="status-tag partial">Partial</span></td>
+                  <td><span class="status-tag partial">Partial</span></td>
+                  <td><span class="status-tag yes">Yes</span></td>
+                  <td class="proposed-cell"><span class="status-tag yes">Yes</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Right Column: Corporate Security Access Protection Graphic -->
+          <div class="roadmap-hero-card lit-hero-card">
+            <img
+              src="file:///C:/Users/EikoMotsu/.gemini/antigravity-ide/brain/d4f61e49-c7b2-4236-bbe7-c9c16dd2f87b/corporate_security_vault_graphic_1784885278609.png"
+              alt="Enterprise Access Protection Framework" />
+            <div class="roadmap-hero-badge">
+              <span style="color: #60a5fa; font-size: 1rem;">🛡️</span>
+              <span>Enterprise Access Protection Framework</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Key Observation Box -->
+        <div class="lit-observation-box">
+          <span>💡 Key Observation:</span>
+          <span>Existing authentication approaches focus primarily on user verification, whereas the proposed system
+            integrates authentication, monitoring, event logging, and privacy-focused local storage into a unified
+            desktop application.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 9: SYSTEM ARCHITECTURE
+         ========================================== -->
+    <!-- ==========================================
+         SLIDE 9: SYSTEM ARCHITECTURE (UPGRADED 5-MODULE CARDS)
+         ========================================== -->
+    <section class="slide" data-slide-index="8">
+      <div class="slide-content flex-column" style="justify-content: space-between; height: 100%;">
+        <!-- Header -->
+        <div class="slide-header" style="margin-bottom: 0.3rem;">
+          <h2 class="slide-title"
+            style="font-size: 2.1rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.2; margin-top: 0.2rem;">
+            Proposed System Architecture</h2>
+          <p style="font-size: 0.92rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 2px;">
+            A modular, local-first 5-module architecture with identity verification, real-time monitoring, threat
+            detection, and encrypted storage.
+          </p>
+        </div>
+
+        <div class="arch-5col-wrapper">
+          <!-- Module 1: Presentation Layer (GUI) (Outside Enclave) -->
+          <div class="arch-mod-card gui-mod">
+            <div class="mod-card-top">
+              <span class="mod-micro-tag dark">LOCAL</span>
+            </div>
+            <div class="mod-card-title">Presentation Layer (GUI)</div>
+            <div class="mod-card-divider"></div>
+            <div class="mod-card-items">
+              <div class="mod-item-row">Login Interface</div>
+              <div class="mod-item-row">Security Dashboard</div>
+              <div class="mod-item-row">Event Viewer</div>
+              <div class="mod-item-row">System Settings</div>
+            </div>
+            <div class="mod-card-footer">
+              <span class="mod-tech">PySide6</span> • <span class="mod-tech">Tkinter</span>
+            </div>
+          </div>
+
+          <div class="arch-arrow-connector">
+            <span class="connector-arrow">──►</span>
+            <span class="connector-label">IPC Flow</span>
+          </div>
+
+          <!-- Subtle Enclave Boundary wrapping Core Security Modules 2, 3, 4, 5 -->
+          <div class="core-security-boundary">
+            <div class="boundary-watermark-label">CORE SECURITY ENGINE</div>
+
+            <div class="core-modules-grid">
+              <!-- Module 2: Identity Verification Engine (Dominant) -->
+              <div class="arch-mod-card auth-mod dominant">
+                <div class="mod-card-top">
+                  <span class="mod-micro-tag dark">ZERO TRUST</span>
+                </div>
+                <div class="mod-card-title">Identity Verification Engine</div>
+                <div class="mod-card-divider strong"></div>
+                <div class="mod-card-items">
+                  <div class="mod-item-row">Identity Verification</div>
+                  <div class="mod-item-row">Id Hashing</div>
+                  <div class="mod-item-row">Session Validation</div>
+                  <div class="mod-item-row">Access Control Decision</div>
+                </div>
+                <div class="mod-card-footer">
+                  <span class="mod-tech">Id</span> • <span class="mod-tech">HMAC</span>
+                </div>
+              </div>
+
+              <div class="arch-arrow-connector inner">
+                <span class="connector-arrow dashed">╍╍►</span>
+                <span class="connector-label">Watchdog Trigger</span>
+              </div>
+
+              <!-- Module 3: Security Monitoring Engine -->
+              <div class="arch-mod-card monitor-mod">
+                <div class="mod-card-top">
+                  <span class="mod-micro-tag dark">REAL TIME</span>
+                </div>
+                <div class="mod-card-title">Security Monitoring Engine</div>
+                <div class="mod-card-divider"></div>
+                <div class="mod-card-items">
+                  <div class="mod-item-row">System Event Observer</div>
+                  <div class="mod-item-row">Process Activity Monitoring</div>
+                  <div class="mod-item-row">Post-Login Watchdog</div>
+                </div>
+                <div class="mod-card-footer">
+                  <span class="mod-tech">Watchdog</span> • <span class="mod-tech">psutil</span>
+                </div>
+              </div>
+
+              <div class="arch-arrow-connector inner">
+                <span class="connector-arrow">──►</span>
+                <span class="connector-label">Threat Flow</span>
+              </div>
+
+              <!-- Module 4: Security Enforcement Engine -->
+              <div class="arch-mod-card detection-mod">
+                <div class="mod-card-top">
+                  <span class="mod-micro-tag dark">EVENTS</span>
+                </div>
+                <div class="mod-card-title">Security Enforcement Engine</div>
+                <div class="mod-card-divider"></div>
+                <div class="mod-card-items">
+                  <div class="mod-item-row">Threat Detection</div>
+                  <div class="mod-item-row">Alert Generation</div>
+                  <div class="mod-item-row">Lockout Enforcement</div>
+                </div>
+                <div class="mod-card-footer">
+                  <span class="mod-tech">Win32</span> • <span class="mod-tech">Subprocess</span>
+                </div>
+              </div>
+
+              <div class="arch-arrow-connector inner">
+                <span class="connector-arrow">──►</span>
+                <span class="connector-label">Commit Flow</span>
+              </div>
+
+              <!-- Module 5: Encrypted Persistence Layer -->
+              <div class="arch-mod-card storage-mod">
+                <div class="mod-card-top">
+                  <span class="mod-micro-tag dark">ENCRYPTED</span>
+                </div>
+                <div class="mod-card-title">Encrypted Persistence Layer</div>
+                <div class="mod-card-divider"></div>
+                <div class="mod-card-items">
+                  <div class="mod-item-row">Local Security DB</div>
+                  <div class="mod-item-row">Audit Trail Records</div>
+                  <div class="mod-item-row">Tamper-Resistant Storage</div>
+                </div>
+                <div class="mod-card-footer">
+                  <span class="mod-tech">SQLite</span> • <span class="mod-tech">SQLCipher</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Line IEEE Legend Footer -->
+        <div class="arch-single-line-legend">
+          <div class="legend-pill"><span class="lg-sym">──►</span> Execution Flow</div>
+          <div class="legend-pill"><span class="lg-sym">╍╍►</span> Monitoring Flow</div>
+          <div class="legend-pill"><span class="lg-sym">[SQL]</span> Encrypted Storage</div>
+          <div class="legend-pill"><span class="lg-sym">[SEC]</span> Core Security Engine</div>
+          <div class="legend-pill bold">100% LOCAL EXECUTION</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 10: END-TO-END SECURITY EXECUTION FLOW (CONFERENCE 3-LAYER PIPELINE)
+         ========================================== -->
+    <section class="slide" data-slide-index="9">
+      <div class="slide-content flex-column" style="justify-content: space-between; height: 100%;">
+        <!-- Header with Subtitle -->
+        <div class="slide-header" style="margin-bottom: 0.2rem;">
+          <h2 class="slide-title"
+            style="font-size: 2.1rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; margin-top: 0.2rem;">
+            End-to-End Security Execution Flow</h2>
+          <p style="font-size: 0.94rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 3px;">
+            A structured 3-layer architecture guiding system execution from user input through real-time security
+            analysis to encrypted persistence.
+          </p>
+        </div>
+
+        <div class="conf-pipeline-container">
+
+          <!-- BAND 1: INPUT & AUTHENTICATION LAYER -->
+          <div class="pipeline-band band-input">
+            <div class="band-header">
+              <span class="band-title">INPUT &amp; AUTHENTICATION LAYER</span>
+              <span class="band-tag">LAYER 01</span>
+            </div>
+
+            <div class="band-cards-wrapper">
+              <!-- Step 1: Initialize -->
+              <div class="pipeline-card" style="border-top: 4px solid #3b82f6;">
+                <div class="card-step-header">
+                  <span class="step-badge">STEP 01</span>
+                  <span class="step-pill">INPUT</span>
+                </div>
+                <div class="card-headline">Initialize</div>
+                <ul class="card-bullet-points">
+                  <li>Load security modules</li>
+                  <li>Create local session</li>
+                </ul>
+                <div class="card-tech-footer">[ System Init ]</div>
+              </div>
+
+              <div class="pipeline-arrow-next">➔</div>
+
+              <!-- Step 2: Authenticate -->
+              <div class="pipeline-card" style="border-top: 4px solid #2563eb;">
+                <div class="card-step-header">
+                  <span class="step-badge">STEP 02</span>
+                  <span class="step-pill">VERIFY</span>
+                </div>
+                <div class="card-headline">Authenticate</div>
+                <ul class="card-bullet-points">
+                  <li>Prompt user login</li>
+                  <li>Id hashing</li>
+                </ul>
+                <div class="card-tech-footer">[ Id ]</div>
+              </div>
+
+              <div class="pipeline-arrow-next">➔</div>
+
+              <!-- Step 3: Verify -->
+              <div class="pipeline-card dominant" style="border-top: 4px solid #059669;">
+                <div class="card-step-header">
+                  <span class="step-badge">STEP 03</span>
+                  <span class="step-pill dark">DECIDE</span>
+                </div>
+                <div class="card-headline">Verification</div>
+                <ul class="card-bullet-points">
+                  <li>Compare hash state</li>
+                  <li>Grant / Deny decision</li>
+                </ul>
+                <div class="card-tech-footer">[ Access Control ]</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vertical Down Connector between Layer 1 & Layer 2 -->
+          <div class="pipeline-inter-band-connector">
+            <span class="connector-line"></span>
+            <span class="connector-down-arrow">▼ EXECUTION PASS &amp; POST-LOGIN HANDOFF ▼</span>
+            <span class="connector-line"></span>
+          </div>
+
+          <!-- BAND 2: SECURITY ENGINE LAYER -->
+          <div class="pipeline-band band-engine">
+            <div class="band-header">
+              <span class="band-title">CORE SECURITY ENGINE</span>
+              <span class="band-tag dark">LAYER 02</span>
+            </div>
+
+            <div class="band-cards-wrapper">
+              <!-- Step 4: Monitor -->
+              <div class="pipeline-card dominant" style="border-top: 4px solid #10b981;">
+                <div class="card-step-header">
+                  <span class="step-badge">STEP 04</span>
+                  <span class="step-pill">MONITOR</span>
+                </div>
+                <div class="card-headline">Security Monitoring</div>
+                <ul class="card-bullet-points">
+                  <li>Watchdog Observer</li>
+                  <li>Track process events</li>
+                </ul>
+                <div class="card-tech-footer">[ Watchdog ]</div>
+              </div>
+
+              <div class="pipeline-arrow-next">➔</div>
+
+              <!-- Step 5: Detect -->
+              <div class="pipeline-card dominant" style="border-top: 4px solid #f59e0b;">
+                <div class="card-step-header">
+                  <span class="step-badge">STEP 05</span>
+                  <span class="step-pill">DETECT</span>
+                </div>
+                <div class="card-headline">Threat Detection</div>
+                <ul class="card-bullet-points">
+                  <li>Win32 Rule Engine</li>
+                  <li>Anomaly detection</li>
+                </ul>
+                <div class="card-tech-footer">[ Win32 Observer ]</div>
+              </div>
+
+              <div class="pipeline-arrow-next">➔</div>
+
+              <!-- Step 6: Respond -->
+              <div class="pipeline-card" style="border-top: 4px solid #e11d48;">
+                <div class="card-step-header">
+                  <span class="step-badge">STEP 06</span>
+                  <span class="step-pill">RESPOND</span>
+                </div>
+                <div class="card-headline">Security Response</div>
+                <ul class="card-bullet-points">
+                  <li>Trigger session lock</li>
+                  <li>Alert user / system</li>
+                </ul>
+                <div class="card-tech-footer">[ Lockout ]</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vertical Down Connector between Layer 2 & Layer 3 -->
+          <div class="pipeline-inter-band-connector">
+            <span class="connector-line"></span>
+            <span class="connector-down-arrow">▼ AUDIT COMMIT &amp; ENCRYPTED PERSISTENCE ▼</span>
+            <span class="connector-line"></span>
+          </div>
+
+          <!-- BAND 3: DATA & PERSISTENCE LAYER -->
+          <div class="pipeline-band band-persistence">
+            <div class="band-header">
+              <span class="band-title">DATA &amp; PERSISTENCE LAYER</span>
+              <span class="band-tag">LAYER 03</span>
+            </div>
+
+            <div class="band-cards-wrapper single-full">
+              <!-- Step 7: Encrypted Logging -->
+              <div class="pipeline-card full-width" style="border-top: 4px solid #64748b;">
+                <div class="card-step-header">
+                  <span class="step-badge">STEP 07</span>
+                  <span class="step-pill">STORE</span>
+                </div>
+                <div class="card-headline">Encrypted Audit Logging</div>
+                <ul class="card-bullet-points horizontal">
+                  <li>• Commit auth attempts &amp; session logs</li>
+                  <li>• SQLCipher 256-bit AES encryption</li>
+                  <li>• Local tamper-resistant audit storage</li>
+                </ul>
+                <div class="card-tech-footer">[ SQLCipher Database ]</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- IEEE Conference 1-Line Legend Footer -->
+        <div class="pipeline-single-line-legend">
+          <div class="legend-pill"><span class="lg-sym">INPUT LAYER</span> Initialization ➔ Auth ➔ Verification</div>
+          <div class="legend-pill"><span class="lg-sym">SECURITY ENGINE</span> Watchdog ➔ Detection ➔ Lockout Response
+          </div>
+          <div class="legend-pill"><span class="lg-sym">DATA LAYER</span> Encrypted SQLCipher Storage</div>
+          <div class="legend-pill bold">IEEE WIDESCREEN PIPELINE</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 11: LOCAL DATA STORAGE ARCHITECTURE (IEEE RICH ARCHITECTURE)
+         ========================================== -->
+    <section class="slide" data-slide-index="10">
+      <div class="slide-content flex-column" style="justify-content: space-between; height: 100%;">
+        <!-- Header with Subtitle -->
+        <div class="slide-header" style="margin-bottom: 0.3rem;">
+          <h2 class="slide-title"
+            style="font-size: 2.1rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; margin-top: 0.2rem;">
+            Local Data Storage Architecture</h2>
+          <p style="font-size: 0.94rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 3px;">
+            A local-first, zero-cloud data management schema organizing user records, authentication state, real-time
+            events, and encrypted audit trails.
+          </p>
+        </div>
+
+        <div class="ds-container-3col"
+          style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <!-- 5 Logical Database Design Modules Grid -->
+          <div class="ds-modules-grid">
+            <!-- Module 1: User Records -->
+            <div class="ds-module-card" style="border: 2px solid #000000; border-top: 4px solid #3b82f6;">
+              <div class="ds-card-top">
+                <span class="ds-step-num">MODULE 01</span>
+                <span class="ds-pill-tag">ENCLAVE</span>
+              </div>
+              <div class="ds-module-header">User Records</div>
+              <ul class="ds-module-list">
+                <li>User Unique Hash ID &amp; Profile Metadata</li>
+                <li>Id Salted Credential Hashes</li>
+                <li>Encrypted User Settings &amp; Roles</li>
+                <li>Session Access &amp; Expiry Tokens</li>
+              </ul>
+              <div class="ds-tech-footer">[ SQLite / AES-256 ]</div>
+            </div>
+
+            <!-- Module 2: Authentication Records -->
+            <div class="ds-module-card" style="border: 2px solid #000000; border-top: 4px solid #2563eb;">
+              <div class="ds-card-top">
+                <span class="ds-step-num">MODULE 02</span>
+                <span class="ds-pill-tag">AUTH STATE</span>
+              </div>
+              <div class="ds-module-header">Authentication Records</div>
+              <ul class="ds-module-list">
+                <li>Timestamped Login Attempt History</li>
+                <li>Authentication Status &amp; Decision Logs</li>
+                <li>Failed Attempt Lockout Counter</li>
+                <li>Environment &amp; Session State Hashes</li>
+              </ul>
+              <div class="ds-tech-footer">[ Id / HMAC ]</div>
+            </div>
+
+            <!-- Module 3: Security Event Logs -->
+            <div class="ds-module-card" style="border: 2px solid #000000; border-top: 4px solid #10b981;">
+              <div class="ds-card-top">
+                <span class="ds-step-num">MODULE 03</span>
+                <span class="ds-pill-tag">OBSERVER</span>
+              </div>
+              <div class="ds-module-header">Security Event Logs</div>
+              <ul class="ds-module-list">
+                <li>Real-Time Watchdog Observer Alerts</li>
+                <li>Suspicious Process Activity Triggers</li>
+                <li>Win32 Lockout &amp; Defense Events</li>
+                <li>System Anomaly Security Warnings</li>
+              </ul>
+              <div class="ds-tech-footer">[ Watchdog / Win32 ]</div>
+            </div>
+
+            <!-- Module 4: Application Settings -->
+            <div class="ds-module-card" style="border: 2px solid #000000; border-top: 4px solid #f59e0b;">
+              <div class="ds-card-top">
+                <span class="ds-step-num">MODULE 04</span>
+                <span class="ds-pill-tag">CONFIG</span>
+              </div>
+              <div class="ds-module-header">Application Settings</div>
+              <ul class="ds-module-list">
+                <li>Local Security Policy Configuration</li>
+                <li>Failed Login Lockout Delay Rules</li>
+                <li>Watchdog Scan Interval &amp; Thresholds</li>
+                <li>GUI Interface &amp; Key File Paths</li>
+              </ul>
+              <div class="ds-tech-footer">[ Local JSON / Policy ]</div>
+            </div>
+
+            <!-- Module 5: Audit Logs & Tamper-Resistant Storage -->
+            <div class="ds-module-card wide-card"
+              style="border: 2px solid #000000; border-top: 4px solid #64748b; grid-column: span 2;">
+              <div class="ds-card-top">
+                <span class="ds-step-num">MODULE 05</span>
+                <span class="ds-pill-tag dark">TAMPER-PROOF AUDIT</span>
+              </div>
+              <div class="ds-module-header">Audit Logs &amp; Encrypted Persistence</div>
+              <div class="ds-audit-two-col">
+                <ul class="ds-module-list">
+                  <li>Cryptographically Signed Event Chain</li>
+                  <li>Tamper-Evident SHA-256 Audit Hashes</li>
+                  <li>Immutable Forensic Auth History</li>
+                </ul>
+                <ul class="ds-module-list">
+                  <li>SQLCipher 256-bit AES Local Database</li>
+                  <li>Zero-Knowledge Verification</li>
+                  <li>System Integrity Backup Manifest</li>
+                </ul>
+              </div>
+              <div class="ds-tech-footer">[ SQLCipher 256-bit AES ]</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Data Flow Pipeline Bar -->
+        <div class="ds-single-line-legend">
+          <div class="legend-pill"><span class="lg-sym">PIPELINE</span> User Login ➔ Credentials Verification ➔ Event
+            Monitoring ➔ Local Database ➔ Dashboard</div>
+          <div class="legend-pill bold">100% LOCAL-FIRST ENCLAVE</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 12: SECTION 03 DIVIDER
+         ========================================== -->
+    <section class="slide section-divider-slide" data-slide-index="11">
+      <div class="slide-content slide-layout-hero" style="position: relative;">
+        <!-- Large section number watermark -->
+        <div class="section-num-watermark">03</div>
+        <div class="slide-text" style="z-index: 2; position: relative; align-items: flex-start;">
+          <h2 class="slide-title"
+            style="font-size: 3.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; margin-top: 1.2rem; line-height: 1.1;">
+            Workflow, Technology<br>Stack &amp; Core Features</h2>
+          <div class="cover-divider" style="margin-top: 20px;"></div>
+        </div>
+        <div class="slide-visual" style="display: flex; align-items: center; justify-content: center; z-index: 2;">
+          <div class="animate-float"
+            style="width: 75%; max-width: 340px; aspect-ratio: 1; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 50px rgba(37,99,235,0.15); padding: 20px;">
+            <!-- Premium Glowing Settings/Gear Graphic -->
+            <svg viewBox="0 0 200 200" width="100%" height="100%"
+              style="filter: drop-shadow(0 10px 20px rgba(124, 58, 237, 0.25));">
+              <defs>
+                <radialGradient id="gearGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="rgba(124, 58, 237, 0.15)" />
+                  <stop offset="100%" stop-color="rgba(124, 58, 237, 0)" />
+                </radialGradient>
+                <linearGradient id="gearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8b5cf6" />
+                  <stop offset="100%" stop-color="#6d28d9" />
+                </linearGradient>
+              </defs>
+              <!-- Background Glow -->
+              <circle cx="100" cy="100" r="90" fill="url(#gearGlow)" />
+              <!-- Central Gear Geometry -->
+              <g transform="translate(100, 100)">
+                <g fill="url(#gearGrad)" stroke="#a78bfa" stroke-width="2">
+                  <rect x="-12" y="-45" width="24" height="90" rx="4" />
+                  <rect x="-12" y="-45" width="24" height="90" rx="4" transform="rotate(45)" />
+                  <rect x="-12" y="-45" width="24" height="90" rx="4" transform="rotate(90)" />
+                  <rect x="-12" y="-45" width="24" height="90" rx="4" transform="rotate(135)" />
+                  <circle cx="0" cy="0" r="36" />
+                </g>
+                <circle cx="0" cy="0" r="16" fill="#ffffff" />
+                <circle cx="0" cy="0" r="6" fill="#8b5cf6" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 13: END-TO-END AUTHENTICATION PROCESS
+         ========================================== -->
+    <section class="slide" data-slide-index="12">
+      <div class="slide-content flex-column" style="justify-content: space-between; height: 100%;">
+        <!-- Header with Subtitle -->
+        <div class="slide-header" style="margin-bottom: 0.2rem;">
+          <h2 class="slide-title"
+            style="font-size: 2.1rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; margin-top: 0.2rem;">
+            End-to-End Authentication Process</h2>
+          <p style="font-size: 0.94rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 3px;">
+            A structured execution flow moving from system startup through user authentication and active monitoring to
+            secure audit storage.
+          </p>
+        </div>
+
+        <div class="e2e-4phase-container">
+
+          <!-- SECTION 1: SYSTEM START -->
+          <div class="e2e-phase-band">
+            <div class="phase-band-header">
+              <span class="phase-band-title">SYSTEM START</span>
+              <span class="phase-band-tag">SECTION 01</span>
+            </div>
+
+            <div class="phase-cards-row single-full">
+              <div class="e2e-card full-width" style="border: 2px solid #000000;">
+                <div class="e2e-card-top">
+                  <span class="e2e-step-badge">STEP 01</span>
+                  <span class="e2e-tech-tag">[ System Init ]</span>
+                </div>
+                <div class="e2e-card-headline">Application Initialization</div>
+                <ul class="e2e-bullet-inline">
+                  <li>• Load modules</li>
+                  <li>• Read configuration</li>
+                  <li>• Start services</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flow Down Arrow -->
+          <div class="phase-inter-connector">↓ HANDOFF TO USER AUTHENTICATION ↓</div>
+
+          <!-- SECTION 2: USER AUTHENTICATION -->
+          <div class="e2e-phase-band highlight">
+            <div class="phase-band-header">
+              <span class="phase-band-title">USER AUTHENTICATION</span>
+              <span class="phase-band-tag dark">SECTION 02</span>
+            </div>
+
+            <div class="phase-cards-row">
+              <div class="e2e-card" style="border: 2px solid #000000;">
+                <div class="e2e-card-top">
+                  <span class="e2e-step-badge">STEP 02.1</span>
+                  <span class="e2e-tech-tag">[ Login UI ]</span>
+                </div>
+                <div class="e2e-card-headline">User Login</div>
+                <div class="e2e-card-desc">Prompt user identity credentials and initial login request.</div>
+              </div>
+
+              <div class="phase-flow-arrow">➔</div>
+
+              <div class="e2e-card dominant" style="border: 2.5px solid #000000;">
+                <div class="e2e-card-top">
+                  <span class="e2e-step-badge">STEP 02.2</span>
+                  <span class="e2e-tech-tag dark">[ Id ]</span>
+                </div>
+                <div class="e2e-card-headline">Id Verification</div>
+                <div class="e2e-card-desc">Compute salted password hash and verify against enclave.</div>
+              </div>
+
+              <div class="phase-flow-arrow">➔</div>
+
+              <div class="e2e-card dominant" style="border: 2.5px solid #000000;">
+                <div class="e2e-card-top">
+                  <span class="e2e-step-badge">STEP 02.3</span>
+                  <span class="e2e-tech-tag dark">[ Access Control ]</span>
+                </div>
+                <div class="e2e-card-headline">Access Decision</div>
+                <div class="e2e-card-desc">Determine session authorization (Grant Session / Lockout).</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flow Down Arrow -->
+          <div class="phase-inter-connector">↓ HANDOFF TO ACTIVE SECURITY ENGINE ↓</div>
+
+          <!-- SECTION 3: ACTIVE SECURITY -->
+          <div class="e2e-phase-band">
+            <div class="phase-band-header">
+              <span class="phase-band-title">ACTIVE SECURITY</span>
+              <span class="phase-band-tag">SECTION 03</span>
+            </div>
+
+            <div class="phase-cards-row">
+              <div class="e2e-card" style="border: 2px solid #000000;">
+                <div class="e2e-card-top">
+                  <span class="e2e-step-badge">STEP 03.1</span>
+                  <span class="e2e-tech-tag">[ Watchdog ]</span>
+                </div>
+                <div class="e2e-card-headline">Security Monitoring</div>
+                <div class="e2e-card-desc">Observe post-login runtime process activity and events.</div>
+              </div>
+
+              <div class="phase-flow-arrow">➔</div>
+
+              <div class="e2e-card dominant" style="border: 2.5px solid #000000;">
+                <div class="e2e-card-top">
+                  <span class="e2e-step-badge">STEP 03.2</span>
+                  <span class="e2e-tech-tag dark">[ Rule Engine ]</span>
+                </div>
+                <div class="e2e-card-headline">Threat Detection</div>
+                <div class="e2e-card-desc">Identify suspicious process execution and anomalies.</div>
+              </div>
+
+              <div class="phase-flow-arrow">➔</div>
+
+              <div class="e2e-card dominant" style="border: 2.5px solid #000000;">
+                <div class="e2e-card-top">
+                  <span class="e2e-step-badge">STEP 03.3</span>
+                  <span class="e2e-tech-tag dark">[ Lockout Engine ]</span>
+                </div>
+                <div class="e2e-card-headline">Security Response</div>
+                <div class="e2e-card-desc">Generate real-time alerts and trigger defensive lockout.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flow Down Arrow -->
+          <div class="phase-inter-connector">↓ HANDOFF TO SECURE AUDIT PERSISTENCE ↓</div>
+
+          <!-- SECTION 4: SECURE STORAGE -->
+          <div class="e2e-phase-band">
+            <div class="phase-band-header">
+              <span class="phase-band-title">SECURE STORAGE</span>
+              <span class="phase-band-tag">SECTION 04</span>
+            </div>
+
+            <div class="phase-cards-row single-full">
+              <div class="e2e-card full-width" style="border: 2px solid #000000;">
+                <div class="e2e-card-top">
+                  <span class="e2e-step-badge">STEP 04.1</span>
+                  <span class="e2e-tech-tag">[ SQLCipher 256-bit AES ]</span>
+                </div>
+                <div class="e2e-card-headline">SQLCipher Audit Logs</div>
+                <div class="e2e-card-desc">Store encrypted event history and tamper-resistant audit logs in local
+                  database.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Lightweight Centered Footer -->
+        <div class="e2e-compact-footer">
+          System Start ➔ User Authentication ➔ Active Security ➔ Encrypted Storage
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 14: PROPOSED TECHNOLOGY STACK (ARCHITECTURE LAYERS)
+         ========================================== -->
+    <section class="slide" data-slide-index="13">
+      <div class="slide-content flex-column" style="justify-content: space-between; height: 100%;">
+        <!-- Header with Subtitle -->
+        <div class="slide-header" style="margin-bottom: 0.2rem;">
+          <h2 class="slide-title" style="font-size: 2.1rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; margin-top: 0.2rem;">Proposed Technology Stack</h2>
+          <p style="font-size: 0.94rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 3px;">
+            A multi-layered, cross-platform architecture combining a modern React frontend, lightweight Tauri runtime, and Python security engine.
+          </p>
+        </div>
+
+        <div class="ts-arch-container">
+          <!-- 8 Architecture Layer Cards (4x2 Grid) -->
+          <div class="ts-arch-grid">
+            
+            <!-- Layer 1: Frontend -->
+            <div class="ts-layer-card">
+              <div class="ts-card-header-row">
+                <span class="ts-layer-title">Frontend Layer</span>
+                <span class="ts-layer-pill">[ UI ]</span>
+              </div>
+              <div class="ts-tech-names">React • TypeScript • Tailwind CSS</div>
+              <div class="ts-card-purpose"><strong>Purpose:</strong> Serves as the primary desktop GUI framework, providing a modern, type-safe, component-driven user interface and security dashboard.</div>
+            </div>
+
+            <!-- Layer 2: Desktop Runtime -->
+            <div class="ts-layer-card">
+              <div class="ts-card-header-row">
+                <span class="ts-layer-title">Desktop Runtime</span>
+                <span class="ts-layer-pill">[ RUNTIME ]</span>
+              </div>
+              <div class="ts-tech-names">Tauri</div>
+              <div class="ts-card-purpose"><strong>Purpose:</strong> Encapsulates the application into a lightweight, secure desktop container with low memory footprint (~30MB RAM) &amp; native OS controls.</div>
+            </div>
+
+            <!-- Layer 3: Core Backend & AI -->
+            <div class="ts-layer-card">
+              <div class="ts-card-header-row">
+                <span class="ts-layer-title">Core Backend &amp; AI</span>
+                <span class="ts-layer-pill">[ BACKEND ]</span>
+              </div>
+              <div class="ts-tech-names">Python • scikit-learn</div>
+              <div class="ts-card-purpose"><strong>Purpose:</strong> Powers core application logic, security evaluation algorithms, and behavioral machine learning anomaly classification models.</div>
+            </div>
+
+            <!-- Layer 4: System Monitoring -->
+            <div class="ts-layer-card">
+              <div class="ts-card-header-row">
+                <span class="ts-layer-title">System Monitoring</span>
+                <span class="ts-layer-pill">[ TELEMETRY ]</span>
+              </div>
+              <div class="ts-tech-names">psutil • pynput</div>
+              <div class="ts-card-purpose"><strong>Purpose:</strong> Executes real-time system process telemetry observation, non-human input monitoring, and suspicious background task tracking.</div>
+            </div>
+
+            <!-- Layer 5: Security Layer -->
+            <div class="ts-layer-card">
+              <div class="ts-card-header-row">
+                <span class="ts-layer-title">Security Layer</span>
+                <span class="ts-layer-pill">[ SECURITY ]</span>
+              </div>
+              <div class="ts-tech-names">Argon2id • cryptography</div>
+              <div class="ts-card-purpose"><strong>Purpose:</strong> Enforces memory-hard password hashing, key derivation routines, and AES-256 GCM authenticated encryption for credential defense.</div>
+            </div>
+
+            <!-- Layer 6: Data Layer -->
+            <div class="ts-layer-card">
+              <div class="ts-card-header-row">
+                <span class="ts-layer-title">Data Layer</span>
+                <span class="ts-layer-pill">[ STORAGE ]</span>
+              </div>
+              <div class="ts-tech-names">SQLite • SQLAlchemy</div>
+              <div class="ts-card-purpose"><strong>Purpose:</strong> Delivers encrypted local-first database persistence, ORM schema abstraction, and tamper-resistant security event audit logging.</div>
+            </div>
+
+            <!-- Layer 7: Communication Layer -->
+            <div class="ts-layer-card">
+              <div class="ts-card-header-row">
+                <span class="ts-layer-title">Communication Layer</span>
+                <span class="ts-layer-pill">[ IPC ]</span>
+              </div>
+              <div class="ts-tech-names">Tauri IPC • Python Sidecar</div>
+              <div class="ts-card-purpose"><strong>Purpose:</strong> Enables asynchronous inter-process communication between the frontend React UI and the isolated Python security sidecar process.</div>
+            </div>
+
+            <!-- Layer 8: Development & Testing -->
+            <div class="ts-layer-card">
+              <div class="ts-layer-card">
+              <div class="ts-card-header-row">
+                <span class="ts-layer-title">Dev &amp; Testing</span>
+                <span class="ts-layer-pill">[ TESTING ]</span>
+              </div>
+              <div class="ts-tech-names">Git • GitHub • Vitest • Pytest</div>
+              <div class="ts-card-purpose"><strong>Purpose:</strong> Provides version control repository management, continuous integration workflows, and comprehensive automated test suites.</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Architecture Summary Bar -->
+        <div class="ts-summary-footer">
+          Frontend: React + TS ➔ Runtime: Tauri ➔ Engine: Python + scikit-learn ➔ Security: Argon2id + AES ➔ Persistence: SQLite
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 15: SECURITY MONITORING MODULE (IEEE RICH ARCHITECTURE)
+         ========================================== -->
+    <section class="slide" data-slide-index="14">
+      <div class="slide-content flex-column" style="justify-content: space-between; height: 100%;">
+        <!-- Header with Subtitle -->
+        <div class="slide-header" style="margin-bottom: 0.2rem;">
+          <h2 class="slide-title" style="font-size: 2.1rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; margin-top: 0.2rem;">Security Monitoring &amp; Event Logging</h2>
+          <p style="font-size: 0.94rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 3px;">
+            The Security Monitoring Module continuously observes system security events, identifies suspicious process activity, and logs audit data.
+          </p>
+        </div>
+
+        <div class="sm-container-3col" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <!-- 2-Column Grid: Monitoring Functions & Security Actions -->
+          <div class="sm-cards-grid">
+            
+            <!-- Card 1: Monitoring Functions -->
+            <div class="sm-card">
+              <div class="sm-card-header-row">
+                <span class="sm-card-title">Monitoring Functions</span>
+                <span class="sm-card-tag">[ TELEMETRY OBSERVER ]</span>
+              </div>
+              <div class="sm-feature-list">
+                <div class="sm-feature-item">
+                  <div class="sm-item-name">1. Authentication Monitoring</div>
+                  <div class="sm-item-desc">Tracks real-time login attempts, passcode validations, session tokens, and failure threshold counts across user sessions.</div>
+                </div>
+                <div class="sm-feature-item">
+                  <div class="sm-item-name">2. System Activity Observation</div>
+                  <div class="sm-item-desc">Observes post-login system execution, process spawns, system resource bounds, and rapid non-human input patterns.</div>
+                </div>
+                <div class="sm-feature-item">
+                  <div class="sm-item-name">3. Security Event Telemetry</div>
+                  <div class="sm-item-desc">Captures cross-module identity state transitions, privilege escalation attempts, and system file access boundaries.</div>
+                </div>
+                <div class="sm-feature-item">
+                  <div class="sm-item-name">4. Suspicious Activity Detection</div>
+                  <div class="sm-item-desc">Identifies repeated authentication failures, brute-force patterns, and computes dynamic threat severity risk scores.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Security & Defensive Actions -->
+            <div class="sm-card">
+              <div class="sm-card-header-row">
+                <span class="sm-card-title">Security &amp; Defensive Actions</span>
+                <span class="sm-card-tag">[ RESPONSE &amp; AUDIT ]</span>
+              </div>
+              <div class="sm-feature-list">
+                <div class="sm-feature-item">
+                  <div class="sm-item-name">1. Real-Time Alert Generation</div>
+                  <div class="sm-item-desc">Triggers immediate desktop pop-up visual warnings and dispatches real-time security alerts to the administrator console.</div>
+                </div>
+                <div class="sm-feature-item">
+                  <div class="sm-item-name">2. Encrypted Event Persistence</div>
+                  <div class="sm-item-desc">Stores authentication logs, telemetry records, and security events into a local 256-bit AES encrypted SQLCipher database.</div>
+                </div>
+                <div class="sm-feature-item">
+                  <div class="sm-item-name">3. Live Dashboard Updates</div>
+                  <div class="sm-item-desc">Streams live security telemetry data, active threat risk indicators, and event volume metrics directly to the administrator GUI.</div>
+                </div>
+                <div class="sm-feature-item">
+                  <div class="sm-item-name">4. Tamper-Resistant Audit Trail</div>
+                  <div class="sm-item-desc">Signs event log entries with SHA-256 tamper-evident hashes to maintain an immutable forensic audit trail history.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Key Function Footer Bar -->
+        <div class="sm-summary-footer">
+          <span style="font-weight: 800; font-family: Georgia, serif;">SECURITY PIPELINE:</span> Monitor System Events ➔ Detect Suspicious Activity ➔ Trigger Defensive Response ➔ Commit Local Audit Trail ➔ Live Dashboard
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 16: SECURE USER AUTHENTICATION (IEEE 3-COLUMN ARCHITECTURE)
+         ========================================== -->
+    <section class="slide" data-slide-index="15">
+      <div class="slide-content flex-column" style="justify-content: space-between; height: 100%;">
+        <!-- Header with Subtitle -->
+        <div class="slide-header" style="margin-bottom: 0.2rem;">
+          <h2 class="slide-title" style="font-size: 2.1rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; margin-top: 0.2rem;">Secure User Authentication</h2>
+          <p style="font-size: 0.94rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 3px;">
+            The Authentication Module verifies user identity, controls system access, and provides a secure interface for authorized users.
+          </p>
+        </div>
+
+        <div class="am-container-3col" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <!-- 3-Column Grid Layout -->
+          <div class="am-cards-grid">
+            
+            <!-- Column 1: User Authentication Pipeline -->
+            <div class="am-card">
+              <div class="am-card-header-row">
+                <span class="am-card-title">User Authentication</span>
+                <span class="am-card-tag">[ AUTH PIPELINE ]</span>
+              </div>
+              <div class="am-feature-list">
+                <div class="am-feature-item">
+                  <div class="am-item-name">1. Credential Ingestion</div>
+                  <div class="am-item-desc">Collects user credentials, sanitizes input parameters, and enforces rate-limiting policies to prevent brute-force attacks.</div>
+                </div>
+                <div class="am-feature-item">
+                  <div class="am-item-name">2. Identity Verification</div>
+                  <div class="am-item-desc">Computes memory-hard Argon2id key derivation and performs constant-time hash comparison against local salt records.</div>
+                </div>
+                <div class="am-feature-item">
+                  <div class="am-item-name">3. Request Processing</div>
+                  <div class="am-item-desc">Validates authentication payloads, verifies environment security posture, and executes secure IPC sidecar handoff.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2: Access Decision Engine -->
+            <div class="am-card">
+              <div class="am-card-header-row">
+                <span class="am-card-title">Access Decision Engine</span>
+                <span class="am-card-tag">[ ACCESS CONTROL ]</span>
+              </div>
+              <div class="am-feature-list">
+                <div class="am-feature-item">
+                  <div class="am-item-name">1. Valid Credential Action</div>
+                  <div class="am-item-desc">Unlocks session state, authorizes encrypted database access, and broadcasts success events to the desktop UI.</div>
+                </div>
+                <div class="am-feature-item">
+                  <div class="am-item-name">2. Invalid Credential Action</div>
+                  <div class="am-item-desc">Rejects unauthorized access attempts, increments lockout counters, and triggers visual security warnings.</div>
+                </div>
+                <div class="am-feature-item">
+                  <div class="am-item-name">3. Audit Log Commit</div>
+                  <div class="am-item-desc">Writes timestamped authentication records and SHA-256 HMAC cryptographic signatures to SQLCipher audit storage.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3: Interface & Guided Flow -->
+            <div class="am-card">
+              <div class="am-card-header-row">
+                <span class="am-card-title">Interface &amp; Guided Flow</span>
+                <span class="am-card-tag">[ USER INTERFACE ]</span>
+              </div>
+              <div class="am-feature-list">
+                <div class="am-feature-item">
+                  <div class="am-item-name">1. Desktop Login UI</div>
+                  <div class="am-item-desc">Renders a modern responsive desktop login window with full keyboard accessibility and masked password input fields.</div>
+                </div>
+                <div class="am-feature-item">
+                  <div class="am-item-name">2. Real-Time Feedback</div>
+                  <div class="am-item-desc">Displays live validation progress spinners, non-revealing error messages, and active lockout countdown timers.</div>
+                </div>
+                <div class="am-feature-item">
+                  <div class="am-item-name">3. Guided User Flow</div>
+                  <div class="am-item-desc">Directs users step-by-step through authentication, enrollment setup, master key creation, and session resets.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Summary Footer Bar -->
+        <div class="am-summary-footer">
+          <span style="font-weight: 800; font-family: Georgia, serif;">AUTHENTICATION PIPELINE:</span> Credential Ingestion ➔ Argon2id Hash Verification ➔ Access Control Decision ➔ SQLCipher Audit Commit ➔ Dashboard Access
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 17: EXPECTED SECURITY OUTCOMES (IEEE ARCHITECTURE)
+         ========================================== -->
+    <section class="slide" data-slide-index="16">
+      <div class="slide-content flex-column" style="justify-content: space-between; height: 100%;">
+        <!-- Header with Subtitle -->
+        <div class="slide-header" style="margin-bottom: 0.2rem;">
+          <h2 class="slide-title" style="font-size: 2.1rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; margin-top: 0.2rem;">Expected Security Outcomes</h2>
+          <p style="font-size: 0.94rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 3px;">
+            The proposed system is designed to improve desktop security through authentication, monitoring, event logging, and a privacy-focused local-first architecture.
+          </p>
+        </div>
+
+        <div class="eo-container-3col" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <!-- 3-Column Grid Layout -->
+          <div class="eo-cards-grid">
+            
+            <!-- Card 1: Improved Authentication -->
+            <div class="eo-card">
+              <div class="eo-card-header-row">
+                <span class="eo-card-title">Improved Authentication</span>
+                <span class="eo-card-tag">[ AUTH ]</span>
+              </div>
+              <div class="eo-feature-list">
+                <div class="eo-feature-item">
+                  <div class="eo-item-name">Access Control</div>
+                  <div class="eo-item-desc">Enforces strict user authentication rules and active session locks to prevent unauthorized desktop access and session hijacking.</div>
+                </div>
+                <div class="eo-feature-item">
+                  <div class="eo-item-name">Identity Verification</div>
+                  <div class="eo-item-desc">Verifies user identity credentials via memory-hard Argon2id key derivation before granting access to desktop resources.</div>
+                </div>
+                <div class="eo-feature-item">
+                  <div class="eo-item-name">Auth Attempt Log</div>
+                  <div class="eo-item-desc">Records all successful and failed authentication attempts with precise timestamps and failure counters for security analysis.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Security Monitoring -->
+            <div class="eo-card">
+              <div class="eo-card-header-row">
+                <span class="eo-card-title">Security Monitoring</span>
+                <span class="eo-card-tag">[ MONITOR ]</span>
+              </div>
+              <div class="eo-feature-list">
+                <div class="eo-feature-item">
+                  <div class="eo-item-name">System Observation</div>
+                  <div class="eo-item-desc">Continuously monitors selected security-critical system activities, active background processes, and user session telemetry.</div>
+                </div>
+                <div class="eo-feature-item">
+                  <div class="eo-item-name">Behavior Detection</div>
+                  <div class="eo-item-desc">Detects anomalous authentication patterns, rapid input sequences, and unauthorized background process execution.</div>
+                </div>
+                <div class="eo-feature-item">
+                  <div class="eo-item-name">Alert Generation</div>
+                  <div class="eo-item-desc">Generates real-time desktop visual warnings and administrative notifications upon identifying suspicious security events.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Event Logging & Privacy -->
+            <div class="eo-card">
+              <div class="eo-card-header-row">
+                <span class="eo-card-title">Event Logging &amp; Privacy</span>
+                <span class="eo-card-tag">[ AUDIT ]</span>
+              </div>
+              <div class="eo-feature-list">
+                <div class="eo-feature-item">
+                  <div class="eo-item-name">History Maintenance</div>
+                  <div class="eo-item-desc">Maintains comprehensive authentication history, telemetry events, and system state logs for complete operational visibility.</div>
+                </div>
+                <div class="eo-feature-item">
+                  <div class="eo-item-name">Local Storage</div>
+                  <div class="eo-item-desc">Stores all security logs locally in a 256-bit AES encrypted SQLCipher database to ensure 100% user data privacy.</div>
+                </div>
+                <div class="eo-feature-item">
+                  <div class="eo-item-name">Audit Support</div>
+                  <div class="eo-item-desc">Provides cryptographically signed SHA-256 tamper-evident logs to support future security reviews, auditing, and analysis.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Expected Benefits Bar -->
+        <div class="eo-summary-footer">
+          <span style="font-weight: 800; font-family: Georgia, serif;">EXPECTED BENEFITS:</span> Prevent Unauthorized Access • Improve Security Visibility • Maintain Local Audit Logs • Protect User Privacy • Support Future Enhancements
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 18: EXPECTED PROJECT OUTCOMES
+         ========================================== -->
+    <section class="slide" data-slide-index="17">
+      <div class="slide-content flex-column"
+        style="justify-content: space-between; height: 100%; padding-bottom: 28px;">
+        <!-- Header with Subtitle -->
+        <div class="slide-header" style="margin-bottom: 0.5rem;">
+          <h2 class="slide-title">Expected Project Outcomes &amp; Benefits</h2>
+          <p style="font-size: 0.94rem; color: var(--color-text-sec); font-weight: 500; margin-top: 4px;">
+            The proposed system is expected to strengthen desktop authentication, improve security monitoring, and
+            enhance user privacy through a local-first architecture.
+          </p>
+        </div>
+
+        <div class="po-container-3col">
+          <!-- Left Column: 6 Proposal-Aligned Expected Outcome Cards (2x3 Grid) -->
+          <div class="po-grid-6cards">
+            <!-- Outcome 1: Secure Authentication -->
+            <div class="po-outcome-card c1">
+              <div class="po-card-header">Secure Authentication</div>
+              <div class="po-card-benefit"><strong>Key Benefit:</strong> Prevents unauthorized access to desktop sessions and user data.</div>
+              <div class="po-card-desc">Restricts application access exclusively to authenticated users using Argon2id key derivation and constant-time password validation.</div>
+            </div>
+
+            <!-- Outcome 2: Improved Security -->
+            <div class="po-outcome-card c2">
+              <div class="po-card-header">Improved Security</div>
+              <div class="po-card-benefit"><strong>Key Benefit:</strong> Detects, flags, and logs suspicious system activity in real time.</div>
+              <div class="po-card-desc">Monitors system process telemetry and input behavior to rapidly capture intrusion attempts and compute dynamic threat scores.</div>
+            </div>
+
+            <!-- Outcome 3: Local-First Privacy -->
+            <div class="po-outcome-card c3">
+              <div class="po-card-header">Local-First Privacy</div>
+              <div class="po-card-benefit"><strong>Key Benefit:</strong> Guarantees total data privacy with zero cloud data transmission.</div>
+              <div class="po-card-desc">Persists all security logs, passcodes, and event records locally within a 256-bit AES encrypted SQLCipher database vault.</div>
+            </div>
+
+            <!-- Outcome 4: Security Visibility -->
+            <div class="po-outcome-card c4">
+              <div class="po-card-header">Security Visibility</div>
+              <div class="po-card-benefit"><strong>Key Benefit:</strong> Provides administrators with a centralized live telemetry dashboard.</div>
+              <div class="po-card-desc">Streams real-time security events, threat severity levels, and metric visualizations directly onto the desktop interface.</div>
+            </div>
+
+            <!-- Outcome 5: Modular Design -->
+            <div class="po-outcome-card c5">
+              <div class="po-card-header">Modular Design</div>
+              <div class="po-card-benefit"><strong>Key Benefit:</strong> Ensures seamless extensibility for future security module additions.</div>
+              <div class="po-card-desc">Decouples the React frontend, Tauri runtime shell, and Python sidecar backend through clean, isolated IPC interfaces.</div>
+            </div>
+
+            <!-- Outcome 6: Scalable Architecture -->
+            <div class="po-outcome-card c6">
+              <div class="po-card-header">Scalable Architecture</div>
+              <div class="po-card-benefit"><strong>Key Benefit:</strong> Enables easy integration of multi-factor auth and advanced AI.</div>
+              <div class="po-card-desc">Standardizes system event pipelines to easily incorporate future hardware tokens, biometrics, and ML threat models.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Expected Benefits Bar -->
+        <div class="obj-defense-footer" style="margin-top: 0.5rem;">
+          <span style="font-weight: 800; white-space: nowrap;">Expected Benefits:</span>
+          <span>Prevent Unauthorized Access • Improve Security Visibility • Protect User Privacy • Maintain Local Audit
+            Logs • Support Future Enhancements</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 19: LITERATURE REFERENCES
+         ========================================== -->
+    <section class="slide" data-slide-index="18">
+      <div class="slide-content flex-column"
+        style="justify-content: space-between; height: 100%; padding-bottom: 28px;">
+        <!-- Header with Subtitle -->
+        <div class="slide-header" style="margin-bottom: 0.4rem;">
+          <h2 class="slide-title">Literature References</h2>
+          <p style="font-size: 0.94rem; color: var(--color-text-sec); font-weight: 500; margin-top: 4px;">
+            Primary research papers forming the foundation of the proposed Secure Desktop Authentication and System
+            Protection Application.
+          </p>
+        </div>
+
+        <!-- 2 Paper Cards Grid -->
+        <div class="ref-cards-grid">
+          <!-- Paper 1: Continuous Authentication -->
+          <div class="ref-paper-card">
+            <div class="ref-paper-header">
+              <span class="ref-tag">[1]</span>
+              <span class="ref-paper-category">Continuous Authentication</span>
+            </div>
+            <div class="ref-paper-title">A Review of Continuous Authentication Using Behavioral Biometrics</div>
+            <div class="ref-meta-row">
+              <span class="ref-meta-item">I. Stylios, O. Thanou, I. Androulidakis, E. Zaitseva • SEEDA-CECNSM 2016 (ACM) • DOI: 10.1145/2984393.2984403</span>
+            </div>
+            <div class="ref-contribution-box">
+              <strong>Contribution to Project:</strong> Establishes that traditional one-time authentication is insufficient and introduces continuous authentication through behavioral biometrics, providing the research basis for monitoring authenticated user sessions.
+            </div>
+            <a href="https://www.researchgate.net/publication/309295047_A_Review_of_Continuous_Authentication_Using_Behavioral_Biometrics"
+              target="_blank" class="ref-link-btn">
+              View on ResearchGate ➔
+            </a>
+          </div>
+
+          <!-- Paper 2: Zero Trust Architecture -->
+          <div class="ref-paper-card">
+            <div class="ref-paper-header">
+              <span class="ref-tag">[2]</span>
+              <span class="ref-paper-category">Zero Trust Architecture</span>
+            </div>
+            <div class="ref-paper-title">Zero Trust Architecture: A Systematic Literature Review</div>
+            <div class="ref-meta-row">
+              <span class="ref-meta-item">M. L. Gambo, A. Almulhem • Systematic Literature Review (PRISMA), 2025 • arXiv: 2503.12362</span>
+            </div>
+            <div class="ref-contribution-box">
+              <strong>Contribution to Project:</strong> Explains Zero Trust principles such as continuous verification, least privilege, and dynamic trust evaluation, forming the architectural foundation for the proposed desktop security system.
+            </div>
+            <a href="https://arxiv.org/abs/2503.12362" target="_blank" class="ref-link-btn">
+              View on arXiv (2503.12362) ➔
+            </a>
+          </div>
+        </div>
+
+        <!-- Exact IEEE Citation Formatting Box -->
+        <div class="ref-ieee-box">
+          <div class="ref-ieee-title">IEEE Formatted References:</div>
+          <div class="ref-ieee-entry">[1] I. Stylios, O. Thanou, I. Androulidakis, and E. Zaitseva, "A Review of Continuous Authentication Using Behavioral Biometrics," Proc. SEEDA-CECNSM, ACM, 2016. DOI: 10.1145/2984393.2984403</div>
+          <div class="ref-ieee-entry">[2] M. L. Gambo and A. Almulhem, "Zero Trust Architecture: A Systematic Literature Review," arXiv preprint, 2025. Available: https://arxiv.org/abs/2503.12362</div>
+        </div>
+
+        <!-- Bottom Theoretical Foundation Footer Bar -->
+        <div class="ref-summary-footer">
+          <span style="font-weight: 800; font-family: Georgia, serif;">THEORETICAL FOUNDATION:</span> These research papers provide the theoretical foundation for continuous authentication, Zero Trust security, and adaptive desktop protection, which directly motivate the proposed system.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 20: CONCLUSION & FUTURE SCOPE
+         ========================================== -->
+    <section class="slide" data-slide-index="19">
+      <div class="slide-content flex-column"
+        style="justify-content: space-between; height: 100%; padding-bottom: 28px;">
+        <!-- Header with Subtitle -->
+        <div class="slide-header" style="margin-bottom: 0.5rem;">
+          <h2 class="slide-title">Conclusion &amp; Future Scope</h2>
+          <p style="font-size: 0.94rem; color: var(--color-text-sec); font-weight: 500; margin-top: 4px;">
+            A privacy-focused desktop authentication solution designed to enhance security, improve monitoring, and
+            support future extensibility.
+          </p>
+        </div>
+
+        <div class="cfs-container-2col">
+          <!-- Left Column: Project Summary & Highlights -->
+          <div class="cs-card">
+            <div class="cs-card-header-row">
+              <span class="cs-card-title">Project Summary &amp; Highlights</span>
+              <span class="cs-card-tag">[ SUMMARY ]</span>
+            </div>
+            <div class="cs-feature-list">
+              <div class="cs-feature-item">
+                <div class="cs-item-name">1. Secure Authentication Engine</div>
+                <div class="cs-item-desc">Enforces memory-hard Argon2id key derivation &amp; constant-time hash verification to prevent unauthorized desktop session access.</div>
+              </div>
+              <div class="cs-feature-item">
+                <div class="cs-item-name">2. Local-First Privacy Architecture</div>
+                <div class="cs-item-desc">Persists all authentication logs, passcodes, and security event telemetry locally within a 256-bit AES encrypted SQLCipher database vault.</div>
+              </div>
+              <div class="cs-feature-item">
+                <div class="cs-item-name">3. Real-Time Telemetry &amp; Watchdog</div>
+                <div class="cs-item-desc">Continuously monitors system process executions, input event behavior, and resource bounds to rapidly detect suspicious activity.</div>
+              </div>
+              <div class="cs-feature-item">
+                <div class="cs-item-name">4. Centralized Security Dashboard</div>
+                <div class="cs-item-desc">Renders an interactive desktop administration GUI displaying active threat risk indicators, event volume metrics, and security audit logs.</div>
+              </div>
+              <div class="cs-feature-item">
+                <div class="cs-item-name">5. Modular Multi-Layer Architecture</div>
+                <div class="cs-item-desc">Decouples React UI, Tauri runtime shell, Python sidecar backend, and SQLite storage into isolated layers connected via secure Tauri IPC.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Future Roadmap & Enhancements -->
+          <div class="cs-card">
+            <div class="cs-card-header-row">
+              <span class="cs-card-title">Future Roadmap &amp; Enhancements</span>
+              <span class="cs-card-tag">[ ROADMAP ]</span>
+            </div>
+            <div class="cs-roadmap-grid">
+              <div class="cs-feature-item">
+                <div class="cs-item-name">Multi-Factor Auth (MFA) &amp; Biometrics</div>
+                <div class="cs-item-desc">Integrates TOTP authenticator tokens, hardware YubiKeys, and OS biometric verification (Windows Hello) for multi-factor login protection.</div>
+              </div>
+              <div class="cs-feature-item">
+                <div class="cs-item-name">AI Anomaly Detection Model</div>
+                <div class="cs-item-desc">Deploys trained scikit-learn machine learning classifiers to predict unauthorized behavioral anomalies in real-time user input patterns.</div>
+              </div>
+              <div class="cs-feature-item">
+                <div class="cs-item-name">Enterprise Remote Management</div>
+                <div class="cs-item-desc">Enables encrypted administrative console sync, remote device session lockouts, and centralized enterprise security policy enforcement.</div>
+              </div>
+              <div class="cs-feature-item">
+                <div class="cs-item-name">Encrypted Cloud Backup &amp; Fleet Sync</div>
+                <div class="cs-item-desc">Provides optional zero-knowledge encrypted database backup and multi-device audit trail synchronization for enterprise desktop fleets.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Summary Footer Bar -->
+        <div class="cs-summary-footer">
+          <span style="font-weight: 800; font-family: Georgia, serif;">DEFENSE CONCLUSION:</span> "The proposed system provides secure desktop authentication, continuous security monitoring, and privacy protection through a scalable local-first architecture." — <strong>Academic Project Defense</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 21: STANDALONE THANK YOU & Q&A SLIDE
+         ========================================== -->
+    <section class="slide thank-you-slide" data-slide-index="20">
+      <div class="thank-you-grid-container">
+        <!-- Main Thank You Glass Card -->
+        <div class="thank-you-card">
+          <!-- Top Pill Badge -->
+          <div class="thank-you-badge">
+            <span style="font-size: 1.1rem; margin-right: 6px;">🛡️</span> ACADEMIC DEFENSE KEYNOTE COMPLETE
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="thank-you-title">Thank You!</h1>
+
+          <!-- Subtitle -->
+          <p class="thank-you-sub">
+            For Your Time, Guidance, and Evaluation During This Project Presentation
+          </p>
+
+          <div class="thank-you-divider"></div>
+
+          <!-- Q&A Action Callout -->
+          <div class="thank-you-qa-box">
+            <div class="qa-badge">QUESTIONS &amp; ANSWERS</div>
+            <div class="qa-desc">Open for Panel Evaluation, Discussion, and Feedback</div>
+          </div>
+
+          <!-- Team & Mentor Footer Info Grid -->
+          <div class="thank-you-info-grid">
+            <div class="info-col">
+              <div class="info-label">PROJECT DEVELOPMENT TEAM</div>
+              <div class="info-value">Erolla Rishvin Reddy • Yogamruth Reddy Guggilla • Navari Yashwanth Reddy •
+                Gayathri Pocharam • Chakradhar Muppuri</div>
+            </div>
+            <div class="info-col">
+              <div class="info-label">PROJECT MENTOR</div>
+              <div class="info-value">Professor Meher Gayatri Devi Tiwari</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       SLIDE OVERVIEW DRAWER (20 SLIDES)
+       ========================================== -->
+  <aside class="overview-drawer" id="slide-overview-drawer">
+    <div class="drawer-header">
+      <h3>Slide Deck Overview</h3>
+      <button class="btn-close-drawer" id="btn-close-drawer">&times;</button>
+    </div>
+    <div class="drawer-grid" id="drawer-grid-container">
+      <!-- Dynamically generated by app.js -->
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
