@@ -68,7 +68,7 @@
       background: rgba(37, 99, 235, 0.25) !important;
       color: #93c5fd !important;
       border: 1px solid rgba(59, 130, 246, 0.5) !important;
-      font-family: 'Outfit', 'Inter', system-ui, sans-serif !important;
+      font-family: 'Courier New', monospace !important;
       font-size: 0.95rem !important;
       font-weight: 700 !important;
       letter-spacing: 2px !important;
@@ -80,7 +80,7 @@
     }
 
     .cover-main-title {
-      font-family: 'Outfit', 'Inter', system-ui, sans-serif !important;
+      font-family: Georgia, serif !important;
       font-size: clamp(3.2rem, 4.5vw, 4.8rem) !important;
       font-weight: 800 !important;
       line-height: 1.15 !important;
@@ -100,7 +100,7 @@
     }
 
     .cover-tagline {
-      font-family: 'Inter', system-ui, sans-serif !important;
+      font-family: 'Times New Roman', serif !important;
       font-size: 1.25rem !important;
       color: #cbd5e1 !important;
       line-height: 1.6 !important;
@@ -130,7 +130,7 @@
 
     .card-header-tag {
       color: #60a5fa !important;
-      font-family: 'Outfit', 'Inter', system-ui, sans-serif !important;
+      font-family: 'Courier New', monospace !important;
       font-size: 0.9rem !important;
       font-weight: 700 !important;
       letter-spacing: 2px !important;
@@ -154,7 +154,7 @@
       align-items: center !important;
       padding: 14px 0 !important;
       border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important;
-      font-family: 'Inter', system-ui, sans-serif !important;
+      font-family: 'Times New Roman', serif !important;
     }
 
     .team-member-row:last-child {
@@ -165,6 +165,7 @@
       color: #f1f5f9 !important;
       font-size: 1.12rem !important;
       font-weight: 500 !important;
+      font-family: 'Times New Roman', serif !important;
       text-align: left !important;
     }
 
@@ -173,7 +174,7 @@
       font-size: 1.12rem !important;
       font-weight: 700 !important;
       letter-spacing: 0.5px !important;
-      font-family: 'JetBrains Mono', monospace !important;
+      font-family: 'Courier New', monospace !important;
       text-align: right !important;
     }
 
@@ -183,7 +184,7 @@
       border-left: 4px solid #2563eb !important;
       padding: 18px 24px !important;
       border-radius: 10px !important;
-      font-family: 'Inter', system-ui, sans-serif !important;
+      font-family: 'Times New Roman', serif !important;
       text-align: left !important;
     }
 
@@ -193,6 +194,7 @@
       font-size: 0.78rem !important;
       text-transform: uppercase !important;
       letter-spacing: 1.5px !important;
+      font-family: 'Courier New', monospace !important;
       margin-bottom: 6px !important;
     }
 
@@ -201,6 +203,7 @@
       font-size: 1.18rem !important;
       font-weight: 700 !important;
       line-height: 1.35 !important;
+      font-family: Georgia, serif !important;
     }
 
     /* 4. Slide Navigation Dots (Fixed & Vertically Centered) */
@@ -751,7 +754,7 @@
         </div>
 
         <!-- Top Section: Project Design Goals Table -->
-        <div style="width: 100%; margin-bottom: 0.6rem;">
+        <div style="width: 100%; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; margin-bottom: 0.8rem;">
           <div class="design-goals-table-box">
             <table class="design-goals-table">
               <thead>
@@ -787,7 +790,7 @@
         </div>
 
         <!-- Middle Section: 3 Objective Group Cards -->
-        <div class="objectives-container-3col" style="flex-grow: 1;">
+        <div class="objectives-container-3col">
           <div class="objectives-cards-column">
             <!-- Group 1: Authentication & Security -->
             <div class="obj-group-card blue">
@@ -845,39 +848,41 @@
         </div>
         <div class="slide-visual" style="display: flex; align-items: center; justify-content: center; z-index: 2;">
           <div class="animate-float"
-            style="width: 75%; max-width: 340px; aspect-ratio: 1; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 50px rgba(37,99,235,0.15); padding: 20px;">
-            <!-- Premium Glowing Shield Graphic -->
+            style="width: 75%; max-width: 340px; aspect-ratio: 1; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 50px rgba(16,185,129,0.15); padding: 20px;">
+            <!-- Premium Glowing System Architecture Node Network Graphic -->
             <svg viewBox="0 0 200 200" width="100%" height="100%"
-              style="filter: drop-shadow(0 10px 20px rgba(37, 99, 235, 0.25));">
+              style="filter: drop-shadow(0 10px 20px rgba(16, 185, 129, 0.25));">
               <defs>
-                <radialGradient id="shieldGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="rgba(37, 99, 235, 0.15)" />
-                  <stop offset="100%" stop-color="rgba(37, 99, 235, 0)" />
+                <radialGradient id="archGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="rgba(16, 185, 129, 0.18)" />
+                  <stop offset="100%" stop-color="rgba(16, 185, 129, 0)" />
                 </radialGradient>
-                <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#3b82f6" />
-                  <stop offset="100%" stop-color="#1d4ed8" />
+                <linearGradient id="archGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#10b981" />
+                  <stop offset="100%" stop-color="#047857" />
                 </linearGradient>
               </defs>
               <!-- Background Glow -->
-              <circle cx="100" cy="100" r="90" fill="url(#shieldGlow)" />
-              <!-- Hexagon grid lines -->
-              <path d="M100 25 L160 55 L160 125 L100 175 L40 125 L40 55 Z" fill="none" stroke="rgba(37, 99, 235, 0.12)"
-                stroke-width="2" />
-              <path d="M100 35 L150 62 L150 120 L100 162 L50 120 L50 62 Z" fill="none" stroke="rgba(37, 99, 235, 0.2)"
-                stroke-width="1.5" />
-              <!-- Main Shield Shape -->
-              <path
-                d="M100 45 C130 45 145 55 145 85 C145 125 100 155 100 155 C100 155 55 125 55 85 C55 55 70 45 100 45 Z"
-                fill="url(#shieldGrad)" stroke="#60a5fa" stroke-width="2.5" />
-              <!-- Inner accent -->
-              <path
-                d="M100 55 C120 55 130 63 130 85 C130 115 100 138 100 138 C100 138 70 115 70 85 C70 63 80 55 100 55 Z"
-                fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="3,3" />
-              <!-- Padlock inside shield -->
-              <rect x="90" y="88" width="20" height="16" rx="3" fill="#ffffff" />
-              <path d="M94 88 V82 C94 78 97 75 100 75 C103 75 106 78 106 82 V88" fill="none" stroke="#ffffff"
-                stroke-width="2" />
+              <circle cx="100" cy="100" r="90" fill="url(#archGlow)" />
+              <!-- Outer Interconnected Layer Rings -->
+              <circle cx="100" cy="100" r="70" fill="none" stroke="rgba(16, 185, 129, 0.25)" stroke-width="1.5" stroke-dasharray="4,4" />
+              <!-- Node Connection Lines -->
+              <line x1="100" y1="100" x2="100" y2="45" stroke="#10b981" stroke-width="2" />
+              <line x1="100" y1="100" x2="152" y2="130" stroke="#10b981" stroke-width="2" />
+              <line x1="100" y1="100" x2="48" y2="130" stroke="#10b981" stroke-width="2" />
+              <!-- Outer Nodes -->
+              <circle cx="100" cy="45" r="14" fill="#ffffff" stroke="#10b981" stroke-width="3" />
+              <circle cx="152" cy="130" r="14" fill="#ffffff" stroke="#10b981" stroke-width="3" />
+              <circle cx="48" cy="130" r="14" fill="#ffffff" stroke="#10b981" stroke-width="3" />
+              <circle cx="100" cy="45" r="6" fill="#10b981" />
+              <circle cx="152" cy="130" r="6" fill="#10b981" />
+              <circle cx="48" cy="130" r="6" fill="#10b981" />
+              <!-- Center Core Architecture Node -->
+              <circle cx="100" cy="100" r="32" fill="url(#archGrad)" stroke="#34d399" stroke-width="2.5" />
+              <!-- Core Icon (Layers Stack) -->
+              <path d="M86 94 L100 87 L114 94 L100 101 Z" fill="#ffffff" />
+              <path d="M86 100 L100 107 L114 100" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+              <path d="M86 106 L100 113 L114 106" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
             </svg>
           </div>
         </div>
@@ -1534,7 +1539,7 @@
             </div>
 
             <div class="phase-cards-row single-full">
-              <div class="e2e-card full-width" style="border: 2px solid #000000;">
+              <div class="e2e-card full-width">
                 <div class="e2e-card-top">
                   <span class="e2e-step-badge">STEP 01</span>
                   <span class="e2e-tech-tag">[ System Init ]</span>
@@ -1560,7 +1565,7 @@
             </div>
 
             <div class="phase-cards-row">
-              <div class="e2e-card" style="border: 2px solid #000000;">
+              <div class="e2e-card">
                 <div class="e2e-card-top">
                   <span class="e2e-step-badge">STEP 02.1</span>
                   <span class="e2e-tech-tag">[ Login UI ]</span>
@@ -1571,7 +1576,7 @@
 
               <div class="phase-flow-arrow">➔</div>
 
-              <div class="e2e-card dominant" style="border: 2.5px solid #000000;">
+              <div class="e2e-card dominant">
                 <div class="e2e-card-top">
                   <span class="e2e-step-badge">STEP 02.2</span>
                   <span class="e2e-tech-tag dark">[ Id ]</span>
@@ -1582,7 +1587,7 @@
 
               <div class="phase-flow-arrow">➔</div>
 
-              <div class="e2e-card dominant" style="border: 2.5px solid #000000;">
+              <div class="e2e-card dominant">
                 <div class="e2e-card-top">
                   <span class="e2e-step-badge">STEP 02.3</span>
                   <span class="e2e-tech-tag dark">[ Access Control ]</span>
@@ -1604,7 +1609,7 @@
             </div>
 
             <div class="phase-cards-row">
-              <div class="e2e-card" style="border: 2px solid #000000;">
+              <div class="e2e-card">
                 <div class="e2e-card-top">
                   <span class="e2e-step-badge">STEP 03.1</span>
                   <span class="e2e-tech-tag">[ Watchdog ]</span>
@@ -1615,7 +1620,7 @@
 
               <div class="phase-flow-arrow">➔</div>
 
-              <div class="e2e-card dominant" style="border: 2.5px solid #000000;">
+              <div class="e2e-card dominant">
                 <div class="e2e-card-top">
                   <span class="e2e-step-badge">STEP 03.2</span>
                   <span class="e2e-tech-tag dark">[ Rule Engine ]</span>
@@ -1626,7 +1631,7 @@
 
               <div class="phase-flow-arrow">➔</div>
 
-              <div class="e2e-card dominant" style="border: 2.5px solid #000000;">
+              <div class="e2e-card dominant">
                 <div class="e2e-card-top">
                   <span class="e2e-step-badge">STEP 03.3</span>
                   <span class="e2e-tech-tag dark">[ Lockout Engine ]</span>
@@ -1648,7 +1653,7 @@
             </div>
 
             <div class="phase-cards-row single-full">
-              <div class="e2e-card full-width" style="border: 2px solid #000000;">
+              <div class="e2e-card full-width">
                 <div class="e2e-card-top">
                   <span class="e2e-step-badge">STEP 04.1</span>
                   <span class="e2e-tech-tag">[ SQLCipher 256-bit AES ]</span>
@@ -1758,7 +1763,6 @@
 
             <!-- Layer 8: Development & Testing -->
             <div class="ts-layer-card">
-              <div class="ts-layer-card">
               <div class="ts-card-header-row">
                 <span class="ts-layer-title">Dev &amp; Testing</span>
                 <span class="ts-layer-pill">[ TESTING ]</span>
@@ -2286,7 +2290,7 @@
 
           <!-- Q&A Action Callout -->
           <div class="thank-you-qa-box">
-            <div class="qa-badge">QUESTIONS &amp; ANSWERS</div>
+            <div class="qa-badge" style="background-color: transparent !important; color: #ffffff !important; border: 1.5px solid #ffffff !important;">QUESTIONS &amp; ANSWERS</div>
             <div class="qa-desc">Open for Panel Evaluation, Discussion, and Feedback</div>
           </div>
 
