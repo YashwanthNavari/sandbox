@@ -245,7 +245,7 @@ body,
 /* Card 02 Content */
 .ed-sub-label {
   font-size: 0.85rem !important;
-  font-weight: 800 !important;
+  font-weight: 400 !important;
   text-transform: uppercase !important;
   letter-spacing: 1.2px !important;
   color: #64748b !important;
@@ -268,7 +268,7 @@ body,
 }
 
 .ed-check-list li .chk-icon {
-  font-weight: 800 !important;
+  font-weight: 400 !important;
   color: #000000 !important;
   margin-right: 6px !important;
 }
@@ -284,7 +284,7 @@ body,
 
 .compare-name {
   font-size: 1rem !important;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
   color: #000000 !important;
   font-family: Georgia, serif !important;
   margin-bottom: 2px !important;
@@ -296,8 +296,8 @@ body,
   line-height: 1.4 !important;
 }
 
-.cmp-row.pos { color: #000000 !important; font-weight: 700 !important; }
-.cmp-row.neg { color: #475569 !important; }
+.cmp-row.pos { color: #000000 !important; font-weight: 400 !important; }
+.cmp-row.neg { color: #475569 !important; font-weight: 400 !important; }
 
 /* Card 04 Content */
 .ed-missing-list {
@@ -316,7 +316,7 @@ body,
 
 .box-icon {
   font-family: monospace !important;
-  font-weight: 800 !important;
+  font-weight: 400 !important;
   margin-right: 6px !important;
 }
 
@@ -332,7 +332,7 @@ body,
 
 .chain-node {
   font-size: 0.9rem !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
   color: #000000 !important;
   background-color: #ffffff !important;
   border: 1.5px solid #cbd5e1 !important;
@@ -344,14 +344,14 @@ body,
 }
 
 .chain-node.active {
-  font-weight: 800 !important;
+  font-weight: 400 !important;
   border-color: #cbd5e1 !important;
 }
 
 .chain-arr {
   font-size: 0.82rem !important;
   color: #000000 !important;
-  font-weight: 900 !important;
+  font-weight: 400 !important;
 }
 
 /* Card 06 Content */
@@ -366,7 +366,7 @@ body,
 
 .arch-box {
   font-size: 0.9rem !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
   color: #000000 !important;
   background-color: #ffffff !important;
   border: 1.5px solid #cbd5e1 !important;
@@ -379,13 +379,13 @@ body,
 
 .arch-box.active {
   border-color: #cbd5e1 !important;
-  font-weight: 800 !important;
+  font-weight: 400 !important;
 }
 
 .arch-arr {
   font-size: 0.82rem !important;
   color: #000000 !important;
-  font-weight: 900 !important;
+  font-weight: 400 !important;
 }
 
 /* Card 07 Content */
@@ -401,7 +401,7 @@ body,
 
 .tech-pill {
   font-size: 0.88rem !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
   font-family: "Courier New", monospace !important;
   background-color: #ffffff !important;
   border: 1.5px solid #cbd5e1 !important;
@@ -412,7 +412,7 @@ body,
 
 .ed-impl-flow {
   font-size: 0.92rem !important;
-  font-weight: 800 !important;
+  font-weight: 400 !important;
   color: #000000 !important;
   text-align: center !important;
   font-family: "Times New Roman", serif !important;
@@ -433,7 +433,7 @@ body,
 
 .ms-node {
   font-size: 0.9rem !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
   color: #000000 !important;
   background-color: #ffffff !important;
   border: 1.5px solid #cbd5e1 !important;
@@ -445,14 +445,14 @@ body,
 }
 
 .ms-node.current {
-  font-weight: 800 !important;
+  font-weight: 400 !important;
   border-color: #cbd5e1 !important;
 }
 
 .ms-arr {
   font-size: 0.82rem !important;
   color: #000000 !important;
-  font-weight: 900 !important;
+  font-weight: 400 !important;
 }
 
 /* Editorial Connectors & Section Divider */
@@ -747,7 +747,7 @@ body,
 
 .acad-item-title {
   font-size: 1.15rem !important;
-  font-weight: 800 !important;
+  font-weight: 400 !important;
   color: #000000 !important;
   font-family: Georgia, serif !important;
   margin-bottom: 2px !important;
@@ -758,7 +758,7 @@ body,
 }
 
 .acad-item-title .chk-icon {
-  font-weight: 900 !important;
+  font-weight: 400 !important;
   color: #000000 !important;
   margin-right: 4px !important;
 }
@@ -833,26 +833,6 @@ body,
   align-items: stretch !important;
 }
 
-.obj-group-card {
-  background-color: #f8fafc !important;
-  border: 1.5px solid #cbd5e1 !important;
-  border-radius: 10px !important;
-  padding: 0.65rem 0.95rem !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
-}
-
-.obj-group-title {
-  font-size: 1.1rem !important;
-  font-weight: 800 !important;
-  color: #000000 !important;
-  font-family: Georgia, serif !important;
-  margin-bottom: 0.3rem !important;
-  border-bottom: 1.5px solid #cbd5e1 !important;
-  padding-bottom: 0.25rem !important;
-}
 
 .obj-bullet-list {
   list-style-type: disc !important;
@@ -1161,7 +1141,7 @@ body,
 }
 
 .lg-sym {
-  font-weight: 900 !important;
+  font-weight: 400 !important;
   font-family: monospace !important;
 }
 
@@ -1463,12 +1443,12 @@ body,
 }
 
 .ds-module-list li {
-  font-size: 0.86rem !important;
+  font-size: 1.05rem !important;
   color: #000000 !important;
   font-weight: 600 !important;
   font-family: "Times New Roman", serif !important;
   line-height: 1.35 !important;
-  margin-bottom: 0.25rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .ds-audit-two-col {
@@ -2359,14 +2339,14 @@ body,
 
 .cs-card-title {
   font-size: 1.25rem !important;
-  font-weight: 800 !important;
+  font-weight: 400 !important;
   color: #000000 !important;
   font-family: Georgia, serif !important;
 }
 
 .cs-card-tag {
   font-size: 0.74rem !important;
-  font-weight: 900 !important;
+  font-weight: 400 !important;
   font-family: "Courier New", monospace !important;
   background-color: #f1f5f9 !important;
   color: #000000 !important;
@@ -2405,7 +2385,7 @@ body,
 
 .cs-item-name {
   font-size: 1.08rem !important;
-  font-weight: 800 !important;
+  font-weight: 400 !important;
   color: #000000 !important;
   font-family: Georgia, serif !important;
   margin-bottom: 0.3rem !important;
@@ -2431,7 +2411,7 @@ body,
   padding: 0.5rem 1rem !important;
   margin-top: 0.5rem !important;
   font-size: 0.88rem !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
   color: #000000 !important;
   font-family: "Times New Roman", serif !important;
   letter-spacing: 0.5px !important;
@@ -3587,9 +3567,9 @@ body {
   background: var(--bg-card);
   border: 1.5px solid var(--color-border);
   border-radius: 16px;
-  padding: 1.2rem 1.4rem;
+  padding: 0;
   box-shadow: var(--card-shadow);
-  overflow-x: auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3605,25 +3585,33 @@ body {
 
 .lit-compare-table th {
   border-bottom: 2px solid #cbd5e1;
-  padding: 12px 10px;
+  padding: 16px 10px;
   color: #0f172a;
   font-weight: 800;
   font-size: 0.88rem;
   background: #f8fafc;
 }
 
+.lit-compare-table th:first-child,
+.lit-compare-table td:first-child {
+  padding-left: 1.8rem;
+}
+
+.lit-compare-table th:last-child,
+.lit-compare-table td:last-child {
+  padding-right: 1.8rem;
+}
+
 .lit-compare-table th.proposed-col-header {
   color: #0f172a;
   background: #f1f5f9;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
   border-bottom: 2px solid #0f172a;
   font-weight: 800;
 }
 
 .lit-compare-table td {
   border-bottom: 1px solid #e2e8f0;
-  padding: 11px 10px;
+  padding: 18px 10px;
   font-size: 0.86rem;
   color: #0f172a;
 }
@@ -4988,4 +4976,154 @@ body {
   display: inline-block !important;
   margin-bottom: 0.5rem !important;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* =============================================================
+   STRICT PRESENTATION RULE: ONLY HEADINGS ARE BOLD, CONTENT IS NORMAL
+   ============================================================= */
+
+/* Reset all general content, body text, lists, paragraphs, footers, badges to normal weight */
+p,
+li,
+ul,
+ol,
+td,
+th,
+b,
+strong,
+.slide-subtitle,
+.slide-subtitle *,
+.card-bullet-points,
+.card-bullet-points *,
+.obj-bullet-list,
+.obj-bullet-list *,
+.ed-bullet-list,
+.ed-bullet-list *,
+.ed-check-list,
+.ed-check-list *,
+.ed-missing-list,
+.ed-missing-list *,
+.ds-module-list,
+.ds-module-list *,
+.e2e-bullet-inline,
+.e2e-bullet-inline *,
+.card-desc,
+.card-desc *,
+.e2e-card-desc,
+.e2e-card-desc *,
+.acad-item-desc,
+.acad-item-desc *,
+.mod-item-row,
+.mod-item-row *,
+.cmp-row,
+.cmp-row *,
+.chain-node,
+.chain-node *,
+.arch-box,
+.arch-box *,
+.ed-goal-box,
+.ed-goal-box *,
+.ed-sub-label,
+.chk-icon,
+.box-icon,
+.legend-pill,
+.legend-pill *,
+.obj-defense-footer,
+.obj-defense-footer span:not(:first-child),
+.pipeline-inter-band-connector,
+.pipeline-inter-band-connector *,
+.phase-inter-connector,
+.card-tech-footer,
+.card-tech-footer *,
+.ds-tech-footer,
+.ds-tech-footer *,
+.mod-card-footer,
+.mod-card-footer *,
+.mod-tech,
+.ref-meta-row,
+.ref-meta-row *,
+.ref-contribution-box,
+.ref-contribution-box *,
+.ref-ieee-box,
+.ref-ieee-box *,
+.member-name,
+.member-id,
+.mentor-name,
+.team-member-row,
+.mentor-badge-card,
+.threat-desc,
+.ts-item-row,
+.ts-item-row *,
+.ts-use-case,
+.sm-feature-list,
+.sm-feature-list *,
+.sm-item-name,
+.sm-item-desc,
+.sm-summary-footer,
+.am-sprint-list,
+.am-sprint-list *,
+.am-item-name,
+.am-item-desc,
+.am-summary-footer,
+.eo-metric-list,
+.eo-metric-list *,
+.eo-item-name,
+.eo-item-desc,
+.eo-summary-footer,
+.po-item-name,
+.po-item-desc,
+.po-summary-footer,
+.cover-tagline,
+span.cover-pill-badge,
+.card-header-tag,
+.ed-card-title,
+.compare-name,
+.threat-card-title,
+.matrix-column-title,
+.acad-item-title,
+.proposed-item .acad-item-desc,
+.status-tag,
+.lit-observation-box,
+.lit-observation-box *,
+.card-bullet-points li,
+.ds-module-list li,
+.e2e-compact-footer,
+.e2e-card-headline,
+.phase-band-title,
+.phase-band-tag,
+.e2e-step-badge,
+.ts-layer-title,
+.ts-tech-names,
+.ts-summary-footer,
+.ts-card-purpose strong,
+.ref-paper-category,
+.ref-paper-title,
+.ref-contribution-box strong,
+.ref-link-btn,
+.ref-summary-footer,
+.ref-ieee-title,
+.obj-group-title,
+.card-headline,
+.band-title,
+.step-badge,
+.band-tag {
+  font-weight: 400 !important;
+}
+
+/* Explicitly retain Bold weight ONLY on Slide Headings, Section Headers, and Component Titles */
+h1, h2, h3, h4, h5, h6,
+.slide-title,
+.section-title,
+.cover-title,
+.thank-you-title,
+.card-title,
+.ds-module-header,
+.mod-card-title,
+.step-num,
+.ed-card-num,
+.section-num-watermark,
+.ds-step-num,
+.mod-step-num,
+.ds-pill-tag {
+  font-weight: 700 !important;
 }
