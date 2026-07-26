@@ -243,12 +243,12 @@ function registerMockupListeners() {
     toggle.addEventListener('click', () => {
       toggle.classList.toggle('active');
       
-      // Update badge count in Slide 13 (data-slide-index="12")
+      // Update badge count in Slide 14 (previously 13)
       const activeCount = document.querySelectorAll('.observer-toggle.active').length;
-      const slide13 = document.querySelector('.slide[data-slide-index="12"]');
-      if (slide13) {
+      const targetSlide = slides[13];
+      if (targetSlide) {
         // Find the span containing the badge
-        const badgeSpan = Array.from(slide13.querySelectorAll('span')).find(el => el.textContent.includes('Obs'));
+        const badgeSpan = Array.from(targetSlide.querySelectorAll('span')).find(el => el.textContent.includes('Obs'));
         if (badgeSpan) {
           badgeSpan.textContent = `${activeCount} Obs`;
         }
@@ -463,7 +463,7 @@ function initCardTilt() {
 
 // ─── Cover Slide Sparkle Rings ──────────────────────────────────
 function initCoverSparkleRings() {
-  const coverSlide = document.querySelector('.slide[data-slide-index="0"]');
+  const coverSlide = slides[0];
   if (!coverSlide) return;
   for (let i = 0; i < 3; i++) {
     const ring = document.createElement('div');
