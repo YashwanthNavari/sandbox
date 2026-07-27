@@ -798,14 +798,16 @@ body,
   overflow: hidden !important;
   border: 1.5px solid #cbd5e1 !important;
   border-radius: 10px !important;
-  padding: 0.6rem !important;
+  padding: 0 !important;
   background-color: #f8fafc !important;
 }
 
 .acad-stack-img {
+  width: 100% !important;
+  height: 100% !important;
   max-width: 100% !important;
-  max-height: 220px !important;
-  object-fit: contain !important;
+  max-height: none !important;
+  object-fit: cover !important;
 }
 
 .acad-center-flow-arrow {
