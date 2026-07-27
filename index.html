@@ -424,10 +424,10 @@
                 <div class="ed-card-title">Problem Statement</div>
                 <div class="ed-sub-label">Problems</div>
                 <ul class="ed-check-list">
-                  <li><span class="chk-icon">✔</span> Session Hijacking</li>
-                  <li><span class="chk-icon">✔</span> Weak Authentication</li>
-                  <li><span class="chk-icon">✔</span> No Monitoring</li>
-                  <li><span class="chk-icon">✔</span> Insider Threat</li>
+                  <li><span class="chk-icon">•</span> Session Hijacking</li>
+                  <li><span class="chk-icon">•</span> Weak Authentication</li>
+                  <li><span class="chk-icon">•</span> No Monitoring</li>
+                  <li><span class="chk-icon">•</span> Insider Threat</li>
                 </ul>
               </div>
 
@@ -442,13 +442,13 @@
                 <div class="ed-compare-box">
                   <div class="compare-group">
                     <div class="compare-name">Windows Hello</div>
-                    <div class="cmp-row pos">✔ Login</div>
-                    <div class="cmp-row neg">✖ Continuous Protection</div>
+                    <div class="cmp-row pos">• Login</div>
+                    <div class="cmp-row neg">• Continuous Protection</div>
                   </div>
                   <div class="compare-group" style="margin-top: 6px;">
                     <div class="compare-name">Linux PAM</div>
-                    <div class="cmp-row pos">✔ Authentication</div>
-                    <div class="cmp-row neg">✖ Monitoring</div>
+                    <div class="cmp-row pos">• Authentication</div>
+                    <div class="cmp-row neg">• Monitoring</div>
                   </div>
                 </div>
               </div>
@@ -463,10 +463,10 @@
                 <div class="ed-card-title">Research Gap</div>
                 <div class="ed-sub-label">Missing Features</div>
                 <ul class="ed-missing-list">
-                  <li><span class="box-icon">□</span> Local Monitoring</li>
-                  <li><span class="box-icon">□</span> Runtime Protection</li>
-                  <li><span class="box-icon">□</span> Tamper Detection</li>
-                  <li><span class="box-icon">□</span> Audit Logging</li>
+                  <li><span class="box-icon">•</span> Local Monitoring</li>
+                  <li><span class="box-icon">•</span> Runtime Protection</li>
+                  <li><span class="box-icon">•</span> Tamper Detection</li>
+                  <li><span class="box-icon">•</span> Audit Logging</li>
                 </ul>
               </div>
             </div>
@@ -547,7 +547,7 @@
                 </div>
                 <div class="ed-card-title">Future Scope</div>
                 <div class="ed-milestones-chain">
-                  <div class="ms-node current">✔ Current Base</div>
+                  <div class="ms-node current">• Current Base</div>
                   <div class="ms-arr">↓</div>
                   <div class="ms-node">MFA Integration</div>
                   <div class="ms-arr">↓</div>
@@ -856,15 +856,15 @@
 
             <div class="acad-list">
               <div class="acad-item proposed-item">
-                <div class="acad-item-title"><span class="chk-icon">✔</span> Multi-Layer Auth</div>
+                <div class="acad-item-title"><span class="chk-icon"></span> Multi-Layer Auth</div>
                 <div class="acad-item-desc">Multi-factor security layers.</div>
               </div>
               <div class="acad-item proposed-item">
-                <div class="acad-item-title"><span class="chk-icon">✔</span> Continuous Monitoring</div>
+                <div class="acad-item-title"><span class="chk-icon"></span> Continuous Monitoring</div>
                 <div class="acad-item-desc">Real-time post-login watchdog.</div>
               </div>
               <div class="acad-item proposed-item">
-                <div class="acad-item-title"><span class="chk-icon">✔</span> Centralized Dashboard</div>
+                <div class="acad-item-title"><span class="chk-icon"></span> Centralized Dashboard</div>
                 <div class="acad-item-desc">Unified real-time event view.</div>
               </div>
               <div class="acad-item proposed-item">
@@ -1407,6 +1407,7 @@
             .arch-box.dark .arch-box-title {
               color: #0f172a !important;
             }
+
             .arch-box.dark .arch-box-subtitle {
               color: #475569 !important;
               font-weight: 600;
@@ -1429,17 +1430,20 @@
           </style>
 
           <!-- Top Row (Main Pipeline) using Grid to prevent horizontal stretching -->
-          <div style="display: grid; grid-template-columns: 17% 3% 18% 3% 29% 3% 27%; width: 100%; max-width: 1200px; margin-top: 25px; align-items: end;">
-            
+          <div
+            style="display: grid; grid-template-columns: 17% 3% 18% 3% 29% 3% 27%; width: 100%; max-width: 1200px; margin-top: 25px; align-items: end;">
+
             <!-- Stage 1: USER -> DESKTOP APP (17%) -->
             <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-              <div class="arch-box" style="width: 80%; border-style: dashed; border-color: #64748b; background: #f8fafc; padding: 8px;">
+              <div class="arch-box"
+                style="width: 80%; border-style: dashed; border-color: #64748b; background: #f8fafc; padding: 8px;">
                 <div class="arch-box-title" style="color: #334155; font-size: 1.05rem;">USER</div>
               </div>
               <div style="width: 2px; height: 25px; background: #64748b; position: relative;">
                 <div class="arch-connector-arrow"></div>
               </div>
-              <div class="arch-box" style="width: 100%; border-color: #334155; padding: 16px 8px; height: 150px; justify-content: center;">
+              <div class="arch-box"
+                style="width: 100%; border-color: #334155; padding: 16px 8px; height: 150px; justify-content: center;">
                 <div class="arch-box-title" style="color: #0f172a;">DESKTOP APP</div>
                 <div class="arch-box-subtitle" style="font-weight: 600;">React / Tauri</div>
               </div>
@@ -1448,13 +1452,16 @@
             <!-- Arrow 1 -> 2 (3%) -->
             <div style="display: flex; align-items: center; height: 150px; width: 100%;">
               <div style="width: 100%; height: 2px; background: #64748b; position: relative;">
-                <div style="border-width: 6px 0 6px 7px; border-style: solid; border-color: transparent transparent transparent #64748b; position: absolute; right: -6px; top: -5px;"></div>
+                <div
+                  style="border-width: 6px 0 6px 7px; border-style: solid; border-color: transparent transparent transparent #64748b; position: absolute; right: -6px; top: -5px;">
+                </div>
               </div>
             </div>
 
             <!-- Stage 2: AUTHENTICATION (18%) -->
             <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-              <div class="arch-box dark" style="width: 100%; padding: 16px 8px; height: 150px; justify-content: center;">
+              <div class="arch-box dark"
+                style="width: 100%; padding: 16px 8px; height: 150px; justify-content: center;">
                 <div class="arch-box-title">AUTHENTICATION<br>ENGINE</div>
                 <div class="arch-box-subtitle" style="margin-top: 10px;">Argon2id<br>Session</div>
               </div>
@@ -1463,25 +1470,34 @@
             <!-- Arrow 2 -> 3 (3%) -->
             <div style="display: flex; align-items: center; height: 150px; width: 100%;">
               <div style="width: 100%; height: 2px; background: #64748b; position: relative;">
-                <div style="border-width: 6px 0 6px 7px; border-style: solid; border-color: transparent transparent transparent #64748b; position: absolute; right: -6px; top: -5px;"></div>
+                <div
+                  style="border-width: 6px 0 6px 7px; border-style: solid; border-color: transparent transparent transparent #64748b; position: absolute; right: -6px; top: -5px;">
+                </div>
               </div>
             </div>
 
             <!-- Stage 3: CONTINUOUS SECURITY (29%) -->
             <div style="display: flex; flex-direction: column; align-items: center; width: 100%; position: relative;">
-              <div class="arch-box" style="width: 100%; border: 2px dashed #94a3b8; padding: 12px 4px; height: 150px; display: flex; flex-direction: column; justify-content: space-between; background: #ffffff;">
+              <div class="arch-box"
+                style="width: 100%; border: 2px dashed #94a3b8; padding: 12px 4px; height: 150px; display: flex; flex-direction: column; justify-content: space-between; background: #ffffff;">
                 <div class="arch-box-title" style="color: #0f172a;">CONTINUOUS SECURITY</div>
                 <div style="display: flex; justify-content: space-between; margin-top: 10px;">
-                  <div style="font-size: 0.85rem; font-weight: 600; color: #475569; text-align: center; width: 33%;">Behavior</div>
-                  <div style="font-size: 0.85rem; font-weight: 600; color: #475569; text-align: center; width: 33%;">Device</div>
-                  <div style="font-size: 0.85rem; font-weight: 600; color: #475569; text-align: center; width: 33%;">Threat</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #475569; text-align: center; width: 33%;">
+                    Behavior</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #475569; text-align: center; width: 33%;">
+                    Device</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #475569; text-align: center; width: 33%;">
+                    Threat</div>
                 </div>
                 <div style="display: flex; justify-content: center; margin: 6px 0;">
                   <div style="width: 2px; height: 14px; background: #94a3b8; position: relative;">
-                    <div style="border-width: 5px 5px 0; border-style: solid; border-color: #94a3b8 transparent transparent transparent; position: absolute; bottom: -4px; left: -4px;"></div>
+                    <div
+                      style="border-width: 5px 5px 0; border-style: solid; border-color: #94a3b8 transparent transparent transparent; position: absolute; bottom: -4px; left: -4px;">
+                    </div>
                   </div>
                 </div>
-                <div class="arch-box dark" style="background: #ffffff !important; border: 2px solid #cbd5e1 !important; padding: 8px; border-radius: 6px;">
+                <div class="arch-box dark"
+                  style="background: #ffffff !important; border: 2px solid #cbd5e1 !important; padding: 8px; border-radius: 6px;">
                   <div style="font-size: 0.95rem; font-weight: 700; color: #0f172a !important;">RISK SCORE</div>
                 </div>
               </div>
@@ -1490,13 +1506,16 @@
             <!-- Arrow 3 -> 4 (3%) -->
             <div style="display: flex; align-items: center; height: 150px; width: 100%;">
               <div style="width: 100%; height: 2px; background: #64748b; position: relative;">
-                <div style="border-width: 6px 0 6px 7px; border-style: solid; border-color: transparent transparent transparent #64748b; position: absolute; right: -6px; top: -5px;"></div>
+                <div
+                  style="border-width: 6px 0 6px 7px; border-style: solid; border-color: transparent transparent transparent #64748b; position: absolute; right: -6px; top: -5px;">
+                </div>
               </div>
             </div>
 
             <!-- Stage 4: ZERO-TRUST & RESPONSE (27%) -->
             <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-              <div class="arch-box dark" style="width: 100%; padding: 16px 8px; height: 150px; justify-content: center;">
+              <div class="arch-box dark"
+                style="width: 100%; padding: 16px 8px; height: 150px; justify-content: center;">
                 <div class="arch-box-title">ZERO-TRUST &<br>RESPONSE</div>
                 <div class="arch-box-subtitle" style="margin-top: 10px;">Allow / Re-auth<br>Restrict / Lock</div>
               </div>
@@ -1506,19 +1525,25 @@
 
           <!-- Bottom Row: Feedback Loop + Storage -->
           <div style="width: 100%; max-width: 1200px; position: relative; height: 150px; margin-top: 8px;">
-            
+
             <!-- Continuous Verification Loop (Width 31%, anchors from center of Zero Trust (13.5% from right) to center of Continuous Sec (44.5% from right)) -->
-            <div style="position: absolute; right: 13.5%; top: 0; width: 31%; height: 28px; border-bottom: 2px dashed #3b82f6; border-left: 2px dashed #3b82f6; border-right: 2px dashed #3b82f6; border-radius: 0 0 12px 12px;">
-              <div style="position: absolute; top: -5px; left: -5px; border-width: 0 5px 6px 5px; border-style: solid; border-color: transparent transparent #3b82f6 transparent;"></div>
-              <div style="position: absolute; bottom: -28px; width: 100%; text-align: center; font-size: 1rem; font-weight: 700; color: #3b82f6;">Continuous Verification</div>
+            <div
+              style="position: absolute; right: 13.5%; top: 0; width: 31%; height: 28px; border-bottom: 2px dashed #3b82f6; border-left: 2px dashed #3b82f6; border-right: 2px dashed #3b82f6; border-radius: 0 0 12px 12px;">
+              <div
+                style="position: absolute; top: -5px; left: -5px; border-width: 0 5px 6px 5px; border-style: solid; border-color: transparent transparent #3b82f6 transparent;">
+              </div>
+              <div
+                style="position: absolute; bottom: -28px; width: 100%; text-align: center; font-size: 1rem; font-weight: 700; color: #3b82f6;">
+                Continuous Verification</div>
             </div>
 
             <!-- Down connection from Zero Trust to Storage -->
             <div style="position: absolute; right: 13.5%; top: 0; width: 2px; height: 65px; background: #64748b;"></div>
-            
+
             <!-- Storage & Cloud Container (Width 50%, anchored to right edge) -->
-            <div style="position: absolute; right: 0; top: 65px; width: 50%; display: flex; flex-direction: column; align-items: center;">
-              
+            <div
+              style="position: absolute; right: 0; top: 65px; width: 50%; display: flex; flex-direction: column; align-items: center;">
+
               <!-- Split Connector -->
               <div style="width: 100%; height: 2px; position: relative;">
                 <div style="position: absolute; right: 27%; top: 0; width: 48%; height: 2px; background: #64748b;">
@@ -1532,14 +1557,16 @@
                   </div>
                 </div>
               </div>
-              
+
               <!-- Storage Boxes -->
               <div style="display: flex; justify-content: space-around; width: 100%; margin-top: 18px;">
                 <div class="arch-box" style="width: 46%; border-radius: 8px; padding: 14px 8px;">
                   <div class="arch-box-title" style="color: #000000; font-size: 1.05rem;">LOCAL STORAGE</div>
-                  <div class="arch-box-subtitle" style="font-size: 0.85rem; color: #1e293b; font-weight: 600; margin-top: 6px;">SQLite + Logs</div>
+                  <div class="arch-box-subtitle"
+                    style="font-size: 0.85rem; color: #1e293b; font-weight: 600; margin-top: 6px;">SQLite + Logs</div>
                 </div>
-                <div class="arch-box" style="width: 46%; border: 2px dashed #94a3b8; background: #f8fafc; padding: 14px 8px;">
+                <div class="arch-box"
+                  style="width: 46%; border: 2px dashed #94a3b8; background: #f8fafc; padding: 14px 8px;">
                   <div class="arch-box-title" style="color: #64748b; font-size: 1.05rem;">OPTIONAL CLOUD</div>
                   <div class="arch-box-subtitle" style="font-size: 0.85rem; margin-top: 6px;">Future / Premium</div>
                 </div>
@@ -1905,28 +1932,32 @@
           <h2 class="slide-title"
             style="font-size: 2.5rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; margin-top: 0.2rem;">
             End-to-End Authentication Process</h2>
-          <p style="font-size: 1.35rem; color: #475569; font-family: 'Times New Roman', serif; font-style: italic; margin-top: 8px;">
+          <p
+            style="font-size: 1.35rem; color: #475569; font-family: 'Times New Roman', serif; font-style: italic; margin-top: 8px;">
             From secure login to continuous verification and adaptive session security.
           </p>
         </div>
 
         <!-- New Simplified E2E Process Container -->
-        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 30px; width: 100%; max-width: 1250px; margin: 0 auto;">
-          
+        <div
+          style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 30px; width: 100%; max-width: 1250px; margin: 0 auto;">
+
           <!-- Phase Headers -->
           <div style="display: flex; width: 100%; margin-bottom: 50px;">
             <div style="width: 65.8%; border-bottom: 3px solid #94a3b8; padding-bottom: 15px; text-align: center;">
-              <span style="font-size: 1.25rem; font-weight: 700; color: #475569; letter-spacing: 2px;">INITIAL AUTHENTICATION</span>
+              <span style="font-size: 1.25rem; font-weight: 700; color: #475569; letter-spacing: 2px;">INITIAL
+                AUTHENTICATION</span>
             </div>
             <div style="width: 2.7%;"></div>
             <div style="width: 31.5%; border-bottom: 3px solid #3b82f6; padding-bottom: 15px; text-align: center;">
-              <span style="font-size: 1.25rem; font-weight: 700; color: #3b82f6; letter-spacing: 2px;">ACTIVE SESSION SECURITY</span>
+              <span style="font-size: 1.25rem; font-weight: 700; color: #3b82f6; letter-spacing: 2px;">ACTIVE SESSION
+                SECURITY</span>
             </div>
           </div>
 
           <!-- Main Flow (6 Boxes) -->
           <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
-            
+
             <style>
               .e2e-box {
                 background: #ffffff;
@@ -1937,10 +1968,11 @@
                 flex-direction: column;
                 width: 180px;
                 height: 240px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
                 position: relative;
                 box-sizing: border-box;
               }
+
               .e2e-num {
                 font-size: 1.1rem;
                 font-weight: 700;
@@ -1948,6 +1980,7 @@
                 margin-bottom: 18px;
                 text-align: center;
               }
+
               .e2e-title {
                 font-size: 1.3rem;
                 font-weight: 800;
@@ -1957,20 +1990,24 @@
                 margin-bottom: 22px;
                 text-transform: uppercase;
               }
+
               .e2e-desc {
                 font-size: 1.1rem;
                 color: #475569;
                 text-align: center;
                 line-height: 1.4;
               }
+
               .e2e-arrow {
                 font-size: 2rem;
                 color: #cbd5e1;
               }
+
               .e2e-box.highlight {
                 border-color: #3b82f6;
                 box-shadow: 0 6px 15px rgba(59, 130, 246, 0.12);
               }
+
               .e2e-box.highlight .e2e-title {
                 color: #1d4ed8;
               }
@@ -2030,19 +2067,25 @@
             </div>
 
             <!-- Continuous Feedback Loop (from Box 06 back to Box 05) -->
-            <div style="position: absolute; right: 90px; bottom: -55px; width: 214px; height: 40px; box-sizing: border-box; border-bottom: 3px dashed #3b82f6; border-left: 3px dashed #3b82f6; border-right: 3px dashed #3b82f6; border-radius: 0 0 10px 10px;">
-               <!-- Arrow pointing up to box 05 -->
-               <div style="position: absolute; left: -8px; top: -7px; border-width: 0 7px 8px 7px; border-style: solid; border-color: transparent transparent #3b82f6 transparent;"></div>
-               <!-- Text -->
-               <div style="position: absolute; bottom: -32px; width: 100%; text-align: center; font-size: 1.1rem; font-weight: 700; color: #3b82f6;">Continuous Verification</div>
+            <div
+              style="position: absolute; right: 90px; bottom: -55px; width: 214px; height: 40px; box-sizing: border-box; border-bottom: 3px dashed #3b82f6; border-left: 3px dashed #3b82f6; border-right: 3px dashed #3b82f6; border-radius: 0 0 10px 10px;">
+              <!-- Arrow pointing up to box 05 -->
+              <div
+                style="position: absolute; left: -8px; top: -7px; border-width: 0 7px 8px 7px; border-style: solid; border-color: transparent transparent #3b82f6 transparent;">
+              </div>
+              <!-- Text -->
+              <div
+                style="position: absolute; bottom: -32px; width: 100%; text-align: center; font-size: 1.1rem; font-weight: 700; color: #3b82f6;">
+                Continuous Verification</div>
             </div>
           </div>
-          
+
           <!-- Bottom Legend -->
-          <div style="margin-top: 150px; text-align: center; font-size: 1.5rem; font-weight: 800; color: #1e293b; letter-spacing: 2px; text-transform: uppercase;">
-            AUTHENTICATE <span style="color: #94a3b8; margin: 0 12px;">➔</span> 
-            ESTABLISH SESSION <span style="color: #94a3b8; margin: 0 12px;">➔</span> 
-            MONITOR <span style="color: #3b82f6; margin: 0 12px;">➔</span> 
+          <div
+            style="margin-top: 150px; text-align: center; font-size: 1.5rem; font-weight: 800; color: #1e293b; letter-spacing: 2px; text-transform: uppercase;">
+            AUTHENTICATE <span style="color: #94a3b8; margin: 0 12px;">➔</span>
+            ESTABLISH SESSION <span style="color: #94a3b8; margin: 0 12px;">➔</span>
+            MONITOR <span style="color: #3b82f6; margin: 0 12px;">➔</span>
             <span style="color: #3b82f6;">ADAPT</span>
           </div>
         </div>
@@ -2392,12 +2435,12 @@
               <div class="po-card-desc" style="flex-grow: 1;">
                 <ul class="ed-check-list" style="margin: 0; padding: 0; list-style: none;">
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Prevent unauthorized desktop access</li>
+                      style="color: #2563eb; margin-right: 5px;">•</span> Prevent unauthorized desktop access</li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Secure credential verification using Argon2id
+                      style="color: #2563eb; margin-right: 5px;">•</span> Secure credential verification using Argon2id
                   </li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Track successful and failed authentication
+                      style="color: #2563eb; margin-right: 5px;">•</span> Track successful and failed authentication
                     attempts</li>
                 </ul>
               </div>
@@ -2414,13 +2457,13 @@
               <div class="po-card-desc" style="flex-grow: 1;">
                 <ul class="ed-check-list" style="margin: 0; padding: 0; list-style: none;">
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Monitor selected security-critical activities
+                      style="color: #2563eb; margin-right: 5px;">•</span> Monitor selected security-critical activities
                     after login</li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Observe suspicious processes and
+                      style="color: #2563eb; margin-right: 5px;">•</span> Observe suspicious processes and
                     authentication patterns</li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Generate real-time security alerts</li>
+                      style="color: #2563eb; margin-right: 5px;">•</span> Generate real-time security alerts</li>
                 </ul>
               </div>
               <div class="po-card-benefit"
@@ -2436,13 +2479,13 @@
               <div class="po-card-desc" style="flex-grow: 1;">
                 <ul class="ed-check-list" style="margin: 0; padding: 0; list-style: none;">
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Identify suspicious or abnormal security
+                      style="color: #2563eb; margin-right: 5px;">•</span> Identify suspicious or abnormal security
                     events</li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Evaluate detected events using security rules
+                      style="color: #2563eb; margin-right: 5px;">•</span> Evaluate detected events using security rules
                   </li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Trigger alerts or defensive actions when
+                      style="color: #2563eb; margin-right: 5px;">•</span> Trigger alerts or defensive actions when
                     required</li>
                 </ul>
               </div>
@@ -2458,13 +2501,13 @@
               <div class="po-card-desc" style="flex-grow: 1;">
                 <ul class="ed-check-list" style="margin: 0; padding: 0; list-style: none;">
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Maintain authentication and security-event
+                      style="color: #2563eb; margin-right: 5px;">•</span> Maintain authentication and security-event
                     history</li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Store sensitive information in encrypted local
+                      style="color: #2563eb; margin-right: 5px;">•</span> Store sensitive information in encrypted local
                     storage</li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Support tamper-evident audit records</li>
+                      style="color: #2563eb; margin-right: 5px;">•</span> Support tamper-evident audit records</li>
                 </ul>
               </div>
               <div class="po-card-benefit"
@@ -2480,13 +2523,13 @@
               <div class="po-card-desc" style="flex-grow: 1;">
                 <ul class="ed-check-list" style="margin: 0; padding: 0; list-style: none;">
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Present events through a centralized dashboard
+                      style="color: #2563eb; margin-right: 5px;">•</span> Present events through a centralized dashboard
                   </li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Provide event history and system-security
+                      style="color: #2563eb; margin-right: 5px;">•</span> Provide event history and system-security
                     status</li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Simplify security monitoring for the user</li>
+                      style="color: #2563eb; margin-right: 5px;">•</span> Simplify security monitoring for the user</li>
                 </ul>
               </div>
               <div class="po-card-benefit"
@@ -2502,12 +2545,12 @@
               <div class="po-card-desc" style="flex-grow: 1;">
                 <ul class="ed-check-list" style="margin: 0; padding: 0; list-style: none;">
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Modular separation of system components</li>
+                      style="color: #2563eb; margin-right: 5px;">•</span> Modular separation of system components</li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Support future MFA and biometric
+                      style="color: #2563eb; margin-right: 5px;">•</span> Support future MFA and biometric
                     authentication</li>
                   <li style="margin-bottom: 6px; font-size: 0.9rem;"><span class="chk-icon"
-                      style="color: #2563eb; margin-right: 5px;">✔</span> Enable behavioral analytics and AI-based
+                      style="color: #2563eb; margin-right: 5px;">•</span> Enable behavioral analytics and AI-based
                     anomaly detection</li>
                 </ul>
               </div>
@@ -2563,9 +2606,9 @@
               insufficient and introduces continuous authentication through behavioral biometrics, providing the
               research basis for monitoring authenticated user sessions.
             </div>
-            <a href="https://www.researchgate.net/publication/309295047_A_Review_of_Continuous_Authentication_Using_Behavioral_Biometrics"
+            <a href="https://drive.google.com/file/d/1Chw-f1rt3NFHHJKBK4Sncmv26Fnuzva-/view?usp=drive_link"
               target="_blank" class="ref-link-btn">
-              View on ResearchGate ➔
+              View the paper ➔
             </a>
           </div>
 
@@ -2585,7 +2628,8 @@
               least privilege, and dynamic trust evaluation, forming the architectural foundation for the proposed
               desktop security system.
             </div>
-            <a href="https://arxiv.org/abs/2503.12362" target="_blank" class="ref-link-btn">
+            <a href="https://drive.google.com/file/d/1Chw-f1rt3NFHHJKBK4Sncmv26Fnuzva-/view?usp=drive_link"
+              target="_blank" class="ref-link-btn">
               View on arXiv (2503.12362) ➔
             </a>
           </div>
