@@ -798,14 +798,16 @@ body,
   overflow: hidden !important;
   border: 1.5px solid #cbd5e1 !important;
   border-radius: 10px !important;
-  padding: 0.6rem !important;
+  padding: 0 !important;
   background-color: #f8fafc !important;
 }
 
 .acad-stack-img {
+  width: 100% !important;
+  height: 100% !important;
   max-width: 100% !important;
-  max-height: 220px !important;
-  object-fit: contain !important;
+  max-height: none !important;
+  object-fit: cover !important;
 }
 
 .acad-center-flow-arrow {
@@ -2640,7 +2642,7 @@ body {
   background-color: #f0f7ff !important;
   background-image: 
     linear-gradient(135deg, rgba(240, 247, 255, 0.55) 0%, rgba(224, 242, 254, 0.7) 100%),
-    url('file:///C:/Users/EikoMotsu/.gemini/antigravity-ide/brain/3a5124cc-add4-43df-8320-2f45ab89b34b/slide_section_bg_v3_1784711860170.png'),
+    url('images/slide_section_bg_v3_1784711860170.png'),
     url('slide_section_bg.png') !important;
   background-size: cover !important;
   background-position: center center !important;
@@ -2799,7 +2801,7 @@ body {
   background-color: #070c18;
   background-image: 
     linear-gradient(135deg, rgba(7, 12, 24, 0.65) 0%, rgba(15, 23, 42, 0.82) 100%),
-    url('file:///C:/Users/EikoMotsu/.gemini/antigravity-ide/brain/3a5124cc-add4-43df-8320-2f45ab89b34b/cover_bg_v2_1784699885589.png'),
+    url('images/cover_bg_v2_1784699885589.png'),
     url('cover_bg.png');
   background-size: cover;
   background-position: center center;
@@ -4703,7 +4705,7 @@ body {
   background-color: #070c18 !important;
   background-image: 
     linear-gradient(135deg, rgba(7, 12, 24, 0.75) 0%, rgba(15, 23, 42, 0.88) 100%),
-    url('file:///C:/Users/EikoMotsu/.gemini/antigravity-ide/brain/3a5124cc-add4-43df-8320-2f45ab89b34b/cover_bg_v2_1784699885589.png') !important;
+    url('images/cover_bg_v2_1784699885589.png') !important;
   background-size: cover !important;
   background-position: center center !important;
   display: flex !important;
