@@ -665,22 +665,22 @@ body,
    ============================================================= */
 .academic-comp-container {
   width: 100% !important;
-  height: 100% !important;
   flex-grow: 1 !important;
   display: grid !important;
   grid-template-columns: 1fr 0.85fr 1fr !important;
   gap: 1.4rem !important;
   align-items: stretch !important;
+  min-height: 0 !important;
 }
 
 .acad-col {
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
-  height: 100% !important;
   background-color: #ffffff !important;
   border-radius: 14px !important;
-  padding: 1.2rem 1.4rem !important;
+  padding: 0.8rem 1.2rem !important;
+  min-height: 0 !important;
 }
 
 .acad-col-existing {
@@ -728,12 +728,12 @@ body,
   flex-direction: column !important;
   justify-content: space-between !important;
   flex-grow: 1 !important;
-  gap: 0.5rem !important;
-  margin-top: 0.2rem !important;
+  gap: 0.35rem !important;
+  margin-top: 0 !important;
 }
 
 .acad-item {
-  padding: 0.65rem 0.95rem !important;
+  padding: 0.45rem 0.75rem !important;
   background-color: #f8fafc !important;
   border: 1.5px solid #e2e8f0 !important;
   border-radius: 10px !important;
@@ -746,15 +746,15 @@ body,
 }
 
 .acad-item-title {
-  font-size: 1.15rem !important;
+  font-size: 1.05rem !important;
   font-weight: 400 !important;
   color: #000000 !important;
   font-family: Georgia, serif !important;
-  margin-bottom: 2px !important;
+  margin-bottom: 0px !important;
 }
 
 .proposed-item .acad-item-title {
-  font-size: 1.18rem !important;
+  font-size: 1.08rem !important;
 }
 
 .acad-item-title .chk-icon {
@@ -764,10 +764,10 @@ body,
 }
 
 .acad-item-desc {
-  font-size: 0.98rem !important;
+  font-size: 0.88rem !important;
   color: #475569 !important;
   font-family: "Times New Roman", serif !important;
-  line-height: 1.4 !important;
+  line-height: 1.3 !important;
 }
 
 .proposed-item .acad-item-desc {
@@ -781,12 +781,12 @@ body,
   flex-direction: column !important;
   justify-content: space-between !important;
   align-items: center !important;
-  height: 100% !important;
   background-color: #ffffff !important;
   border: 2px solid #000000 !important;
   border-radius: 14px !important;
-  padding: 0.9rem !important;
+  padding: 0.5rem !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  min-height: 0 !important;
 }
 
 .acad-img-box {
