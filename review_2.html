@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="SecureDesktop Shield - Academic Defense Presentation" name="description"/>
+<title>SecureDesktop Shield - Academic Defense Presentation</title>
+<!-- Google Fonts: Outfit, Inter, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<!-- ============================================================
+       REDESIGNED MAIN COVER TITLE SLIDE COMPONENT STYLES
+       ============================================================ -->
+<style id="cover-slide-styles">
+    /* 1. Layout & Full Slide Container with Cybersecurity Cover Background */
+    .slide.main-cover-slide {
+      padding: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      overflow: hidden !important;
+      background-color: #070c18 !important;
+      background-image:
+        linear-gradient(135deg, rgba(7, 12, 24, 0.65) 0%, rgba(15, 23, 42, 0.82) 100%),
+        url('images/cover_bg_v2_1784699885589.png'),
+        url('cover_bg.png') !important;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .cover-grid-container {
+      display: grid !important;
+      grid-template-columns: 1.15fr 0.85fr !important;
+      gap: 5rem !important;
+      width: 95% !important;
+      max-width: 1780px !important;
+      padding: 0 4rem !important;
+      align-items: center !important;
+      z-index: 2 !important;
+      box-sizing: border-box !important;
+    }
+
+    /* 2. Typography & Hierarchy (Modern Crisp Sans-Serif) */
+    .cover-left-col {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+    }
+
+    .cover-pill-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      background: rgba(37, 99, 235, 0.25) !important;
+      color: #93c5fd !important;
+      border: 1px solid rgba(59, 130, 246, 0.5) !important;
+      font-family: 'Courier New', monospace !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 2px !important;
+      text-transform: uppercase !important;
+      padding: 10px 28px !important;
+      border-radius: 40px !important;
+      margin-bottom: 2.2rem !important;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15) !important;
+    }
+
+    .cover-main-title {
+      font-family: Georgia, serif !important;
+      font-size: clamp(3.2rem, 4.5vw, 4.8rem) !important;
+      font-weight: 800 !important;
+      line-height: 1.15 !important;
+      color: #ffffff !important;
+      letter-spacing: -0.8px !important;
+      margin: 0 0 1.8rem 0 !important;
+      text-align: left !important;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .cover-accent-line {
+      width: 160px !important;
+      height: 5px !important;
+      background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%) !important;
+      border-radius: 4px !important;
+      margin-bottom: 1.8rem !important;
+    }
+
+    .cover-tagline {
+      font-family: 'Times New Roman', serif !important;
+      font-size: 1.25rem !important;
+      color: #cbd5e1 !important;
+      line-height: 1.6 !important;
+      font-weight: 400 !important;
+      max-width: 680px !important;
+      text-align: left !important;
+    }
+
+    /* 3. Visual Polish & Dark Glassmorphism Card */
+    .cover-right-col {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .cover-glass-card {
+      background: rgba(15, 23, 42, 0.82) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      border-radius: 24px !important;
+      padding: 3rem 3.5rem !important;
+      width: 100% !important;
+      max-width: 650px !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .card-header-tag {
+      color: #60a5fa !important;
+      font-family: 'Courier New', monospace !important;
+      font-size: 0.9rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 2px !important;
+      text-transform: uppercase !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+      padding-bottom: 16px !important;
+      margin-bottom: 16px !important;
+      text-align: left !important;
+    }
+
+    .team-members-list {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0 !important;
+      margin-bottom: 1.8rem !important;
+    }
+
+    .team-member-row {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 14px 0 !important;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important;
+      font-family: 'Times New Roman', serif !important;
+    }
+
+    .team-member-row:last-child {
+      border-bottom: none !important;
+    }
+
+    .member-name {
+      color: #f1f5f9 !important;
+      font-size: 1.12rem !important;
+      font-weight: 500 !important;
+      font-family: 'Times New Roman', serif !important;
+      text-align: left !important;
+    }
+
+    .member-id {
+      color: #93c5fd !important;
+      font-size: 1.12rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.5px !important;
+      font-family: 'Courier New', monospace !important;
+      text-align: right !important;
+    }
+
+    /* Mentor Section Inside Card */
+    .mentor-badge-card {
+      background: rgba(37, 99, 235, 0.18) !important;
+      border-left: 4px solid #2563eb !important;
+      padding: 18px 24px !important;
+      border-radius: 10px !important;
+      font-family: 'Times New Roman', serif !important;
+      text-align: left !important;
+    }
+
+    .mentor-label {
+      color: #60a5fa !important;
+      font-weight: 700 !important;
+      font-size: 0.78rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1.5px !important;
+      font-family: 'Courier New', monospace !important;
+      margin-bottom: 6px !important;
+    }
+
+    .mentor-name {
+      color: #ffffff !important;
+      font-size: 1.18rem !important;
+      font-weight: 700 !important;
+      line-height: 1.35 !important;
+      font-family: Georgia, serif !important;
+    }
+
+    /* 4. Slide Navigation Dots (Fixed & Vertically Centered) */
+    .side-dots {
+      position: fixed !important;
+      right: 28px !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 10px !important;
+      z-index: 100 !important;
+    }
+  </style>
+</head>
+<body>
+<!-- ==========================================
+       MINIMAL SLIDE NUMBER WATERMARK DISPLAY
+       ========================================== -->
+<div class="slide-number-display">
+    SLIDE <span id="current-slide-num">1</span> / <span id="total-slides-num">17</span>
+</div>
+<!-- Navigation Side Dots (17 Slides) -->
+<div class="side-dots">
+<div class="dot active" data-slide-target="0"></div>
+<div class="dot" data-slide-target="1"></div>
+<div class="dot" data-slide-target="2"></div>
+<div class="dot" data-slide-target="3"></div>
+<div class="dot" data-slide-target="4"></div>
+<div class="dot" data-slide-target="5"></div>
+<div class="dot" data-slide-target="6"></div>
+<div class="dot" data-slide-target="7"></div>
+<div class="dot" data-slide-target="8"></div>
+<div class="dot" data-slide-target="9"></div>
+<div class="dot" data-slide-target="10"></div>
+<div class="dot" data-slide-target="11"></div>
+<div class="dot" data-slide-target="12"></div>
+<div class="dot" data-slide-target="13"></div>
+<div class="dot" data-slide-target="14"></div>
+<div class="dot" data-slide-target="15"></div>
+<div class="dot" data-slide-target="16"></div>
+</div>
+<!-- Main Presentation Widescreen Canvas -->
+<main id="presentation-viewport">
+<div class="light-grid-bg"></div>
+<!-- ==========================================
+         SLIDE 1: MAIN COVER TITLE SLIDE
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 2: SECTION 01 DIVIDER
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 3: PROJECT JOURNEY ROADMAP (MCKINSEY / APPLE EDITORIAL)
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 3: PROJECT JOURNEY ROADMAP (EDITORIAL STORYTELLING)
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 4: INTRODUCTION: EVOLUTION OF DESKTOP AUTHENTICATION & SECURITY
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 5: THREAT LANDSCAPE & DIFFERENTIATION
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 5: SECURITY SYSTEM COMPARISON (EDITORIAL ACADEMIC)
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 6: PROJECT GOALS & OBJECTIVES
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 7: PROPOSED METHODOLOGY
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 8: SECTION 02 DIVIDER
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 8: LITERATURE REVIEW & COMPARISON
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 9: SYSTEM ARCHITECTURE
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 9: SYSTEM ARCHITECTURE (9-MODULE PIPELINE)
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 10: END-TO-END SECURITY EXECUTION FLOW (CONFERENCE 3-LAYER PIPELINE)
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 11: LOCAL DATA STORAGE ARCHITECTURE (IEEE RICH ARCHITECTURE)
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 12: SECTION 03 DIVIDER
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 13: END-TO-END AUTHENTICATION PROCESS
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 14: PROPOSED TECHNOLOGY STACK (ARCHITECTURE LAYERS)
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 15: SECURITY MONITORING & EVENT LOGGING
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 16: SECURE USER AUTHENTICATION
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 17: EXPECTED OUTCOMES & BENEFITS
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 19: LITERATURE REFERENCES
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 20: CONCLUSION & FUTURE SCOPE
+         ========================================== -->
+<!-- ==========================================
+         SLIDE 21: STANDALONE THANK YOU & Q&A SLIDE
+         ========================================== -->
+<section class="slide active main-cover-slide" data-slide-index="0">
+<div class="cover-grid-container">
+<!-- LEFT COLUMN: Presentation Title & Accent Elements -->
+<div class="cover-left-col">
+<!-- Top Tag Badge -->
+<div class="cover-pill-badge">
+            ACADEMIC REVIEW 2 PRESENTATION
+          </div>
+<!-- Main Title (Georgia Serif) -->
+<h1 class="cover-main-title">
+            Secure Desktop<br/>
+            Authentication and System<br/>
+            Protection Application
+          </h1>
+<!-- Bottom Blue Accent Line -->
+<div class="cover-accent-line"></div>
+<!-- Review 2 Subtitle -->
+<p style="font-size: 1.6rem; color: #94a3b8; font-family: 'Times New Roman', serif; margin-top: 1.8rem; font-style: italic; letter-spacing: 0.5px;">
+  Implementation, Integration &amp; Security Evaluation
+</p>
+</div>
+<!-- RIGHT COLUMN: Team Members & Mentor Glassmorphism Card -->
+<div class="cover-right-col">
+<div class="cover-glass-card">
+<!-- Card Header Tag -->
+<div class="card-header-tag">
+              PROJECT DEVELOPMENT TEAM
+            </div>
+<!-- Team Members List with Right-Aligned Register IDs -->
+<div class="team-members-list">
+<div class="team-member-row">
+<span class="member-name">Erolla Rishvin Reddy</span>
+<span class="member-id">24WU0103006</span>
+</div>
+<div class="team-member-row">
+<span class="member-name">Yogamruth Reddy Guggilla</span>
+<span class="member-id">24WU0103019</span>
+</div>
+<div class="team-member-row">
+<span class="member-name">Navari Yashwanth Reddy</span>
+<span class="member-id">24WU0104009</span>
+</div>
+<div class="team-member-row">
+<span class="member-name">Gayathri Pocharam</span>
+<span class="member-id">24WU0104034</span>
+</div>
+<div class="team-member-row">
+<span class="member-name">Chakradhar Muppuri</span>
+<span class="member-id">24WU0103020</span>
+</div>
+</div>
+<!-- Project Mentor Section -->
+<div class="mentor-badge-card">
+<div class="mentor-label">PROJECT MENTOR</div>
+<div class="mentor-name">Professor Meher Gayatri Devi Tiwari</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide section-divider-slide" data-slide-index="1">
+<div class="slide-content slide-layout-hero" style="position: relative;">
+<div class="slide-header" style="margin-bottom: 1.5rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25;">
+            Project Recap &amp; Problem Statement
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Why conventional desktop authentication requires stronger, continuous protection.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-top: 10px; padding: 0 1rem;">
+<!-- Column Headers -->
+<div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 1rem; padding-right: 1.5rem; padding-left: 1.5rem;">
+<div style="flex: 1; font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase;">
+              CURRENT SECURITY GAP
+            </div>
+<div style="width: 40px;"></div> <!-- Spacer for arrow -->
+<div style="flex: 1; font-size: 0.95rem; font-weight: 800; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase;">
+              BIOSHIELD APPROACH
+            </div>
+</div>
+<!-- Row 1 -->
+<div style="display: flex; gap: 2rem; align-items: stretch; margin-bottom: 1.2rem;">
+<!-- Left Card -->
+<div style="flex: 1; background: #fafafa; border: 1px solid #cbd5e1; border-left: 4px solid #94a3b8; border-radius: 8px; padding: 1.2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-weight: 800; color: #334155; margin-bottom: 8px; font-size: 1.1rem; text-transform: uppercase;">Password-Centric Security</div>
+<div style="font-size: 1rem; color: #475569; line-height: 1.4;">Passwords alone provide limited protection against credential compromise.</div>
+</div>
+<!-- Arrow Middle -->
+<div style="display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #94a3b8; font-weight: bold; width: 40px;">➔</div>
+<!-- Right Card -->
+<div style="flex: 1; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; border-radius: 8px; padding: 1.2rem; box-shadow: 0 4px 6px rgba(59,130,246,0.05);">
+<div style="font-weight: 800; color: #1e3a8a; margin-bottom: 8px; font-size: 1.1rem; text-transform: uppercase;">Local Identity Security</div>
+<div style="font-size: 1rem; color: #1e40af; line-height: 1.4;">Locally managed authentication protects desktop access and user identities.</div>
+</div>
+</div>
+<!-- Row 2 -->
+<div style="display: flex; gap: 2rem; align-items: stretch; margin-bottom: 1.2rem;">
+<!-- Left Card -->
+<div style="flex: 1; background: #fafafa; border: 1px solid #cbd5e1; border-left: 4px solid #94a3b8; border-radius: 8px; padding: 1.2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-weight: 800; color: #334155; margin-bottom: 8px; font-size: 1.1rem; text-transform: uppercase;">One-Time Verification</div>
+<div style="font-size: 1rem; color: #475569; line-height: 1.4;">Traditional systems primarily verify identity only during login.</div>
+</div>
+<!-- Arrow Middle -->
+<div style="display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #94a3b8; font-weight: bold; width: 40px;">➔</div>
+<!-- Right Card -->
+<div style="flex: 1; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; border-radius: 8px; padding: 1.2rem; box-shadow: 0 4px 6px rgba(59,130,246,0.05);">
+<div style="font-weight: 800; color: #1e3a8a; margin-bottom: 8px; font-size: 1.1rem; text-transform: uppercase;">Continuous Monitoring</div>
+<div style="font-size: 1rem; color: #1e40af; line-height: 1.4;">Security signals are monitored throughout the active user session.</div>
+</div>
+</div>
+<!-- Row 3 -->
+<div style="display: flex; gap: 2rem; align-items: stretch; margin-bottom: 2rem;">
+<!-- Left Card -->
+<div style="flex: 1; background: #fafafa; border: 1px solid #cbd5e1; border-left: 4px solid #94a3b8; border-radius: 8px; padding: 1.2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-weight: 800; color: #334155; margin-bottom: 8px; font-size: 1.1rem; text-transform: uppercase;">Limited Post-Login Protection</div>
+<div style="font-size: 1rem; color: #475569; line-height: 1.4;">Suspicious activity after login may remain undetected.</div>
+</div>
+<!-- Arrow Middle -->
+<div style="display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #94a3b8; font-weight: bold; width: 40px;">➔</div>
+<!-- Right Card -->
+<div style="flex: 1; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; border-radius: 8px; padding: 1.2rem; box-shadow: 0 4px 6px rgba(59,130,246,0.05);">
+<div style="font-weight: 800; color: #1e3a8a; margin-bottom: 8px; font-size: 1.1rem; text-transform: uppercase;">Threat-Aware Response</div>
+<div style="font-size: 1rem; color: #1e40af; line-height: 1.4;">Suspicious events are evaluated to support immediate defensive action.</div>
+</div>
+</div>
+<!-- Bottom Flow Bar -->
+<div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 1.2rem 2rem; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.05);">
+<div style="font-size: 1.35rem; font-weight: 900; color: #0f172a; letter-spacing: 2px; word-spacing: 5px; margin-bottom: 8px;">
+              AUTHENTICATE <span style="color: #94a3b8; font-weight: 300;">→</span> MONITOR <span style="color: #94a3b8; font-weight: 300;">→</span> EVALUATE <span style="color: #94a3b8; font-weight: 300;">→</span> PROTECT
+            </div>
+<div style="font-size: 1.05rem; color: #475569; font-style: italic;">
+              Local-first desktop security from initial identity verification to continuous system protection.
+            </div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="2">
+<div class="slide-content flex-column" style="justify-content: space-between; height: 100%;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Review 1 → Review 2 Development Progress
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Transition from proposed system design to an integrated working prototype.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem;">
+<!-- Column Headers -->
+<div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 1rem; text-align: center;">
+<div style="flex: 1; font-size: 1rem; font-weight: 800; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase;">
+              REVIEW 1
+            </div>
+<div style="width: 40px;"></div>
+<div style="flex: 1; font-size: 1rem; font-weight: 800; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase;">
+              DEVELOPMENT
+            </div>
+<div style="width: 40px;"></div>
+<div style="flex: 1; font-size: 1rem; font-weight: 800; color: #10b981; letter-spacing: 1.5px; text-transform: uppercase;">
+              REVIEW 2
+            </div>
+</div>
+<!-- Cards Row -->
+<div style="display: flex; gap: 2rem; align-items: stretch; margin-bottom: 2.5rem;">
+<!-- Card 1 -->
+<div style="flex: 1; background: #fafafa; border: 1px solid #cbd5e1; border-top: 5px solid #94a3b8; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+<div style="font-size: 2.5rem; font-weight: 900; color: #e2e8f0; line-height: 1; margin-bottom: 1rem;">01</div>
+<div style="font-weight: 800; color: #334155; margin-bottom: 1rem; font-size: 1.1rem; text-transform: uppercase;">System Design &amp; Planning</div>
+<ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; color: #475569; line-height: 1.6; flex-grow: 1;">
+<li style="margin-bottom: 5px;">• Problem</li>
+<li style="margin-bottom: 5px;">• Architecture</li>
+<li style="margin-bottom: 5px;">• Methodology</li>
+<li style="margin-bottom: 5px;">• Workflow</li>
+<li style="margin-bottom: 5px;">• Tech selection</li>
+</ul>
+<div style="margin-top: 1.5rem; text-align: center; font-weight: 800; color: #94a3b8; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; background: #f1f5f9; padding: 8px; border-radius: 4px;">
+                PROPOSED
+              </div>
+</div>
+<!-- Arrow -->
+<div style="display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #cbd5e1; font-weight: bold; width: 40px;">➔</div>
+<!-- Card 2 -->
+<div style="flex: 1; background: #eff6ff; border: 1px solid #bfdbfe; border-top: 5px solid #3b82f6; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 4px 10px rgba(59,130,246,0.1);">
+<div style="font-size: 2.5rem; font-weight: 900; color: #dbeafe; line-height: 1; margin-bottom: 1rem;">02</div>
+<div style="font-weight: 800; color: #1e3a8a; margin-bottom: 1rem; font-size: 1.1rem; text-transform: uppercase;">Implementation &amp; Integration</div>
+<ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; color: #1e40af; line-height: 1.6; flex-grow: 1;">
+<li style="margin-bottom: 5px;">• Authentication</li>
+<li style="margin-bottom: 5px;">• User profiles</li>
+<li style="margin-bottom: 5px;">• Monitoring</li>
+<li style="margin-bottom: 5px;">• Data layer</li>
+<li style="margin-bottom: 5px; font-style: italic;">• Biometrics WIP</li>
+</ul>
+<div style="margin-top: 1.5rem; text-align: center; font-weight: 800; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; background: #dbeafe; padding: 8px; border-radius: 4px;">
+                IMPLEMENTED + WIP
+              </div>
+</div>
+<!-- Arrow -->
+<div style="display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #cbd5e1; font-weight: bold; width: 40px;">➔</div>
+<!-- Card 3 -->
+<div style="flex: 1; background: #f0fdf4; border: 1px solid #bbf7d0; border-top: 5px solid #10b981; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 4px 10px rgba(16,185,129,0.1);">
+<div style="font-size: 2.5rem; font-weight: 900; color: #d1fae5; line-height: 1; margin-bottom: 1rem;">03</div>
+<div style="font-weight: 800; color: #065f46; margin-bottom: 1rem; font-size: 1.1rem; text-transform: uppercase;">Prototype &amp; Evaluation</div>
+<ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; color: #065f46; line-height: 1.6; flex-grow: 1;">
+<li style="margin-bottom: 5px;">• Integrated flow</li>
+<li style="margin-bottom: 5px;">• Working modules</li>
+<li style="margin-bottom: 5px;">• Demonstration</li>
+<li style="margin-bottom: 5px;">• Testing</li>
+<li style="margin-bottom: 5px;">• Results</li>
+</ul>
+<div style="margin-top: 1.5rem; text-align: center; font-weight: 800; color: #10b981; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; background: #d1fae5; padding: 8px; border-radius: 4px;">
+                CURRENT STAGE
+              </div>
+</div>
+</div>
+<!-- Bottom Implementation Snapshot -->
+<div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.05);">
+<div style="font-size: 0.9rem; font-weight: 800; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.2rem;">
+              CURRENT IMPLEMENTATION SNAPSHOT
+            </div>
+<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+<!-- Badge 1 -->
+<div style="display: flex; flex-direction: column; align-items: center; border: 1px solid #e2e8f0; padding: 10px 15px; border-radius: 8px; min-width: 130px; background: #fafafa;">
+<span style="font-size: 0.85rem; font-weight: 800; color: #334155; margin-bottom: 6px;">AUTHENTICATION</span>
+<span style="font-size: 0.75rem; font-weight: 800; color: #22c55e; background: #dcfce7; padding: 4px 10px; border-radius: 20px; letter-spacing: 1px;">OPERATIONAL</span>
+</div>
+<!-- Badge 2 -->
+<div style="display: flex; flex-direction: column; align-items: center; border: 1px solid #e2e8f0; padding: 10px 15px; border-radius: 8px; min-width: 130px; background: #fafafa;">
+<span style="font-size: 0.85rem; font-weight: 800; color: #334155; margin-bottom: 6px;">USER PROFILES</span>
+<span style="font-size: 0.75rem; font-weight: 800; color: #22c55e; background: #dcfce7; padding: 4px 10px; border-radius: 20px; letter-spacing: 1px;">OPERATIONAL</span>
+</div>
+<!-- Badge 3 -->
+<div style="display: flex; flex-direction: column; align-items: center; border: 1px solid #e2e8f0; padding: 10px 15px; border-radius: 8px; min-width: 130px; background: #fafafa;">
+<span style="font-size: 0.85rem; font-weight: 800; color: #334155; margin-bottom: 6px;">MONITORING</span>
+<span style="font-size: 0.75rem; font-weight: 800; color: #22c55e; background: #dcfce7; padding: 4px 10px; border-radius: 20px; letter-spacing: 1px;">OPERATIONAL</span>
+</div>
+<!-- Badge 4 -->
+<div style="display: flex; flex-direction: column; align-items: center; border: 1px solid #e2e8f0; padding: 10px 15px; border-radius: 8px; min-width: 130px; background: #fafafa;">
+<span style="font-size: 0.85rem; font-weight: 800; color: #334155; margin-bottom: 6px;">BIOMETRICS</span>
+<span style="font-size: 0.75rem; font-weight: 800; color: #f59e0b; background: #fef3c7; padding: 4px 10px; border-radius: 20px; letter-spacing: 1px;">WIP/DEBUG</span>
+</div>
+<!-- Badge 5 -->
+<div style="display: flex; flex-direction: column; align-items: center; border: 1px solid #e2e8f0; padding: 10px 15px; border-radius: 8px; min-width: 130px; background: #fafafa;">
+<span style="font-size: 0.85rem; font-weight: 800; color: #334155; margin-bottom: 6px;">BEHAVIORAL</span>
+<span style="font-size: 0.75rem; font-weight: 800; color: #94a3b8; background: #f1f5f9; padding: 4px 10px; border-radius: 20px; letter-spacing: 1px;">PLANNED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="3">
+<div class="slide-content flex-column" style="justify-content: space-between; height: 100%; padding-bottom: 28px;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Objectives &amp; Current Development Status
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Tracking implementation progress against the core objectives defined for BioShield.ID.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 0.5rem;">
+<!-- 5 Columns Container -->
+<div style="display: flex; gap: 1rem; align-items: stretch; margin-bottom: 2.5rem;">
+<!-- Column 1 -->
+<div style="flex: 1; background: #fafafa; border: 1px solid #cbd5e1; border-top: 4px solid #3b82f6; border-radius: 8px; padding: 1.2rem; display: flex; flex-direction: column; align-items: center; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+<div style="font-size: 1.8rem; font-weight: 900; color: #cbd5e1; margin-bottom: 10px;">01</div>
+<div style="font-size: 2rem; margin-bottom: 10px;">🛡️</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem; text-transform: uppercase; height: 2.5rem; display: flex; align-items: center; justify-content: center;">Secure<br/>Authentication</div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; flex-grow: 1;">Protect Desktop Access</div>
+<div style="margin-top: 15px; font-size: 0.75rem; font-weight: 800; color: #22c55e; background: #dcfce7; padding: 5px 10px; border-radius: 20px; letter-spacing: 1px; width: 100%; box-sizing: border-box;">OPERATIONAL</div>
+</div>
+<!-- Column 2 -->
+<div style="flex: 1; background: #fafafa; border: 1px solid #cbd5e1; border-top: 4px solid #3b82f6; border-radius: 8px; padding: 1.2rem; display: flex; flex-direction: column; align-items: center; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+<div style="font-size: 1.8rem; font-weight: 900; color: #cbd5e1; margin-bottom: 10px;">02</div>
+<div style="font-size: 2rem; margin-bottom: 10px;">👥</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem; text-transform: uppercase; height: 2.5rem; display: flex; align-items: center; justify-content: center;">Local User<br/>Management</div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; flex-grow: 1;">Support Multiple Identities</div>
+<div style="margin-top: 15px; font-size: 0.75rem; font-weight: 800; color: #22c55e; background: #dcfce7; padding: 5px 10px; border-radius: 20px; letter-spacing: 1px; width: 100%; box-sizing: border-box;">OPERATIONAL</div>
+</div>
+<!-- Column 3 -->
+<div style="flex: 1; background: #fafafa; border: 1px solid #cbd5e1; border-top: 4px solid #f59e0b; border-radius: 8px; padding: 1.2rem; display: flex; flex-direction: column; align-items: center; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+<div style="font-size: 1.8rem; font-weight: 900; color: #cbd5e1; margin-bottom: 10px;">03</div>
+<div style="font-size: 2rem; margin-bottom: 10px;">👤</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem; text-transform: uppercase; height: 2.5rem; display: flex; align-items: center; justify-content: center;">Biometric<br/>Authentication</div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; flex-grow: 1;">Strengthen Identity Verification</div>
+<div style="margin-top: 15px; font-size: 0.75rem; font-weight: 800; color: #d97706; background: #fef3c7; padding: 5px 10px; border-radius: 20px; letter-spacing: 1px; width: 100%; box-sizing: border-box;">WIP / DEBUG</div>
+</div>
+<!-- Column 4 -->
+<div style="flex: 1; background: #fafafa; border: 1px solid #cbd5e1; border-top: 4px solid #64748b; border-radius: 8px; padding: 1.2rem; display: flex; flex-direction: column; align-items: center; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+<div style="font-size: 1.8rem; font-weight: 900; color: #cbd5e1; margin-bottom: 10px;">04</div>
+<div style="font-size: 2rem; margin-bottom: 10px;">📈</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem; text-transform: uppercase; height: 2.5rem; display: flex; align-items: center; justify-content: center;">Continuous<br/>Security</div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; flex-grow: 1;">Protect After Login</div>
+<div style="margin-top: 15px; font-size: 0.7rem; font-weight: 800; color: #475569; background: #f1f5f9; padding: 5px 8px; border-radius: 20px; letter-spacing: 0.5px; width: 100%; box-sizing: border-box; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">IN DEVELOPMENT</div>
+</div>
+<!-- Column 5 -->
+<div style="flex: 1; background: #fafafa; border: 1px solid #cbd5e1; border-top: 4px solid #10b981; border-radius: 8px; padding: 1.2rem; display: flex; flex-direction: column; align-items: center; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+<div style="font-size: 1.8rem; font-weight: 900; color: #cbd5e1; margin-bottom: 10px;">05</div>
+<div style="font-size: 2rem; margin-bottom: 10px;">🔒</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem; text-transform: uppercase; height: 2.5rem; display: flex; align-items: center; justify-content: center;">Automated<br/>Protection</div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; flex-grow: 1;">Respond to Security Events</div>
+<div style="margin-top: 15px; font-size: 0.75rem; font-weight: 800; color: #059669; background: #d1fae5; padding: 5px 10px; border-radius: 20px; letter-spacing: 1px; width: 100%; box-sizing: border-box;">IMPLEMENTED</div>
+</div>
+</div>
+<!-- Bottom Milestone Box -->
+<div style="background: #ffffff; border: 1px solid #cbd5e1; border-left: 4px solid #3b82f6; border-radius: 8px; padding: 1.5rem; box-shadow: 0 8px 20px rgba(0,0,0,0.05);">
+<div style="font-size: 0.9rem; font-weight: 800; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;">
+              CURRENT MILESTONE
+            </div>
+<div style="font-size: 1.1rem; color: #0f172a; font-weight: 500;">
+              Core security prototype operational <span style="color: #cbd5e1; margin: 0 10px;">•</span> Advanced biometric &amp; behavioral modules under development
+            </div>
+</div>
+</div>
+</div>
+</section><section class="slide section-divider-slide" data-slide-index="4">
+<div class="slide-content slide-layout-hero" style="position: relative;">
+<div class="slide-content flex-column" style="justify-content: center; align-items: center; height: 100%; text-align: center; padding: 2rem;">
+<div style="font-size: 1rem; font-weight: 800; color: #3b82f6; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+            PART II — IMPLEMENTATION
+          </div>
+<h2 class="slide-title" style="font-size: 3.5rem; font-weight: 900; color: #000000; font-family: Georgia, serif; line-height: 1.2; margin-bottom: 1rem;">
+            Implemented Solution
+          </h2>
+<p style="font-size: 1.4rem; color: #475569; font-family: 'Times New Roman', serif; margin-bottom: 2rem; font-style: italic;">
+            From proposed architecture to an integrated local-first security prototype.
+          </p>
+<div style="width: 80px; height: 4px; background-color: #3b82f6; margin: 0 auto 3rem;"></div>
+<!-- Horizontal Flow with Icons -->
+<div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 4rem;">
+<div style="display: flex; flex-direction: column; align-items: center;">
+<div style="font-size: 2.2rem; margin-bottom: 10px;">🛡️</div>
+<div style="font-size: 0.95rem; font-weight: 700; color: #334155; text-transform: uppercase;">Authentication</div>
+</div>
+<div style="font-size: 1.5rem; color: #cbd5e1; font-weight: bold;">➔</div>
+<div style="display: flex; flex-direction: column; align-items: center;">
+<div style="font-size: 2.2rem; margin-bottom: 10px;">👥</div>
+<div style="font-size: 0.95rem; font-weight: 700; color: #334155; text-transform: uppercase;">Identity</div>
+</div>
+<div style="font-size: 1.5rem; color: #cbd5e1; font-weight: bold;">➔</div>
+<div style="display: flex; flex-direction: column; align-items: center;">
+<div style="font-size: 2.2rem; margin-bottom: 10px;">📈</div>
+<div style="font-size: 0.95rem; font-weight: 700; color: #334155; text-transform: uppercase;">Monitoring</div>
+</div>
+<div style="font-size: 1.5rem; color: #cbd5e1; font-weight: bold;">➔</div>
+<div style="display: flex; flex-direction: column; align-items: center;">
+<div style="font-size: 2.2rem; margin-bottom: 10px;">⏱️</div>
+<div style="font-size: 0.95rem; font-weight: 700; color: #334155; text-transform: uppercase;">Risk Evaluation</div>
+</div>
+<div style="font-size: 1.5rem; color: #cbd5e1; font-weight: bold;">➔</div>
+<div style="display: flex; flex-direction: column; align-items: center;">
+<div style="font-size: 2.2rem; margin-bottom: 10px;">🔒</div>
+<div style="font-size: 0.95rem; font-weight: 700; color: #334155; text-transform: uppercase;">Response</div>
+</div>
+</div>
+<!-- Bottom Badge -->
+<div style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 12px 30px; border-radius: 40px; display: inline-block;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px;">
+              IMPLEMENTATION • INTEGRATION • EVALUATION
+            </div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="5">
+<div class="slide-content" style="display: flex; flex-direction: column; height: 100%; width: 100%; box-sizing: border-box;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Actual System Architecture
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Current implementation architecture integrating authentication, monitoring, security response, and local data storage.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem; margin-top: 1rem;">
+<div style="display: flex; align-items: stretch; margin-bottom: 3rem;">
+<!-- Column 1 -->
+<div style="flex: 1; display: flex; flex-direction: column; text-align: left;">
+<div style="font-size: 1.1rem; font-weight: 800; color: #94a3b8; margin-bottom: 1.5rem;">01</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4;">
+                APPLICATION<br/>INTERFACE
+              </div>
+<div style="font-size: 1rem; color: #334155; line-height: 1.8; flex-grow: 1;">
+<div>Login</div>
+<div>Enrollment</div>
+<div>Dashboard</div>
+</div>
+<div style="margin-top: 2.5rem; font-size: 0.85rem; font-weight: 800; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase;">
+                USER<br/>INTERACTION
+              </div>
+</div>
+<!-- Arrow -->
+<div style="display: flex; align-items: flex-start; justify-content: center; font-size: 1.8rem; color: #cbd5e1; font-weight: bold; width: 40px; padding-top: 3rem;">➔</div>
+<!-- Column 2 -->
+<div style="flex: 1; display: flex; flex-direction: column; text-align: left;">
+<div style="font-size: 1.1rem; font-weight: 800; color: #94a3b8; margin-bottom: 1.5rem;">02</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4;">
+                IDENTITY<br/>ENGINE
+              </div>
+<div style="font-size: 1rem; color: #334155; line-height: 1.8; flex-grow: 1;">
+<div>Credentials</div>
+<div>User Profiles</div>
+<div>Sessions</div>
+</div>
+<div style="margin-top: 2.5rem; font-size: 0.85rem; font-weight: 800; color: #f59e0b; letter-spacing: 1.5px; text-transform: uppercase;">
+                BIOMETRICS<br/>WIP
+              </div>
+</div>
+<!-- Arrow -->
+<div style="display: flex; align-items: flex-start; justify-content: center; font-size: 1.8rem; color: #cbd5e1; font-weight: bold; width: 40px; padding-top: 3rem;">➔</div>
+<!-- Column 3 -->
+<div style="flex: 1; display: flex; flex-direction: column; text-align: left;">
+<div style="font-size: 1.1rem; font-weight: 800; color: #94a3b8; margin-bottom: 1.5rem;">03</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4;">
+                MONITORING<br/>SERVICE
+              </div>
+<div style="font-size: 1rem; color: #334155; line-height: 1.8; flex-grow: 1;">
+<div>Processes</div>
+<div>Activity</div>
+<div>Events</div>
+</div>
+<div style="margin-top: 2.5rem; font-size: 0.85rem; font-weight: 800; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase;">
+                CONTINUOUS<br/>OBSERVATION
+              </div>
+</div>
+<!-- Arrow -->
+<div style="display: flex; align-items: flex-start; justify-content: center; font-size: 1.8rem; color: #cbd5e1; font-weight: bold; width: 40px; padding-top: 3rem;">➔</div>
+<!-- Column 4 -->
+<div style="flex: 1; display: flex; flex-direction: column; text-align: left;">
+<div style="font-size: 1.1rem; font-weight: 800; color: #94a3b8; margin-bottom: 1.5rem;">04</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4;">
+                SECURITY DECISION<br/>ENGINE
+              </div>
+<div style="font-size: 1rem; color: #334155; line-height: 1.8; flex-grow: 1;">
+<div>Event Evaluation</div>
+<div>Risk</div>
+<div>Response</div>
+</div>
+<div style="margin-top: 2.5rem; font-size: 0.85rem; font-weight: 800; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase;">
+                DETECT •<br/>DECIDE • RESPOND
+              </div>
+</div>
+<!-- Arrow -->
+<div style="display: flex; align-items: flex-start; justify-content: center; font-size: 1.8rem; color: #cbd5e1; font-weight: bold; width: 40px; padding-top: 3rem;">➔</div>
+<!-- Column 5 -->
+<div style="flex: 1; display: flex; flex-direction: column; text-align: left;">
+<div style="font-size: 1.1rem; font-weight: 800; color: #94a3b8; margin-bottom: 1.5rem;">05</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4;">
+                LOCAL<br/>STORAGE
+              </div>
+<div style="font-size: 1rem; color: #334155; line-height: 1.8; flex-grow: 1;">
+<div>Users</div>
+<div>Auth State</div>
+<div>Event Logs</div>
+</div>
+<div style="margin-top: 2.5rem; font-size: 0.85rem; font-weight: 800; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase;">
+                LOCAL-FIRST<br/>STORAGE
+              </div>
+</div>
+</div>
+<!-- Advanced Identity Modules -->
+<div style="text-align: center; margin-top: 1rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              ADVANCED IDENTITY MODULES
+            </div>
+<div style="display: flex; justify-content: center; gap: 4rem;">
+<div style="display: flex; flex-direction: column; align-items: center;">
+<div style="font-size: 1.1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; margin-bottom: 8px;">FACE</div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #d97706; letter-spacing: 1.5px;">WIP</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center;">
+<div style="font-size: 1.1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; margin-bottom: 8px;">VOICE</div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #d97706; letter-spacing: 1.5px;">WIP</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center;">
+<div style="font-size: 1.1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; margin-bottom: 8px;">FINGERPRINT</div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #64748b; letter-spacing: 1.5px;">FUTURE</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="6">
+<div class="slide-content flex-column" style="display: flex; flex-direction: column; height: 100%; width: 100%; box-sizing: border-box;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Authentication Module Implementation
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Local identity verification with fail-closed access control and protected session creation.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem;">
+<!-- Section 1: Authentication Pipeline -->
+<div style="text-align: center; margin-bottom: 3rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem;">
+              AUTHENTICATION PIPELINE
+            </div>
+<div style="display: flex; justify-content: space-between; position: relative; margin-bottom: 1.5rem; padding: 0 2rem;">
+<!-- Connecting Line -->
+<div style="position: absolute; top: 38px; left: 8%; right: 8%; height: 2px; background-color: #cbd5e1; z-index: 1;"></div>
+<!-- Step 1 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Local Profile</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: center;">Select enrolled<br/>identity</div>
+</div>
+<!-- Step 2 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%; position: relative;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Auth Input</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: center;">PIN / Local<br/>Factor</div>
+<!-- WIP Pointer -->
+<div style="position: absolute; top: 110px; display: flex; flex-direction: column; align-items: center;">
+<div style="font-size: 1.2rem; color: #f59e0b; margin-bottom: 5px; font-weight: bold;">↑</div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #d97706; text-align: center;">Face &amp; Voice Integration<br/><span style="background: #fef3c7; padding: 3px 8px; border-radius: 12px; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-top: 5px;">WIP / DEBUGGING</span></div>
+</div>
+</div>
+<!-- Step 3 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Verification</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: center;">Validate<br/>identity</div>
+</div>
+<!-- Step 4 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Decision</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; font-weight: 800; color: #475569; line-height: 1.4; text-align: center;">
+<span style="color: #10b981;">GRANT ✓</span><br/>
+<span style="color: #ef4444;">DENY ✕</span>
+</div>
+</div>
+<!-- Step 5 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Secure Session</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: #3b82f6; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: center;">Protected<br/>access</div>
+</div>
+</div>
+</div>
+<div style="height: 50px;"></div> <!-- Spacer for the WIP pointer -->
+<!-- Section 2: Security Controls -->
+<div style="text-align: center; margin-top: 1rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              SECURITY CONTROLS
+            </div>
+<div style="display: flex; gap: 1.5rem; justify-content: center;">
+<!-- Card 1 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #0f172a; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; text-align: center;">
+                  LOCAL-FIRST
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.5; flex-grow: 1; text-align: center;">
+                  Authentication data remains associated with local profiles.
+                </div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #64748b; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  Local • Offline
+                </div>
+</div>
+<!-- Card 2 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #0f172a; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; text-align: center;">
+                  FAIL-CLOSED
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.5; flex-grow: 1; text-align: center;">
+                  Failed verification never grants access.
+                </div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #64748b; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  Deny • Retry • Lockout
+                </div>
+</div>
+<!-- Card 3 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #0f172a; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; text-align: center;">
+                  AUDITABLE
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.5; flex-grow: 1; text-align: center;">
+                  Authentication events are securely recorded.
+                </div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #64748b; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  Success • Fail • Time
+                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="7">
+<div class="slide-content flex-column" style="display: flex; flex-direction: column; height: 100%; width: 100%; box-sizing: border-box;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Biometric Authentication Implementation
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Multi-modal identity verification using locally enrolled biometric references.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem;">
+<!-- Section 1: Biometric Pipeline -->
+<div style="text-align: center; margin-bottom: 3rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem;">
+              BIOMETRIC PIPELINE
+            </div>
+<div style="display: flex; justify-content: space-between; position: relative; padding: 0 2rem;">
+<!-- Connecting Line -->
+<div style="position: absolute; top: 38px; left: 8%; right: 8%; height: 2px; background-color: #cbd5e1; z-index: 1;"></div>
+<!-- Step 1 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Capture</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: center;">Camera / Mic<br/>Input</div>
+</div>
+<!-- Step 2 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Validate</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: center;">Quality +<br/>Liveness</div>
+</div>
+<!-- Step 3 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Extract</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: center;">Biometric<br/>Features</div>
+</div>
+<!-- Step 4 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Compare</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: center;">Enrolled<br/>Reference</div>
+</div>
+<!-- Step 5 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Decision</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: #3b82f6; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: center;">Accept /<br/>Reject</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Current Implementation -->
+<div style="text-align: center;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              CURRENT IMPLEMENTATION
+            </div>
+<div style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2.5rem;">
+<!-- Card 1 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #f59e0b; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.2rem;">
+                  FACE
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.8; flex-grow: 1; margin-bottom: 1.5rem;">
+<div>Camera Capture</div>
+<div>Multi-Sample Enroll</div>
+<div>Liveness Workflow</div>
+</div>
+<div style="font-size: 0.75rem; font-weight: 800; color: #d97706; background: #fef3c7; padding: 6px 12px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase; display: inline-block; margin: 0 auto;">
+                  WIP / DEBUGGING
+                </div>
+</div>
+<!-- Card 2 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #64748b; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.2rem;">
+                  VOICE
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.8; flex-grow: 1; margin-bottom: 1.5rem;">
+<div>Microphone Capture</div>
+<div>Enrollment Workflow</div>
+<div>Reference Matching</div>
+</div>
+<div style="font-size: 0.75rem; font-weight: 800; color: #475569; background: #f1f5f9; padding: 6px 12px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase; display: inline-block; margin: 0 auto;">
+                  IN DEVELOPMENT
+                </div>
+</div>
+<!-- Card 3 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #94a3b8; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.2rem;">
+                  FINGERPRINT
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.8; flex-grow: 1; margin-bottom: 1.5rem;">
+<div>Hardware Integration</div>
+<div>Device Biometrics</div>
+<div>Future Extension</div>
+</div>
+<div style="font-size: 0.75rem; font-weight: 800; color: #64748b; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 6px 12px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase; display: inline-block; margin: 0 auto;">
+                  FUTURE INTEGRATION
+                </div>
+</div>
+</div>
+<!-- Footer row -->
+<div style="font-size: 0.9rem; font-weight: 800; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase;">
+              LOCAL-FIRST DESIGN • MULTI-MODAL IDENTITY • FAIL-CLOSED VERIFICATION
+            </div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="8">
+<div class="slide-content flex-column" style="display: flex; flex-direction: column; height: 100%; width: 100%; box-sizing: border-box;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Continuous Authentication &amp; Behavioral Monitoring
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Extending security beyond initial login through continuous session and system observation.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem;">
+<!-- Section 1: Continuous Security Loop -->
+<div style="text-align: center; margin-bottom: 3.5rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem;">
+              CONTINUOUS SECURITY LOOP
+            </div>
+<div style="position: relative; padding: 0 1rem;">
+<!-- Main Flow -->
+<div style="display: flex; justify-content: space-between; align-items: center; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; color: #0f172a; letter-spacing: 1px;">
+<div style="z-index: 2; background: white; padding: 0 10px;">SECURE SESSION</div>
+<div style="color: #cbd5e1; font-size: 1.2rem;">➔</div>
+<div style="z-index: 2; background: white; padding: 0 10px;">MONITOR ACTIVITY</div>
+<div style="color: #cbd5e1; font-size: 1.2rem;">➔</div>
+<div style="z-index: 2; background: white; padding: 0 10px;">ANALYZE EVENTS</div>
+<div style="color: #cbd5e1; font-size: 1.2rem;">➔</div>
+<div style="z-index: 2; background: white; padding: 0 10px;">RE-EVALUATE TRUST</div>
+<div style="color: #cbd5e1; font-size: 1.2rem;">➔</div>
+<div style="z-index: 2; background: white; padding: 0 10px;">RESPOND</div>
+</div>
+<!-- Loop Back Arrow -->
+<div style="position: absolute; top: 1rem; left: 8.5%; right: 4.5%; height: 35px; border-bottom: 2.5px dashed #3b82f6; border-left: 2.5px dashed #3b82f6; border-right: 2.5px dashed #3b82f6; border-radius: 0 0 12px 12px;">
+<!-- Arrow pointer -->
+<div style="position: absolute; top: -5px; left: -6px; border-width: 0 5px 7px 5px; border-style: solid; border-color: transparent transparent #3b82f6 transparent;"></div>
+<!-- Loop Label -->
+<div style="position: absolute; bottom: -10px; width: 100%; text-align: center;">
+<span style="background: white; padding: 0 15px; font-size: 0.75rem; font-weight: 800; color: #3b82f6; letter-spacing: 2px;">CONTINUOUS PROTECTION</span>
+</div>
+</div>
+</div>
+</div>
+<div style="height: 20px;"></div> <!-- Spacer -->
+<!-- Section 2: Implementation Status -->
+<div style="text-align: center;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              IMPLEMENTATION STATUS
+            </div>
+<div style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem;">
+<!-- Card 1 (Left) -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #10b981; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 0.8rem; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.5rem;">
+                  CURRENT IMPLEMENTATION
+                </div>
+<div style="font-size: 1.15rem; font-weight: 800; color: #0f172a; text-transform: uppercase; margin-bottom: 1.5rem;">
+                  SYSTEM &amp; SESSION MONITORING
+                </div>
+<ul style="list-style: none; padding: 0; margin: 0; font-size: 1rem; color: #334155; line-height: 1.8; flex-grow: 1;">
+<li style="margin-bottom: 8px;">• Process activity</li>
+<li style="margin-bottom: 8px;">• Resource monitoring</li>
+<li style="margin-bottom: 8px;">• Security events</li>
+<li style="margin-bottom: 8px;">• Background observation</li>
+</ul>
+<div style="margin-top: 2rem; text-align: center;">
+<span style="font-size: 0.8rem; font-weight: 800; color: #059669; background: #d1fae5; padding: 8px 16px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase;">
+                    OPERATIONAL / CURRENT
+                  </span>
+</div>
+</div>
+<!-- Card 2 (Right) -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #f59e0b; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 0.8rem; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.5rem;">
+                  ADVANCED BEHAVIORAL LAYER
+                </div>
+<div style="font-size: 1.15rem; font-weight: 800; color: #0f172a; text-transform: uppercase; margin-bottom: 1.5rem;">
+                  BEHAVIORAL AUTHENTICATION
+                </div>
+<ul style="list-style: none; padding: 0; margin: 0; font-size: 1rem; color: #334155; line-height: 1.8; flex-grow: 1;">
+<li style="margin-bottom: 8px;">• Keystroke dynamics</li>
+<li style="margin-bottom: 8px;">• Mouse interaction patterns</li>
+<li style="margin-bottom: 8px;">• Behavior profiling</li>
+<li style="margin-bottom: 8px;">• Identity confidence</li>
+</ul>
+<div style="margin-top: 2rem; text-align: center;">
+<span style="font-size: 0.8rem; font-weight: 800; color: #d97706; background: #fef3c7; padding: 8px 16px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase;">
+                    PLANNED / PARTIAL
+                  </span>
+</div>
+</div>
+</div>
+<!-- Footer row -->
+<div style="font-size: 0.95rem; font-weight: 800; color: #3b82f6; letter-spacing: 2px; text-transform: uppercase;">
+              MONITOR • ANALYZE • RE-EVALUATE • RESPOND
+            </div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="9">
+<div class="slide-content flex-column" style="display: flex; flex-direction: column; height: 100%; width: 100%; box-sizing: border-box;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Risk &amp; Trust Evaluation Engine
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Converts authentication and monitoring signals into dynamic security decisions.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem;">
+<!-- Section 1: Security Decision Pipeline -->
+<div style="text-align: center; margin-bottom: 2rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              SECURITY DECISION PIPELINE
+            </div>
+<div style="display: flex; justify-content: space-between; position: relative; padding: 0 1rem;">
+<!-- Connecting Line -->
+<div style="position: absolute; top: 38px; left: 8%; right: 8%; height: 2px; background-color: #cbd5e1; z-index: 1;"></div>
+<!-- Step 1 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Security<br/>Signals</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; text-align: left;">
+<div>Auth Status</div>
+<div>System Activity</div>
+<div>Session Events</div>
+</div>
+</div>
+<!-- Arrow -->
+<div style="position: absolute; left: 18.5%; top: 30px; font-size: 1.5rem; color: #94a3b8; font-weight: bold; background: white; padding: 0 5px; z-index: 3;">➔</div>
+<!-- Step 2 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Event<br/>Collection</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; text-align: left;">
+<div>Auth Events</div>
+<div>Monitor Alerts</div>
+<div>Failures</div>
+</div>
+</div>
+<!-- Arrow -->
+<div style="position: absolute; left: 39%; top: 30px; font-size: 1.5rem; color: #94a3b8; font-weight: bold; background: white; padding: 0 5px; z-index: 3;">➔</div>
+<!-- Step 3 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Risk<br/>Evaluation</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; text-align: left;">
+<div>Rules &amp;</div>
+<div>Thresholds</div>
+</div>
+</div>
+<!-- Arrow -->
+<div style="position: absolute; left: 59.5%; top: 30px; font-size: 1.5rem; color: #94a3b8; font-weight: bold; background: white; padding: 0 5px; z-index: 3;">➔</div>
+<!-- Step 4 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Trust<br/>Decision</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.85rem; font-weight: 700; line-height: 1.6; text-align: left;">
+<div style="color: #10b981;">LOW</div>
+<div style="color: #f59e0b;">MEDIUM</div>
+<div style="color: #ef4444;">HIGH</div>
+</div>
+</div>
+<!-- Arrow -->
+<div style="position: absolute; left: 80%; top: 30px; font-size: 1.5rem; color: #94a3b8; font-weight: bold; background: white; padding: 0 5px; z-index: 3;">➔</div>
+<!-- Step 5 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Security<br/>Action</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: #3b82f6; margin-bottom: 15px;"></div>
+<div style="font-size: 0.85rem; font-weight: 700; line-height: 1.6; text-align: left;">
+<div style="color: #10b981;">Continue</div>
+<div style="color: #f59e0b;">Re-Verify</div>
+<div style="color: #ef4444;">Restrict/Lock</div>
+</div>
+</div>
+</div>
+</div>
+<div style="height: 10px;"></div> <!-- Spacer -->
+<!-- Section 2: Dynamic Security Response -->
+<div style="text-align: center;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              DYNAMIC SECURITY RESPONSE
+            </div>
+<div style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem;">
+<!-- Card 1 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #10b981; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">
+                  LOW RISK
+                </div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #10b981; letter-spacing: 2px; margin-bottom: 1.2rem;">
+                  TRUSTED
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.6; flex-grow: 1;">
+<div>Successful Auth</div>
+<div>Normal Activity</div>
+</div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #059669; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  CONTINUE
+                </div>
+</div>
+<!-- Card 2 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #f59e0b; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">
+                  MEDIUM RISK
+                </div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #f59e0b; letter-spacing: 2px; margin-bottom: 1.2rem;">
+                  SUSPICIOUS
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.6; flex-grow: 1;">
+<div>Repeated Failures</div>
+<div>Unusual Activity</div>
+</div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #d97706; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  RE-VERIFY
+                </div>
+</div>
+<!-- Card 3 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #ef4444; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">
+                  HIGH RISK
+                </div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #ef4444; letter-spacing: 2px; margin-bottom: 1.2rem;">
+                  CRITICAL
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.6; flex-grow: 1;">
+<div>Critical Event</div>
+<div>Multiple Indicators</div>
+</div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #b91c1c; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  RESTRICT / LOCK
+                </div>
+</div>
+</div>
+<!-- Footer row -->
+<div style="font-size: 0.95rem; font-weight: 800; color: #3b82f6; letter-spacing: 2px; text-transform: uppercase;">
+              OBSERVE → EVALUATE → DECIDE → RESPOND
+            </div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="10">
+<div class="slide-content flex-column" style="display: flex; flex-direction: column; height: 100%; width: 100%; box-sizing: border-box;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Security Monitoring &amp; Automated Response
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Continuous system observation with rule-based detection and defensive action against suspicious activity.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem;">
+<!-- Section 1: Threat Response Pipeline -->
+<div style="text-align: center; margin-bottom: 3rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem;">
+              THREAT RESPONSE PIPELINE
+            </div>
+<div style="display: flex; justify-content: space-between; position: relative; padding: 0 2rem;">
+<!-- Connecting Line -->
+<div style="position: absolute; top: 38px; left: 8%; right: 8%; height: 2px; background-color: #cbd5e1; z-index: 1;"></div>
+<!-- Step 1 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Monitor</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: left;">
+<div>Processes</div>
+<div>Resources</div>
+<div>Events</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Detect</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: left;">
+<div>Suspicious</div>
+<div>Activity</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Classify</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: left;">
+<div>Event</div>
+<div>Severity</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Respond</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; font-weight: 700; color: #475569; line-height: 1.4; text-align: left;">
+<div>Alert /</div>
+<div>Restrict / Lock</div>
+</div>
+</div>
+<!-- Step 5 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Record</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: #3b82f6; margin-bottom: 15px;"></div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.4; text-align: left;">
+<div>Security</div>
+<div>Audit Event</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Adaptive Response -->
+<div style="text-align: center;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              ADAPTIVE RESPONSE
+            </div>
+<div style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2.5rem;">
+<!-- Card 1 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #10b981; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">
+                  LOW RISK
+                </div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #10b981; letter-spacing: 2px; margin-bottom: 1.2rem;">
+                  NORMAL ACTIVITY
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.6; flex-grow: 1;">
+                  Continue monitoring without interruption.
+                </div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #059669; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  OBSERVE → CONTINUE
+                </div>
+</div>
+<!-- Card 2 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #f59e0b; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">
+                  MEDIUM RISK
+                </div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #f59e0b; letter-spacing: 2px; margin-bottom: 1.2rem;">
+                  SUSPICIOUS ACTIVITY
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.6; flex-grow: 1;">
+                  Increase security and re-evaluate.
+                </div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #d97706; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  ALERT → RE-VERIFY
+                </div>
+</div>
+<!-- Card 3 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #ef4444; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">
+                  HIGH RISK
+                </div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #ef4444; letter-spacing: 2px; margin-bottom: 1.2rem;">
+                  CRITICAL ACTIVITY
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.6; flex-grow: 1;">
+                  Protect the session immediately.
+                </div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #b91c1c; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  RESTRICT → LOCK
+                </div>
+</div>
+</div>
+<!-- Footer row -->
+<div style="font-size: 0.95rem; font-weight: 800; color: #3b82f6; letter-spacing: 2px; text-transform: uppercase;">
+              DETECT • EVALUATE • RESPOND • AUDIT
+            </div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="11">
+<div class="slide-content flex-column" style="display: flex; flex-direction: column; height: 100%; width: 100%; box-sizing: border-box;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Database &amp; Secure Data Flow
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Local storage architecture for user profiles, authentication state, and security events.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem;">
+<!-- Section 1: Local Data Flow -->
+<div style="text-align: center; margin-bottom: 3rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem;">
+              LOCAL DATA FLOW
+            </div>
+<div style="display: flex; justify-content: space-between; position: relative; padding: 0 2rem;">
+<!-- Connecting Line -->
+<div style="position: absolute; top: 38px; left: 8%; right: 8%; height: 2px; background-color: #cbd5e1; z-index: 1;"></div>
+<!-- Step 1 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">User /<br/>Profile</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; text-align: center;">
+<div>Local Identity</div>
+<div>Enrollment</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Auth<br/>Engine</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; text-align: center;">
+<div>Verification</div>
+<div>Session State</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Local<br/>Database</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; text-align: center;">
+<div>Persistence</div>
+<div>User Records</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Security<br/>Logs</div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; margin-bottom: 15px;"></div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; text-align: center;">
+<div>Events</div>
+<div>Responses</div>
+</div>
+</div>
+<!-- Step 5 -->
+<div style="display: flex; flex-direction: column; align-items: center; z-index: 2; width: 18%;">
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Application<br/> </div>
+<div style="width: 20px; height: 20px; border-radius: 50%; border: 3px solid #3b82f6; background-color: #3b82f6; margin-bottom: 15px;"></div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.4; text-align: center;">
+<div>Authorized</div>
+<div>Access</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Data Organization -->
+<div style="text-align: center;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              DATA ORGANIZATION
+            </div>
+<div style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2.5rem;">
+<!-- Card 1 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #0f172a; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">
+                  IDENTITY DATA
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.8; flex-grow: 1;">
+<div>Local Profiles</div>
+<div>User Information</div>
+<div>Auth Configuration</div>
+<div>Enrollment Status</div>
+</div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #64748b; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  PROFILE-SCOPED
+                </div>
+</div>
+<!-- Card 2 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #0f172a; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">
+                  SECURITY STATE
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.8; flex-grow: 1;">
+<div>Authentication</div>
+<div>Session State</div>
+<div>Security Config</div>
+<div>Monitoring State</div>
+</div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #64748b; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  LOCAL SECURITY
+                </div>
+</div>
+<!-- Card 3 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #0f172a; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">
+                  AUDIT EVENTS
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.8; flex-grow: 1;">
+<div>Event Type</div>
+<div>Timestamp</div>
+<div>Auth Result</div>
+<div>Security Response</div>
+</div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #64748b; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  TRACEABLE EVENTS
+                </div>
+</div>
+</div>
+<!-- Footer row -->
+<div style="font-size: 0.85rem; font-weight: 800; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase;">
+              LOCAL-FIRST DATA • PROFILE ISOLATION • SECURITY LOGGING • PRIVACY BY DESIGN
+            </div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="12">
+<div class="slide-content flex-column" style="display: flex; flex-direction: column; height: 100%; width: 100%; box-sizing: border-box;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Application UI &amp; Local User Management
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Local-first user experience for profile selection, secure authentication, enrollment, and security management.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem;">
+<!-- Section 1: Screenshots -->
+<div style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem;">
+<!-- Screenshot 1 -->
+<div style="flex: 1; display: flex; flex-direction: column; text-align: center;">
+<div style="height: 300px; border: 2.5px dashed #94a3b8; border-radius: 8px; background-color: #f1f5f9; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #64748b; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);">
+<div style="font-size: 1.5rem; margin-bottom: 10px;">🖼️</div>
+<div style="line-height: 1.5;">ACTUAL LOCK SCREEN<br/>SCREENSHOT</div>
+</div>
+<div style="font-size: 0.95rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
+                01 — LOCAL IDENTITY
+              </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.6;">
+                Select and authenticate an enrolled profile.
+              </div>
+</div>
+<!-- Screenshot 2 -->
+<div style="flex: 1; display: flex; flex-direction: column; text-align: center;">
+<div style="height: 300px; border: 2.5px dashed #94a3b8; border-radius: 8px; background-color: #f1f5f9; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #64748b; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);">
+<div style="font-size: 1.5rem; margin-bottom: 10px;">🖼️</div>
+<div style="line-height: 1.5;">ACTUAL USER ENROLLMENT<br/>SCREENSHOT</div>
+</div>
+<div style="font-size: 0.95rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
+                02 — SECURE ENROLLMENT
+              </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.6;">
+                Create additional local identities securely.
+              </div>
+</div>
+<!-- Screenshot 3 -->
+<div style="flex: 1; display: flex; flex-direction: column; text-align: center;">
+<div style="height: 300px; border: 2.5px dashed #94a3b8; border-radius: 8px; background-color: #f1f5f9; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #64748b; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);">
+<div style="font-size: 1.5rem; margin-bottom: 10px;">🖼️</div>
+<div style="line-height: 1.5;">ACTUAL DASHBOARD<br/>SCREENSHOT</div>
+</div>
+<div style="font-size: 0.95rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
+                03 — SECURITY DASHBOARD
+              </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.6;">
+                View security status, monitoring and controls.
+              </div>
+</div>
+</div>
+<!-- Footer row -->
+<div style="text-align: center; margin-top: 1rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #3b82f6; letter-spacing: 2px; text-transform: uppercase; display: inline-block; padding: 12px 24px; border: 1px solid #bfdbfe; background: #eff6ff; border-radius: 40px;">
+              SELECT PROFILE → VERIFY IDENTITY → SECURE ACCESS → PROTECT
+            </div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="13">
+<div class="slide-content flex-column" style="display: flex; flex-direction: column; height: 100%; width: 100%; box-sizing: border-box;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Implementation Demo Flow
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            End-to-end walkthrough of authentication, protected access, continuous monitoring, and security response.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem;">
+<!-- Section 1: End-To-End User Journey -->
+<div style="text-align: center; margin-bottom: 2.5rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              END-TO-END USER JOURNEY
+            </div>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; position: relative;">
+<!-- Connecting Line -->
+<div style="position: absolute; top: 40px; left: 8%; right: 8%; height: 2px; background-color: #cbd5e1; z-index: 1;"></div>
+<!-- Step 1 -->
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 2; padding: 0 5px;">
+<div style="font-size: 1rem; font-weight: 800; color: #94a3b8; margin-bottom: 5px;">01</div>
+<div style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 12px;">🚀</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 8px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Launch<br/>BioShield</div>
+<div style="font-size: 0.8rem; color: #475569; line-height: 1.4; text-align: center;">Initialize<br/>security modules</div>
+</div>
+<!-- Step 2 -->
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 2; padding: 0 5px;">
+<div style="font-size: 1rem; font-weight: 800; color: #94a3b8; margin-bottom: 5px;">02</div>
+<div style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 12px;">👤</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 8px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Select<br/>Profile</div>
+<div style="font-size: 0.8rem; color: #475569; line-height: 1.4; text-align: center;">Choose<br/>local identity</div>
+</div>
+<!-- Step 3 -->
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 2; padding: 0 5px;">
+<div style="font-size: 1rem; font-weight: 800; color: #94a3b8; margin-bottom: 5px;">03</div>
+<div style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 12px;">🛡️</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 8px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Verify<br/>Identity</div>
+<div style="font-size: 0.8rem; color: #475569; line-height: 1.4; text-align: center;">Validate<br/>configured factor</div>
+</div>
+<!-- Step 4 -->
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 2; padding: 0 5px;">
+<div style="font-size: 1rem; font-weight: 800; color: #94a3b8; margin-bottom: 5px;">04</div>
+<div style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 12px;">📊</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 8px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Secure<br/>Access</div>
+<div style="font-size: 0.8rem; color: #475569; line-height: 1.4; text-align: center;">Establish<br/>authorized session</div>
+</div>
+<!-- Step 5 -->
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 2; padding: 0 5px;">
+<div style="font-size: 1rem; font-weight: 800; color: #94a3b8; margin-bottom: 5px;">05</div>
+<div style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid #3b82f6; background-color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 12px;">👁️</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 8px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Continuous<br/>Monitoring</div>
+<div style="font-size: 0.8rem; color: #475569; line-height: 1.4; text-align: center;">Observe<br/>active session</div>
+</div>
+<!-- Step 6 -->
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 2; padding: 0 5px;">
+<div style="font-size: 1rem; font-weight: 800; color: #94a3b8; margin-bottom: 5px;">06</div>
+<div style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid #3b82f6; background-color: #3b82f6; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 12px;">🔒</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 8px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Security<br/>Response</div>
+<div style="font-size: 0.8rem; color: #475569; line-height: 1.4; text-align: center;">Detect &amp;<br/>protect</div>
+</div>
+</div>
+</div>
+<!-- Section 2: During Active Session (Flowchart) -->
+<div style="text-align: center; margin-top: 1rem;">
+<div style="font-size: 0.85rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              DURING ACTIVE SESSION
+            </div>
+<div style="display: flex; flex-direction: column; align-items: center; position: relative;">
+<!-- Top node -->
+<div style="font-size: 0.9rem; font-weight: 800; color: #0f172a; padding: 10px 20px; border: 2px solid #3b82f6; border-radius: 6px; background: white; margin-bottom: 25px; z-index: 2; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                CONTINUOUS MONITORING
+              </div>
+<!-- Split lines -->
+<div style="position: absolute; top: 38px; left: 50%; transform: translateX(-50%); width: 400px; height: 35px; border-top: 2px solid #cbd5e1; border-left: 2px solid #cbd5e1; border-right: 2px solid #cbd5e1; z-index: 1; border-radius: 6px 6px 0 0;"></div>
+<!-- Arrows pointing down -->
+<div style="position: absolute; top: 70px; left: calc(50% - 200px); transform: translateX(-50%); color: #cbd5e1; font-size: 1.5rem; font-weight: bold;">↓</div>
+<div style="position: absolute; top: 70px; left: calc(50% + 200px); transform: translateX(-50%); color: #cbd5e1; font-size: 1.5rem; font-weight: bold;">↓</div>
+<div style="display: flex; justify-content: space-between; width: 550px; margin-top: 25px;">
+<!-- Left Path (Normal) -->
+<div style="display: flex; flex-direction: column; align-items: center; width: 200px;">
+<div style="font-size: 0.85rem; font-weight: 800; color: #059669; padding: 8px 16px; border: 1px dashed #10b981; border-radius: 6px; background: #f0fdf4; margin-bottom: 15px; width: 100%;">
+                    NORMAL ACTIVITY
+                  </div>
+<div style="color: #cbd5e1; font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;">↓</div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #0f172a; padding: 10px 20px; border: 2px solid #10b981; border-radius: 6px; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); width: 100%;">
+                    CONTINUE SESSION
+                  </div>
+</div>
+<!-- Right Path (Security Event) -->
+<div style="display: flex; flex-direction: column; align-items: center; width: 200px;">
+<div style="font-size: 0.85rem; font-weight: 800; color: #d97706; padding: 8px 16px; border: 1px dashed #f59e0b; border-radius: 6px; background: #fffbeb; margin-bottom: 15px; width: 100%;">
+                    SECURITY EVENT
+                  </div>
+<div style="color: #cbd5e1; font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;">↓</div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #0f172a; padding: 8px 16px; border: 1px dashed #cbd5e1; border-radius: 6px; background: #f8fafc; margin-bottom: 15px; width: 100%;">
+                    EVALUATE RISK
+                  </div>
+<div style="color: #cbd5e1; font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;">↓</div>
+<div style="font-size: 0.85rem; font-weight: 800; color: #0f172a; padding: 10px 20px; border: 2px solid #ef4444; border-radius: 6px; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); width: 100%;">
+                    RESTRICT / LOCK
+                  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer row -->
+<div style="text-align: center; margin-top: 1.5rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #3b82f6; letter-spacing: 2px; text-transform: uppercase;">
+              AUTHENTICATE → ACCESS → MONITOR → DETECT → PROTECT
+            </div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="14">
+<div class="slide-content flex-column" style="display: flex; flex-direction: column; height: 100%; width: 100%; box-sizing: border-box;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Testing &amp; Current Results
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Functional verification of the current prototype across authentication, monitoring, response, and data management.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem;">
+<!-- Section 1: Implementation Verification (Table) -->
+<div style="text-align: center; margin-bottom: 2rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;">
+              IMPLEMENTATION VERIFICATION
+            </div>
+<div style="background: white; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: left; width: 90%; margin: 0 auto;">
+<!-- Table Header -->
+<div style="display: flex; background: #f8fafc; border-bottom: 2px solid #e2e8f0; font-weight: 800; color: #475569; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">
+<div style="flex: 2; padding: 12px 20px;">MODULE</div>
+<div style="flex: 2; padding: 12px 20px;">TESTED FUNCTION</div>
+<div style="flex: 1; padding: 12px 20px;">STATUS</div>
+</div>
+<!-- Row 1 -->
+<div style="display: flex; border-bottom: 1px solid #f1f5f9; font-size: 0.95rem;">
+<div style="flex: 2; padding: 12px 20px; font-weight: 700; color: #0f172a;">Core Authentication</div>
+<div style="flex: 2; padding: 12px 20px; color: #475569;">Valid / Invalid Access</div>
+<div style="flex: 1; padding: 12px 20px; font-weight: 800; color: #059669;">✓ OPERATIONAL</div>
+</div>
+<!-- Row 2 -->
+<div style="display: flex; border-bottom: 1px solid #f1f5f9; font-size: 0.95rem; background: #fafafa;">
+<div style="flex: 2; padding: 12px 20px; font-weight: 700; color: #0f172a;">Local User Profiles</div>
+<div style="flex: 2; padding: 12px 20px; color: #475569;">Create / Select / Manage</div>
+<div style="flex: 1; padding: 12px 20px; font-weight: 800; color: #059669;">✓ OPERATIONAL</div>
+</div>
+<!-- Row 3 -->
+<div style="display: flex; border-bottom: 1px solid #f1f5f9; font-size: 0.95rem;">
+<div style="flex: 2; padding: 12px 20px; font-weight: 700; color: #0f172a;">Security Monitoring</div>
+<div style="flex: 2; padding: 12px 20px; color: #475569;">Background Observation</div>
+<div style="flex: 1; padding: 12px 20px; font-weight: 800; color: #059669;">✓ OPERATIONAL*</div>
+</div>
+<!-- Row 4 -->
+<div style="display: flex; border-bottom: 1px solid #f1f5f9; font-size: 0.95rem; background: #fafafa;">
+<div style="flex: 2; padding: 12px 20px; font-weight: 700; color: #0f172a;">Biometric Authentication</div>
+<div style="flex: 2; padding: 12px 20px; color: #475569;">Enrollment / Verification</div>
+<div style="flex: 1; padding: 12px 20px; font-weight: 800; color: #d97706;">◐ DEBUGGING</div>
+</div>
+<!-- Row 5 -->
+<div style="display: flex; font-size: 0.95rem;">
+<div style="flex: 2; padding: 12px 20px; font-weight: 700; color: #0f172a;">Behavioral Intelligence</div>
+<div style="flex: 2; padding: 12px 20px; color: #475569;">User Behavior Analysis</div>
+<div style="flex: 1; padding: 12px 20px; font-weight: 800; color: #94a3b8;">○ PLANNED / PARTIAL</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Security Test Scenarios -->
+<div style="text-align: center; margin-bottom: 2rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              SECURITY TEST SCENARIOS
+            </div>
+<div style="display: flex; gap: 1.5rem; justify-content: center; width: 90%; margin: 0 auto;">
+<!-- Card 1 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #10b981; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; text-align: center;">
+                  AUTHENTICATION
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.8; flex-grow: 1;">
+<div>Valid → Grant</div>
+<div>Invalid → Deny</div>
+</div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #059669; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  ✓ VERIFIED
+                </div>
+</div>
+<!-- Card 2 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #10b981; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; text-align: center;">
+                  MULTI-USER
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.8; flex-grow: 1;">
+<div>Create Profile</div>
+<div>Select Profile</div>
+<div>Authenticate</div>
+</div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #059669; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  ✓ OPERATIONAL
+                </div>
+</div>
+<!-- Card 3 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #f59e0b; border-radius: 8px; padding: 1.5rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; text-align: center;">
+                  SECURITY RESPONSE
+                </div>
+<div style="font-size: 0.95rem; color: #475569; line-height: 1.8; flex-grow: 1;">
+<div>Detect Event</div>
+<div>Evaluate Risk</div>
+<div>Defensive Action</div>
+</div>
+<div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: #d97706; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 1rem; letter-spacing: 1px; text-transform: uppercase;">
+                  ✓ / ◐ TEST STATUS
+                </div>
+</div>
+</div>
+</div>
+<!-- Footer box -->
+<div style="width: 90%; margin: 0 auto;">
+<div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 15px 25px; border-radius: 0 8px 8px 0; text-align: left; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+<div style="font-size: 0.8rem; font-weight: 800; color: #3b82f6; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">CURRENT FINDING</div>
+<div style="font-size: 1.05rem; color: #1e293b; font-weight: 700;">
+                Core security prototype operational <span style="color: #64748b; font-weight: normal; margin: 0 10px;">•</span> Biometric reliability under active debugging
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-slide-index="15">
+<div class="slide-content flex-column" style="display: flex; flex-direction: column; height: 100%; width: 100%; box-sizing: border-box;">
+<div class="slide-header" style="margin-bottom: 2rem; text-align: left;">
+<h2 class="slide-title" style="font-size: 2.2rem; font-weight: 800; color: #000000; font-family: Georgia, serif; line-height: 1.25; text-transform: uppercase;">
+            Current Limitations &amp; Next Development Phase
+          </h2>
+<p style="font-size: 1.15rem; color: #475569; font-family: 'Times New Roman', serif; margin-top: 5px; font-style: italic;">
+            Identified engineering challenges and the roadmap toward a complete, production-ready prototype.
+          </p>
+<div style="width: 60px; height: 4px; background-color: #3b82f6; margin-top: 15px;"></div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 0 1rem;">
+<!-- Section 1: Current Engineering Challenges -->
+<div style="text-align: center; margin-bottom: 2.5rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">
+              CURRENT ENGINEERING CHALLENGES
+            </div>
+<div style="display: flex; gap: 1rem; justify-content: center; width: 100%;">
+<!-- Card 1 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #f59e0b; border-radius: 8px; padding: 1.2rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 0.95rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; line-height: 1.4;">
+                  BIOMETRIC<br/>RELIABILITY
+                </div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.6; flex-grow: 1;">
+<div>Face &amp; Voice</div>
+<div>stabilization</div>
+</div>
+<div style="margin-top: 1.2rem; font-size: 0.75rem; font-weight: 800; color: #d97706; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 0.8rem; letter-spacing: 1px; text-transform: uppercase;">
+                  ACTIVE DEBUGGING
+                </div>
+</div>
+<!-- Card 2 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #64748b; border-radius: 8px; padding: 1.2rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 0.95rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; line-height: 1.4;">
+                  BEHAVIORAL<br/>INTELLIGENCE
+                </div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.6; flex-grow: 1;">
+<div>Keystroke +</div>
+<div>Mouse modelling</div>
+</div>
+<div style="margin-top: 1.2rem; font-size: 0.75rem; font-weight: 800; color: #475569; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 0.8rem; letter-spacing: 1px; text-transform: uppercase;">
+                  PARTIAL / PLANNED
+                </div>
+</div>
+<!-- Card 3 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #94a3b8; border-radius: 8px; padding: 1.2rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 0.95rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; line-height: 1.4;">
+                  DEVICE<br/>BIOMETRICS
+                </div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.6; flex-grow: 1;">
+<div>Fingerprint</div>
+<div>hardware/API</div>
+</div>
+<div style="margin-top: 1.2rem; font-size: 0.75rem; font-weight: 800; color: #64748b; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 0.8rem; letter-spacing: 1px; text-transform: uppercase;">
+                  FUTURE
+                </div>
+</div>
+<!-- Card 4 -->
+<div style="flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #3b82f6; border-radius: 8px; padding: 1.2rem; background: #fafafa; display: flex; flex-direction: column; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+<div style="font-size: 0.95rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; line-height: 1.4;">
+                  PLATFORM<br/>SUPPORT
+                </div>
+<div style="font-size: 0.9rem; color: #475569; line-height: 1.6; flex-grow: 1;">
+<div>Target desktop</div>
+<div>environment</div>
+</div>
+<div style="margin-top: 1.2rem; font-size: 0.75rem; font-weight: 800; color: #2563eb; text-align: center; border-top: 1px dashed #cbd5e1; padding-top: 0.8rem; letter-spacing: 1px; text-transform: uppercase;">
+                  TARGET FIRST
+                </div>
+</div>
+</div>
+</div>
+<!-- Section 2: Next Development Roadmap -->
+<div style="text-align: center; margin-bottom: 2rem;">
+<div style="font-size: 0.95rem; font-weight: 800; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem;">
+              NEXT DEVELOPMENT ROADMAP
+            </div>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; position: relative;">
+<!-- Connecting Line -->
+<div style="position: absolute; top: 15px; left: 12%; right: 12%; height: 2px; background-color: #cbd5e1; z-index: 1;"></div>
+<!-- Step 1 -->
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 2; padding: 0 5px;">
+<div style="font-size: 1.2rem; font-weight: 800; color: #3b82f6; background: white; padding: 0 10px; margin-bottom: 15px;">01</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 10px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center; line-height: 1.4;">
+                  STABILIZE<br/>BIOMETRICS
+                </div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.5; text-align: center;">
+<div>Face + Voice</div>
+<div>Enrollment</div>
+<div>Verification</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 2; padding: 0 5px;">
+<div style="font-size: 1.2rem; font-weight: 800; color: #3b82f6; background: white; padding: 0 10px; margin-bottom: 15px;">02</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 10px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center; line-height: 1.4;">
+                  INTEGRATE<br/>BEHAVIORAL LAYER
+                </div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.5; text-align: center;">
+<div>Keystroke +</div>
+<div>Mouse Dynamics</div>
+<div>Trust Signals</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 2; padding: 0 5px;">
+<div style="font-size: 1.2rem; font-weight: 800; color: #3b82f6; background: white; padding: 0 10px; margin-bottom: 15px;">03</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 10px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center; line-height: 1.4;">
+                  VALIDATE<br/>SYSTEM
+                </div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.5; text-align: center;">
+<div>Testing</div>
+<div>Benchmarking</div>
+<div>FAR / FRR</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 2; padding: 0 5px;">
+<div style="font-size: 1.2rem; font-weight: 800; color: #3b82f6; background: white; padding: 0 10px; margin-bottom: 15px;">04</div>
+<div style="font-weight: 800; color: #0f172a; margin-bottom: 10px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center; line-height: 1.4;">
+                  HARDEN<br/>FINAL SYSTEM
+                </div>
+<div style="font-size: 0.85rem; color: #475569; line-height: 1.5; text-align: center;">
+<div>Security</div>
+<div>Hardening</div>
+<div>Integration</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer box -->
+<div style="width: 100%;">
+<div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 15px 25px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+<div style="font-size: 0.85rem; font-weight: 800; color: #2563eb; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">
+                REVIEW 2 → FINAL REVIEW
+              </div>
+<div style="font-size: 1rem; color: #1e293b; font-weight: 700;">
+                Core Prototype <span style="color: #94a3b8; font-weight: normal; margin: 0 10px;">➔</span> Advanced Integration <span style="color: #94a3b8; font-weight: normal; margin: 0 10px;">➔</span> Validation <span style="color: #94a3b8; font-weight: normal; margin: 0 10px;">➔</span> Complete System
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide thank-you-slide" data-slide-index="16">
+<div class="thank-you-grid-container">
+<!-- Main Thank You Glass Card -->
+<div class="thank-you-card">
+<!-- Top Pill Badge -->
+<div class="thank-you-badge">
+            ACADEMIC DEFENSE KEYNOTE COMPLETE
+          </div>
+<!-- Main Title -->
+<h1 class="thank-you-title">Thank You!</h1>
+<!-- Subtitle -->
+<p class="thank-you-sub">
+            For Your Time, Guidance, and Evaluation During This Project Presentation
+          </p>
+<div class="thank-you-divider"></div>
+<!-- Q&A Action Callout -->
+<div class="thank-you-qa-box">
+<div class="qa-badge" style="background-color: transparent !important; color: #ffffff !important; border: none !important;">
+              QUESTIONS &amp; ANSWERS</div>
+<div class="qa-desc">Open for Panel Evaluation, Discussion, and Feedback</div>
+</div>
+<!-- Team & Mentor Footer Info Grid -->
+<div class="thank-you-info-grid">
+<div class="info-col">
+<div class="info-label">PROJECT DEVELOPMENT TEAM</div>
+<div class="info-value">Erolla Rishvin Reddy • Yogamruth Reddy Guggilla • Navari Yashwanth Reddy •
+                Gayathri Pocharam • Chakradhar Muppuri</div>
+</div>
+<div class="info-col">
+<div class="info-label">PROJECT MENTOR</div>
+<div class="info-value">Professor Meher Gayatri Devi Tiwari</div>
+</div>
+</div>
+</div>
+</div>
+</section></main>
+<!-- ==========================================
+       SLIDE OVERVIEW DRAWER (20 SLIDES)
+       ========================================== -->
+<aside class="overview-drawer" id="slide-overview-drawer">
+<div class="drawer-header">
+<h3>Slide Deck Overview</h3>
+<button class="btn-close-drawer" id="btn-close-drawer">×</button>
+</div>
+<div class="drawer-grid" id="drawer-grid-container">
+<!-- Dynamically generated by app.js -->
+</div>
+</aside>
+<script src="app.js"></script>
+</body>
+</html>
